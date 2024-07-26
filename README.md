@@ -1,8 +1,8 @@
+# React + Vite
 
-=======
-#Project Guinteract1
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
->>>>>>> 0bee75a00c00fae6e412c25c5f0dbca6a92c6566
-=======
-Start The Project1
->>>>>>> 36b0167bc62d4a6a29b8be3198e64074993b2693
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

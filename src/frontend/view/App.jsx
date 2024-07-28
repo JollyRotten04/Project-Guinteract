@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import DeleteLater from './components/DeleteLater'
+import InitialRegistrationPage from './components/InitialRegistrationPage';
 
 function App() {
   const [help, setHelp] = useState("");
   
   return (
     <div className="App">
-      <DeleteLater></DeleteLater>
+      <InitialRegistrationPage></InitialRegistrationPage>
       {/* <h1>Hello World!</h1> */}
     </div>
   )

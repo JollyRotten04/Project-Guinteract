@@ -74,4 +74,26 @@ export default function InitialRegistrationPage(){
             </div>
         </div>
     );
+
+    // JAVASCRIPT SEGMENT
+    function getDeviceType() {
+        const ua = navigator.userAgent;
+        const body = document.querySelector('.InitialRegistrationPage');
+        if (/Mobile|Android|iP(ad|hone)/.test(ua)) {
+            body.classList.add('mobile');
+        } else if (/Tablet|iPad/.test(ua) || (screen.width >= 600 && screen.width < 1024)) {
+            body.classList.add('tablet');
+        } else {
+            body.classList.add('desktop');
+        }
+    }
+    
+    function applyLayout() {
+        const deviceType = getDeviceType();
+        document.body.setAttribute('data-device', deviceType);
+    }
+    
+    window.addEventListener('resize', applyLayout);
+    document.addEventListener('DOMContentLoaded', applyLayout);
+    
 }

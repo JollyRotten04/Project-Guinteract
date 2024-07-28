@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import InitialRegistrationPage from './components/InitialRegistrationPage';
+import InitialRegistrationPage from './components/InitialRegistrationPage'
 
 function App() {
   const [help, setHelp] = useState("");

@@ -1,5 +1,5 @@
 import React from "react";
-import InitialRegistrationPage from "./frontend/view/componentsa/InitialRegistrationPage.jsx";
+import InitialRegistrationPage from "./frontend/view/components/InitialRegistrationPage.jsx";
 
 function App() {
   return (

@@ -7,8 +7,8 @@ function App() {
   
   return (
     <div className="App">
+      {/* ENTRY POINT */}
       <InitialRegistrationPage></InitialRegistrationPage>
-      {/* <h1>Hello World!</h1> */}
     </div>
   )
 }

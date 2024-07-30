@@ -1,5 +1,12 @@
 /* LARGE VIEW 1024px ABOVE */
 @media (min-width: 1025px) {
+    .mainContents{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        /* background-color: antiquewhite; */
+    }
 
     .topRightLabel #label{
         color: white;
@@ -20,7 +27,6 @@
         display: flex;
         flex-direction: column;
         /* max-width: 60vw; */
-        gap: 5vh;
     }
 
     /* EMAIL FIELD */
@@ -46,6 +52,7 @@
         width: 100%;
         border-radius: 10px 10px;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 
     /* PASSWORD FIELD */
@@ -71,6 +78,117 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         font-weight: 400;
+        margin-bottom: 5vh;
+    }
+
+    /* CONFIRM PASSWORD FIELD */
+    .inputFields #confirmPassword{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputFields #confirmPassword p{
+        color: white;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+    }
+
+    .inputFields #confirmPassword #confirmPasswordInputField{
+        font-size: 30px;
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 10px 10px;
+        border: none;
+        width: 100%;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 1025px) and (orientation: portrait){
+
+
+    .mainContents{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        /* background-color: antiquewhite; */
+    }
+
+    .topRightLabel #label{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        white-space: nowrap;
+        /* word-spacing: 2px; */
+        /* text-align: center; */
+        /* padding-left: 40px; */
+        margin-left: 0;
+        margin-right: 40px;
+        margin-right: 0;
+        font-weight: 400;
+    }
+
+    .inputFields{
+        /* background-color: antiquewhite; */
+        display: flex;
+        flex-direction: column;
+        /* max-width: 60vw; */
+    }
+
+    /* EMAIL FIELD */
+    .inputFields #email{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputFields #email p{
+        color: white;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+    }
+
+    .inputFields #email #emailInputField{
+        font-size: clamp(2vh, 3vh, 3vh);
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+        width: 100%;
+        border-radius: 10px 10px;
+        font-weight: 400;
+        margin-bottom: 5vh;
+    }
+
+    /* PASSWORD FIELD */
+    .inputFields #password{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputFields #password p{
+        color: white;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+    }
+
+    .inputFields #password #passwordInputField{
+        font-size: 30px;
+        height: clamp(4vh, 6vh, 6vh);
+        border: none;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 10px 10px;
+        font-weight: 400;
+        margin-bottom: 5vh;
     }
 
     /* CONFIRM PASSWORD FIELD */
@@ -100,6 +218,14 @@
 }
 
 @media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    .mainContents{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        /* background-color: antiquewhite; */
+    }
+
     .rightInnerContainer .replaceableContent .topRightLabel #label{
         color: white;
         font-size: clamp(3vh, 4vh, 4vh);
@@ -117,7 +243,6 @@
         flex-wrap: wrap; /* Allows content to wrap if necessary */
         max-width: 1000px;
         min-width: 300px;
-        gap: 3vh;
     }
 
     /* EMAIL FIELD */
@@ -142,6 +267,7 @@
         border-radius: 10px 10px;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 
      /* PASSWORD FIELD */
@@ -165,6 +291,7 @@
         border-radius: 10px 10px;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 
     /* CONFIRM PASSWORD FIELD */
@@ -189,6 +316,7 @@
         border-radius: 10px 10px;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 }
 
@@ -211,7 +339,7 @@
         flex-direction: column;
         flex-wrap: wrap; /* Allows content to wrap if necessary */
         width: 80vw;
-        gap: 4vh;
+        /* gap: 4vh; */
     }
 
     /* EMAIL FIELD */
@@ -237,6 +365,7 @@
         border-radius: 10px 10px;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 
      /* PASSWORD FIELD */
@@ -261,6 +390,7 @@
         width: 100%;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 
     /* CONFIRM PASSWORD FIELD */
@@ -285,10 +415,18 @@
         width: 100%;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 }
 
 @media (max-width: 767px) and (orientation: portrait){
+    .mainContents{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .topRightLabel #label{
         color: white;
         font-size: clamp(1.5vh, 2.5vh, 2.5vh);
@@ -307,7 +445,7 @@
         flex-direction: column;
         flex-wrap: wrap; /* Allows content to wrap if necessary */
         width: 80vw;
-        gap: 4vh;
+        /* gap: 4vh; */
     }
 
     /* EMAIL FIELD */
@@ -333,6 +471,7 @@
         border-radius: 10px 10px;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 
      /* PASSWORD FIELD */
@@ -357,6 +496,7 @@
         width: 100%;
         border: none;
         font-weight: 400;
+        margin-bottom: 5vh;
     }
 
     /* CONFIRM PASSWORD FIELD */
@@ -381,6 +521,7 @@
         width: 100%;
         border: none;
         font-weight: 400;
+        /* margin-bottom: 5vh; */
     }
 }
 

@@ -4,7 +4,8 @@ import InitialRegistrationPage from "./frontend/view/componentsa/InitialRegistra
 function App() {
   return (
     <div className="App">
-      <InitialRegistrationPage />
+      {/* ENTRY POINT */}
+      <InitialRegistrationPage></InitialRegistrationPage>
     </div>
   );
 }

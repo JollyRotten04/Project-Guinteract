@@ -1,7 +1,7 @@
 import './RegistrationFieldsStyles.css'
 export default function RegistrationFields(){
     return(
-        <div>
+        <div className = "mainContents">
 
             {/* Top Right Label */}
             <div className="topRightLabel">

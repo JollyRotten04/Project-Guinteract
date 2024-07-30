@@ -346,7 +346,7 @@ body{
         display: flex;
         align-items: center ;
         margin: 0;
-        margin-top: 4vh;
+        margin-top: 3vh;
         height: 80px;
     }
 
@@ -382,7 +382,8 @@ body{
 
     .descriptionContainer #descriptionText{
         margin: 0;
-        margin-top: 3vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
     }
 
     .leftInnerContainer #topDivider{
@@ -428,7 +429,7 @@ body{
         display: flex;
         justify-content: center;
         /* align-items: center; */
-        margin-top: 6vh;
+        margin-top: 3vh;
         margin-left: auto;
         margin-right: auto;
         /* background-color: antiquewhite; */
@@ -625,8 +626,11 @@ body{
     .outerContainer{
         display: flex;
         align-items: center;
-        height: 100%;
+        height: 100vh;
         width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
         overflow-x: hidden;
         overflow-y: hidden;
     }
@@ -696,17 +700,15 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: auto;
-        margin-bottom: auto;
         width: 40vw;
-        height: 100%;
     }
 
     .rightInnerContainer{
         display: flex;
         flex-direction: column;
         /* align-items: center; */
-        height: 100%;
+        /* height: 100%; */
+        /* width: 100%; */
         padding: 20px;
     }
 

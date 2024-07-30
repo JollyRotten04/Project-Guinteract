@@ -1,0 +1,655 @@
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px){
+    .choiceContainer .choice .choiceOuterContainer{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .mainContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .promptTextContainer{
+        text-align:center;
+    }
+
+    .promptTextContainer #promptText{
+        color: white;
+        text-align: center;
+        font-size: clamp(3vh, 4vh, 4vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 6vh;
+    }
+
+    .choiceContainer #individualAccountChoice{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40vh;
+        width: 30vh;
+        border: 3px solid white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+
+    .choiceContainer #individualAccountChoice:hover{
+        transform: scale(1.05, 1.05);
+        background-color: #393939;
+    }
+
+    .choiceContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5vh;
+    }
+
+    .choiceContainer #individualAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3.75vh, 3.75vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer #descriptionText{
+        color: #A0A0A0;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 90%;
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .choiceContainer #pageAccountChoice{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40vh;
+        width: 30vh;
+        border: 3px solid white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+
+    .choiceContainer #individualAccountChoice:hover{
+        transform: scale(1.05, 1.05);
+        background-color: #393939;
+        cursor: pointer;
+    }
+
+    /* WHEN EITHER CHOICES ARE SELECTED */
+
+    .choiceContainer #individualAccountChoice.active{
+        border: 3px solid #e7641e;
+    }
+
+    .choiceContainer #pageAccountChoice.active{
+        border: 3px solid #e7641e;
+    }
+
+    /*  */
+
+    .choiceContainer #pageAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3.75vh, 3.75vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer #descriptionText{
+        color: #A0A0A0;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 90%;
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .choiceContainer #pageAccountChoice:hover{
+        transform: scale(1.05, 1.05);
+        background-color: #393939;
+        cursor: pointer;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND LANDSCAPE ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    .choiceContainer .choice .choiceOuterContainer{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .mainContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .promptTextContainer{
+        text-align:center;
+    }
+
+    .promptTextContainer #promptText{
+        color: white;
+        text-align: center;
+        font-size: clamp(5vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 6vh;
+    }
+
+    .choiceContainer #individualAccountChoice{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50vh;
+        width: 40vh;
+        border: 3px solid white;
+        /* font-size: clamp(2vh, 3vh, 3vh); */
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+
+    .choiceContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5vh;
+    }
+
+    .choiceContainer #individualAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(5vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+        margin: 20px;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer #descriptionText{
+        color: #A0A0A0;
+        font-size: clamp(2vh, 3vh, 3vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 90%;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .choiceContainer #pageAccountChoice{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50vh;
+        width: 40vh;
+        border: 3px solid white;
+        /* font-size: clamp(2vh, 3vh, 3vh); */
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+    /* WHEN EITHER CHOICES ARE SELECTED */
+
+    .choiceContainer #individualAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    .choiceContainer #pageAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    /*  */
+
+    .choiceContainer #pageAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(5vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        margin: 20px;
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer #descriptionText{
+        color: #A0A0A0;
+        font-size: clamp(2vh, 3vh, 3vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 90%;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND PORTRAIT ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+    .choiceContainer .choice .choiceOuterContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vh;
+        width: 100%;
+    }
+
+    .mainContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .promptTextContainer{
+        text-align:center;
+    }
+
+    .promptTextContainer #promptText{
+        color: white;
+        text-align: center;
+        font-size: clamp(3vh, 4vh, 4vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-bottom: 4vh;
+    }
+
+    .choiceContainer #individualAccountChoice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        width: 100%;
+        border: 3px solid white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+
+    .choiceContainer{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5vh;
+    }
+
+    .choiceContainer #individualAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3.75vh, 3.75vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        /* padding: auto; */
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer #descriptionText{
+        color: #A0A0A0;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 60%;
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+    }
+
+    .choiceContainer #pageAccountChoice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        width: 100%;
+        border: 3px solid white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+    /* WHEN EITHER CHOICES ARE SELECTED */
+
+    .choiceContainer #individualAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    .choiceContainer #pageAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    /*  */
+
+    .choiceContainer #pageAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3.75vh, 3.75vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer #descriptionText{
+        display: flex;
+        justify-content: center;
+        color: #A0A0A0;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        /* width: 70%; */
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer{
+        align-items: center;
+        height: 100%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait){
+    .choiceContainer .choice .choiceOuterContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vh;
+        width: 100%;
+    }
+
+    .mainContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .promptTextContainer{
+        text-align:center;
+    }
+
+    .promptTextContainer #promptText{
+        color: white;
+        text-align: center;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-bottom: 4vh;
+    }
+
+    .choiceContainer #individualAccountChoice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 16vh;
+        width: 100%;
+        border: 3px solid white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+
+    .choiceContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5vh;
+    }
+
+    .choiceContainer #individualAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        /* padding: auto; */
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer #descriptionText{
+        color: #A0A0A0;
+        font-size: clamp(1vh, 2vh, 2vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        /* width: 60%; */
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+    }
+
+    .choiceContainer #pageAccountChoice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 16vh;
+        width: 100%;
+        border: 3px solid white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+    /* WHEN EITHER CHOICES ARE SELECTED */
+
+    .choiceContainer #individualAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    .choiceContainer #pageAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    /*  */
+
+    .choiceContainer #pageAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(1.8vh, 2.3vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer #descriptionText{
+        display: flex;
+        justify-content: center;
+        color: #A0A0A0;
+        font-size: clamp(1vh, 2vh, 2vh);
+        /* word-spacing: 2px; */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer{
+        align-items: center;
+        height: 100%;
+        width: 60%;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 767px) and (orientation: landscape) {
+    .choiceContainer .choice .choiceOuterContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vh;
+        height: 100%;
+        width: 100%;
+    }
+
+    .mainContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .promptTextContainer{
+        text-align:center;
+    }
+
+    .promptTextContainer #promptText{
+        color: white;
+        text-align: center;
+        font-size: clamp(4vh, 5vh, 5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-bottom: 4vh;
+    }
+
+    .choiceContainer #individualAccountChoice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        width: 100%;
+        border: 3px solid white;
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+
+    .choiceContainer{
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        gap: 5vh;
+    }
+
+    .choiceContainer #individualAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(7vh, 8vh, 8vh);
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        /* padding: auto; */
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer #descriptionText{
+        color: #A0A0A0;
+        font-size: clamp(3vh, 4vh, 4vh);
+        word-spacing: 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        /* width: 60%; */
+        font-weight: 600;
+    }
+
+    .choiceContainer #individualAccountChoice #descriptionTextContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        /* width: 80%; */
+    }
+
+    .choiceContainer #pageAccountChoice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        width: 100%;
+        border: 3px solid white;
+        box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
+        border-radius: 1vh 1vh;
+    }
+    /* WHEN EITHER CHOICES ARE SELECTED */
+
+    .choiceContainer #individualAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    .choiceContainer #pageAccountChoice.active{
+        transform: scale(1.05, 1.05);
+        border: 3px solid #e7641e;
+    }
+
+    /*  */
+
+    .choiceContainer #pageAccountChoice .mainLabelContainer #mainLabel{
+        color: white;
+        font-size: clamp(6vh, 8vh, 8vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer #descriptionText{
+        display: flex;
+        justify-content: center;
+        color: #A0A0A0;
+        font-size: clamp(3vh, 4vh, 4vh);
+        /* word-spacing: 2px; */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .choiceContainer #pageAccountChoice #descriptionTextContainer{
+        align-items: center;
+        height: 100%;
+        /* width: 60%; */
+    } 
+}

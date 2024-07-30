@@ -1,5 +1,7 @@
-import './InitialRegistrationPageStyle.css'
-import RegistrationFields from './Replaceable_Content/RegistrationFields';
+import './InitialRegistrationPageStyle.css'; // Initial Registration Page...
+import RegistrationFields from './Replaceable_Content/RegistrationFields'; //Registration Fields Page...
+import ChooseAccountType from './Choose_Account_Type/ChooseAccountType'; //Choose Account Type Page...
+import TypesOfPageAccounts from './Page_Account_Selected/TypesOfPageAccounts'; //Types of Page Accounts Page...
 import LogoComponent from './Logo_Component/LogoComponent';
 export default function InitialRegistrationPage(){
     return(
@@ -35,7 +37,9 @@ export default function InitialRegistrationPage(){
 
                     {/* Replaceable content container */}
                     <div className="replaceableContent">
-                        <RegistrationFields></RegistrationFields>
+                        <TypesOfPageAccounts></TypesOfPageAccounts>
+                        {/* <ChooseAccountType></ChooseAccountType> */}
+                        {/* <RegistrationFields></RegistrationFields> */}
                     </div>
 
                     <div className="goButtonContainer">
@@ -51,24 +55,27 @@ export default function InitialRegistrationPage(){
     );
 
     // JAVASCRIPT SEGMENT
-    function getDeviceType() {
-        const ua = navigator.userAgent;
-        const body = document.querySelector('.InitialRegistrationPage');
-        if (/Mobile|Android|iP(ad|hone)/.test(ua)) {
-            body.classList.add('mobile');
-        } else if (/Tablet|iPad/.test(ua) || (screen.width >= 600 && screen.width < 1024)) {
-            body.classList.add('tablet');
-        } else {
-            body.classList.add('desktop');
-        }
-    }
+        //
+    // POTENTIALLY KAILANGAN SA PAG-REDESIGN NG RESIZED BROWSER WINDOW DYNAMICALLY KAYA INIWAN KO LANG AS COMMENT
+        //
+    // function getDeviceType() {
+    //     const ua = navigator.userAgent;
+    //     const body = document.querySelector('.InitialRegistrationPage');
+    //     if (/Mobile|Android|iP(ad|hone)/.test(ua)) {
+    //         body.classList.add('mobile');
+    //     } else if (/Tablet|iPad/.test(ua) || (screen.width >= 600 && screen.width < 1024)) {
+    //         body.classList.add('tablet');
+    //     } else {
+    //         body.classList.add('desktop');
+    //     }
+    // }
     
-    function applyLayout() {
-        const deviceType = getDeviceType();
-        document.body.setAttribute('data-device', deviceType);
-    }
+    // function applyLayout() {
+    //     const deviceType = getDeviceType();
+    //     document.body.setAttribute('data-device', deviceType);
+    // }
     
-    window.addEventListener('resize', applyLayout);
-    document.addEventListener('DOMContentLoaded', applyLayout);
+    // window.addEventListener('resize', applyLayout);
+    // document.addEventListener('DOMContentLoaded', applyLayout);
     
 }

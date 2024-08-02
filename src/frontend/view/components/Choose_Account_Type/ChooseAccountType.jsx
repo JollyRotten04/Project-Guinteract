@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './ChooseAccountTypeStyles.css'
 
 
-export default function ChooseAccountType(){
+export default function ChooseAccountType({ setSelected }){
 
+    //For activation of CSS...
     const [selectedOption, setSelectedOption] = useState(null);
+    const individualAccountChoiceRef = useRef(null);
+    const pageAccountChoiceRef = useRef(null);
 
     // Event handler for choice selection
     const choiceSelect = (event) => {
         // Get the ID of the clicked element
-        const id = event.target.closest('.choice').id;
-        const individualAccountChoice = document.getElementById('individualAccountChoice');
-        const pageAccountChoice = document.getElementById('pageAccountChoice');
-
+        let id = event.target.closest('.choice').id;
+        
         // Update the selected option in the state
         setSelectedOption(id);
+
+        // console.log(individualAccountChoiceRef);
+        // console.log(pageAccountChoiceRef);
+        console.log(id);
 
         if(id == 'individualAccountChoice'){
             if(individualAccountChoice.classList.contains('active')){
@@ -27,7 +32,7 @@ export default function ChooseAccountType(){
             }
         } 
 
-        else{
+        else if(id == 'pageAccountChoice'){
             
             if(pageAccountChoice.classList.contains('active')){
                 pageAccountChoice.classList.remove('active');
@@ -38,6 +43,14 @@ export default function ChooseAccountType(){
             individualAccountChoice.classList.remove('active');
             }
         }
+
+        //Disables the go button if user deselects both choices...
+        if(!individualAccountChoice.classList.contains('active') && !pageAccountChoice.classList.contains('active')){
+            id = false;
+        }
+
+        //To return the choice to the parent component...
+        setSelected(id);
     };
 
     return (
@@ -52,7 +65,7 @@ export default function ChooseAccountType(){
             <div className="choiceContainer">
 
                 {/* Individual Account Choice */}
-                <div className = "choice" id="individualAccountChoice" onClick = {choiceSelect}>
+                <div className = "choice" id="individualAccountChoice" ref = {individualAccountChoiceRef} onClick = {choiceSelect}>
                     <div className="choiceOuterContainer">
 
                         {/* Individual Account Choice Main Label */}
@@ -68,7 +81,7 @@ export default function ChooseAccountType(){
                 </div>
 
                 {/* Page Account Choice */}
-                <div className = "choice" id="pageAccountChoice"  onClick = {choiceSelect}>
+                <div className = "choice" id="pageAccountChoice" ref={pageAccountChoiceRef} onClick = {choiceSelect}>
                     <div className="choiceOuterContainer">
                         {/* Page Account Choice Main Label */}
                         <div className="mainLabelContainer">

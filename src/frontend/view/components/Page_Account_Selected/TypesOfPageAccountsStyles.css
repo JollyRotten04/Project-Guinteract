@@ -453,6 +453,7 @@
         text-align: center;
         /* padding: auto; */
         font-weight: 600;
+        /* margin-top: 2vh; */
     }
 
     .choiceContainer #bandAccountChoice #descriptionTextContainer #descriptionText{
@@ -504,6 +505,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
         font-weight: 600;
+        /* margin-top: 2vh; */
     }
 
     .choiceContainer #merchantAccountChoice #descriptionTextContainer #descriptionText{

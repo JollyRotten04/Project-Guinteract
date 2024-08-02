@@ -311,7 +311,7 @@
 
     .inputFields #confirmPassword #confirmPasswordInputField{
         height: clamp(5vh, 6vh, 6vh);
-        width: auto;
+        width: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         border: none;

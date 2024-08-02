@@ -186,17 +186,52 @@ body{
         margin-left: auto;
         margin-right: auto;
         /* background-color: antiquewhite; */
+        gap: 5vh;
         padding: 0;
     }
 
+    .rightInnerContainer .goButtonContainer #backButton{
+        pointer-events: all;
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        height: 100%;
+        width: 150px;
+        font-size: 30px;
+        border: none;
+        border-radius: 10px 10px;
+        height: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+
     .rightInnerContainer .goButtonContainer #goButton{
+        pointer-events: none;
+        height: 100%;
+        width: 150px;
+        font-size: 30px;
+        background-color: #a34e21;
+        border: none;
+        border-radius: 10px 10px;
+        color: rgb(180, 180, 180);
+        height: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .rightInnerContainer .goButtonContainer #goButton.active{
+        pointer-events: all;
+        cursor: pointer;
         height: 100%;
         width: 150px;
         font-size: 30px;
         background-color: #e7641e;
+        color: white;
         border: none;
         border-radius: 10px 10px;
-        color: white;
         height: 50px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
@@ -330,6 +365,40 @@ body{
         margin-right: auto;
         /* background-color: antiquewhite; */
         padding: 0;
+        gap: 5vh;
+    }
+
+    .rightInnerContainer .goButtonContainer #backButton{
+        position: relative;
+        height: 100%;
+        width: clamp(10vh, 16vh, 16vh);
+        font-size: clamp(3vh, 4vh, 4vh);
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .rightInnerContainer .goButtonContainer #goButton.active{
+        pointer-events: all;
+        position: relative;
+        height: 100%;
+        width: clamp(10vh, 16vh, 16vh);
+        font-size: clamp(3vh, 4vh, 4vh);
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .rightInnerContainer .goButtonContainer #goButton{
@@ -337,13 +406,15 @@ body{
         height: 100%;
         width: clamp(10vh, 16vh, 16vh);
         font-size: clamp(3vh, 4vh, 4vh);
-        background-color: #e7641e;
+        pointer-events: none;
+        background-color: #a34e21;
+        color: rgb(180, 180, 180);
         border: none;
         border-radius: 10px 10px;
-        color: white;
         height: clamp(4vh, 6vh, 6vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .outerContainer #forgotPassword{
@@ -507,19 +578,54 @@ body{
         margin-right: auto;
         /* background-color: antiquewhite; */
         padding: 0;
+        gap: 5vh;
+    }
+
+    .rightInnerContainer .goButtonContainer #backButton{
+        height: 100%;
+        width: clamp(10vh, 25vh, 25vh);
+        font-size: clamp(4vh, 5vh, 5vh);
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(6vh, 10vh, 10vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .rightInnerContainer .goButtonContainer #goButton.active{
+        pointer-events: all;
+        height: 100%;
+        width: clamp(10vh, 25vh, 25vh);
+        font-size: clamp(4vh, 5vh, 5vh);
+        cursor: pointer;
+        background-color: #e7641e;
+        pointer-events: none;
+        color: white;
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(6vh, 10vh, 10vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .rightInnerContainer .goButtonContainer #goButton{
         height: 100%;
         width: clamp(10vh, 25vh, 25vh);
         font-size: clamp(4vh, 5vh, 5vh);
-        background-color: #e7641e;
+        background-color: #a34e21;
+        color: rgb(180, 180, 180);
+        pointer-events: none;
         border: none;
         border-radius: 10px 10px;
-        color: white;
         height: clamp(6vh, 10vh, 10vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 }
 
@@ -641,8 +747,6 @@ body{
         flex-direction: column;
     }
 
-    
-
      /* GO BUTTON */
      .rightInnerContainer .goButtonContainer{
         display: flex;
@@ -653,6 +757,40 @@ body{
         margin-right: auto;
         /* background-color: antiquewhite; */
         padding: 0;
+        gap: 5vh;
+    }
+
+    .rightInnerContainer .goButtonContainer #backButton{
+        position: relative;
+        height: 100%;
+        width: clamp(10vh, 16vh, 16vh);
+        font-size: clamp(3vh, 4vh, 4vh);
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .rightInnerContainer .goButtonContainer #goButton.active{
+        pointer-events: all;
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        position: relative;
+        height: 100%;
+        width: clamp(10vh, 16vh, 16vh);
+        font-size: clamp(3vh, 4vh, 4vh);
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .rightInnerContainer .goButtonContainer #goButton{
@@ -660,13 +798,15 @@ body{
         height: 100%;
         width: clamp(10vh, 16vh, 16vh);
         font-size: clamp(3vh, 4vh, 4vh);
-        background-color: #e7641e;
+        background-color: #a34e21;
+        color: rgb(180, 180, 180);
+        pointer-events: none;
         border: none;
         border-radius: 10px 10px;
-        color: white;
         height: clamp(4vh, 6vh, 6vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .outerContainer #forgotPassword{
@@ -825,6 +965,40 @@ body{
         margin-right: auto;
         /* background-color: antiquewhite; */
         padding: 0;
+        gap: 5vh;
+    }
+
+    .rightInnerContainer .goButtonContainer #backButton{
+        position: relative;
+        height: 100%;
+        width: clamp(10vh, 16vh, 16vh);
+        font-size: clamp(3vh, 4vh, 4vh);
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .rightInnerContainer .goButtonContainer #goButton.active{
+        pointer-events: all;
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        position: relative;
+        height: 100%;
+        width: clamp(10vh, 16vh, 16vh);
+        font-size: clamp(3vh, 4vh, 4vh);
+        border: none;
+        border-radius: 10px 10px;
+        height: clamp(4vh, 6vh, 6vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .rightInnerContainer .goButtonContainer #goButton{
@@ -832,13 +1006,15 @@ body{
         height: 100%;
         width: clamp(10vh, 16vh, 16vh);
         font-size: clamp(3vh, 4vh, 4vh);
-        background-color: #e7641e;
+        background-color: #a34e21;
+        pointer-events: none;
+        color: rgb(180, 180, 180);
         border: none;
         border-radius: 10px 10px;
-        color: white;
         height: clamp(4vh, 6vh, 6vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .rightInnerContainer .logInPortrait{
@@ -989,20 +1165,56 @@ body{
         margin-right: auto;
         /* background-color: antiquewhite; */
         padding: 0;
+        margin: 0;
+        gap: 5vh;
     }
 
-    .rightInnerContainer .goButtonContainer #goButton{
+    .rightInnerContainer .goButtonContainer #backButton{
         position: relative;
         height: 100%;
         width: clamp(15vh, 22vh, 22vh);
         font-size: clamp(4vh, 6vh, 6vh);
-        background-color: #e7641e;
+        background-color: #a34e21;
+        color: rgb(180, 180, 180);
         border: none;
         border-radius: 1vh 1vh;
-        color: white;
         height: clamp(7vh, 10vh, 10vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .rightInnerContainer .goButtonContainer #goButton.active{
+        pointer-events: all;
+        cursor: pointer;
+        background-color: #e7641e;
+        color: white;
+        position: relative;
+        height: 100%;
+        width: clamp(15vh, 22vh, 22vh);
+        font-size: clamp(4vh, 6vh, 6vh);
+        border: none;
+        border-radius: 1vh 1vh;
+        height: clamp(7vh, 10vh, 10vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .rightInnerContainer .goButtonContainer #goButton{
+        pointer-events: none;
+        position: relative;
+        height: 100%;
+        width: clamp(15vh, 22vh, 22vh);
+        font-size: clamp(4vh, 6vh, 6vh);
+        background-color: #a34e21;
+        color: rgb(180, 180, 180);
+        border: none;
+        border-radius: 1vh 1vh;
+        height: clamp(7vh, 10vh, 10vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
 
     .rightInnerContainer .logInPortrait{

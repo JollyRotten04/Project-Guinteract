@@ -1,4 +1,4 @@
-import logoImage from '../../../assets/1.png';
+import logoImage from '../../assets/1.png';
 export default function LogoComponent(){
     return(
         <div className = "logo">

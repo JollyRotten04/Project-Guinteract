@@ -1,12 +1,12 @@
 import './TypesOfPageAccountsStyles.css';
 import React, { useState } from 'react';
-export default function TypesOfPageAccounts(){
+export default function TypesOfPageAccounts({ selectedPageType }){
     const [selectedOption, setSelectedOption] = useState(null);
 
     // Event handler for choice selection
     const choiceSelect = (event) => {
         // Get the ID of the clicked element
-        const id = event.target.closest('.choice').id;
+        let id = event.target.closest('.choice').id;
         const bandAccountChoice = document.getElementById('bandAccountChoice');
         const merchantAccountChoice = document.getElementById('merchantAccountChoice');
 
@@ -24,7 +24,7 @@ export default function TypesOfPageAccounts(){
             }
         } 
 
-        else{
+        else if(id == 'merchantAccountChoice'){
             
             if(merchantAccountChoice.classList.contains('active')){
                 merchantAccountChoice.classList.remove('active');
@@ -35,6 +35,14 @@ export default function TypesOfPageAccounts(){
             bandAccountChoice.classList.remove('active');
             }
         }
+
+        //Disables the go button if user deselects both choices...
+        if(!bandAccountChoice.classList.contains('active') && !merchantAccountChoice.classList.contains('active')){
+            id = null;
+        }
+
+        //To return the choice to the parent component...
+        selectedPageType(id);
     };
 
     return (

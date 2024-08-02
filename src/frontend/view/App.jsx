@@ -1,14 +1,13 @@
-import { useState } from 'react'
 import './App.css'
-import InitialRegistrationPage from './components/InitialRegistrationPage'
+import InitialRegistrationPage from './src/Initial_Registration_Page/InitialRegistrationPage';
+import LoadingScreen from './components/Loading_Screen/LoadingScreen';
 
 function App() {
-  const [help, setHelp] = useState("");
-  
   return (
     <div className="App">
       {/* ENTRY POINT */}
       <InitialRegistrationPage></InitialRegistrationPage>
+      {/* <LoadingScreen></LoadingScreen> */}
     </div>
   )
 }

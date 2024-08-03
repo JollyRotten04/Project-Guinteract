@@ -11,6 +11,9 @@ const router = createBrowserRouter([
     element: <InitialRegistrationPage />,
     children: []
   }
+  /*
+    if you want to add another page, add it in the children if the page is a part of the the some parent page, else add another entry
+  */
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

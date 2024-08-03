@@ -7,27 +7,25 @@ export default function LoadingScreen(){
         <div className="loadingScreen">
 
             {/* Main Container for all elements */}
-            <div className="mainContainer">
+            <div className="loadingMainContainer">
 
 
                 {/* Logo Container */}
-                <div className="logoContainer">
+                <div className="loadingLogoContainer">
                     <LogoComponent></LogoComponent>
                 </div>
 
-                <div id="mainLabel">
-                    Meet and connect with fellow guitarists...
+                <div id="loadingMainLabel">
+                    Meet and connect with fellow guitarists
                 </div>
 
-                <div id="reassuranceText">
-                    Setting things up, this may take a while...
+                <div id="loadingReassuranceText">
+                    Setting things up, this may take a bit of time...
                 </div>
 
                 <div className="loadingIcon">
                     <LoadingIcon></LoadingIcon>
                 </div>
-
-                
             </div>
         </div>
     );

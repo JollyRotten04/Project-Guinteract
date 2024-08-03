@@ -3,12 +3,12 @@ import RegistrationFields from '../../components/Replaceable_Content/Registratio
 import ChooseAccountType from '../../components/Choose_Account_Type/ChooseAccountType'; //Choose Account Type Page...
 import TypesOfPageAccounts from '../../components/Page_Account_Selected/TypesOfPageAccounts'; //Types of Page Accounts Page...
 import LogoComponent from '../../components/Logo_Component/LogoComponent';
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function InitialRegistrationPage(){    
 
     //Functionality to change between login and register account options...
-    const [selected, changeOption] = useState(null);
+    //const [selected, changeOption] = useState(null);
     const [loginPage, setIsLoginPage] = useState(false);
     const confirmPasswordFieldRef = useRef(null); // Create a ref for the password field
     const passwordFieldRef = useRef(null); // Create a ref for the password field
@@ -103,7 +103,7 @@ export default function InitialRegistrationPage(){
               passwordFieldRef.current = ref.passwordField.current;
             }
           }} onFieldsStatusChange={handleChildValue} />, 
-        ChooseAccountType: <ChooseAccountType setSelected = {selectedAccountType}/>, 
+        ChooseAccountType: <ChooseAccountType setSelected={selectedAccountType}/>, 
         TypesOfPageAccounts: <TypesOfPageAccounts selectedPageType = {selectedPageAccount}/>
       };
 

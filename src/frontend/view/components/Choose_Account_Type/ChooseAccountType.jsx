@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import './ChooseAccountTypeStyles.css'
 
 
@@ -22,30 +22,30 @@ export default function ChooseAccountType({ setSelected }){
         console.log(id);
 
         if(id == 'individualAccountChoice'){
-            if(individualAccountChoice.classList.contains('active')){
-                individualAccountChoice.classList.remove('active');
+            if(individualAccountChoiceRef.classList.contains('active')){
+                individualAccountChoiceRef.classList.remove('active');
             }
 
             else{
-                individualAccountChoice.classList.add('active');
-                pageAccountChoice.classList.remove('active');
+                individualAccountChoiceRef.classList.add('active');
+                individualAccountChoiceRef.classList.remove('active');
             }
         } 
 
         else if(id == 'pageAccountChoice'){
             
-            if(pageAccountChoice.classList.contains('active')){
-                pageAccountChoice.classList.remove('active');
+            if(pageAccountChoiceRef.classList.contains('active')){
+                pageAccountChoiceRef.classList.remove('active');
             }
 
             else{
-            pageAccountChoice.classList.add('active');
-            individualAccountChoice.classList.remove('active');
+                pageAccountChoiceRef.classList.add('active');
+                pageAccountChoiceRef.classList.remove('active');
             }
         }
 
         //Disables the go button if user deselects both choices...
-        if(!individualAccountChoice.classList.contains('active') && !pageAccountChoice.classList.contains('active')){
+        if(!individualAccountChoiceRef.classList.contains('active') && !pageAccountChoiceRef.classList.contains('active')){
             id = false;
         }
 

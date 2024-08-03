@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from './App.jsx';
 import './index.css';
 import InitialRegistrationPage from "./src/Initial_Registration_Page/InitialRegistrationPage.jsx";
 
@@ -9,13 +8,8 @@ import InitialRegistrationPage from "./src/Initial_Registration_Page/InitialRegi
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
-    children: [
-      {
-        path: 'initial_registration',
-        element: <InitialRegistrationPage />
-      }
-    ]
+    element: <InitialRegistrationPage />,
+    children: []
   }
 ]);
 

@@ -1,6 +1,6 @@
-import LogoComponent from "../Logo_Component/LogoComponent";
+import LogoComponent from "../../components/Logo_Component/LogoComponent";
 import './LoadingScreenStyles.css';
-import LoadingIcon from '../Loading_Icon/LoadingIcon';
+import LoadingIcon from '../../components/Loading_Icon/LoadingIcon';
 
 export default function LoadingScreen(){
     return(

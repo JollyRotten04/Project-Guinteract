@@ -181,8 +181,8 @@
     }
 
     .inputFields #password #passwordInputField{
-        font-size: 30px;
         height: clamp(4vh, 6vh, 6vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         border: none;
         width: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -207,8 +207,8 @@
     }
 
     .inputFields #confirmPassword #confirmPasswordInputField{
-        font-size: 30px;
         height: clamp(4vh, 6vh, 6vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         border: none;
@@ -232,7 +232,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         /* text-align: center; */
         margin-top: 1.5vh;
-        margin-bottom: 5vh;
+        margin-bottom: 2vh;
         font-weight: 400;
     }
 
@@ -267,7 +267,7 @@
         border-radius: 10px 10px;
         border: none;
         font-weight: 400;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 
      /* PASSWORD FIELD */
@@ -287,11 +287,12 @@
 
     .inputFields #password #passwordInputField{
         height: clamp(5vh, 6vh, 6vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         border: none;
         font-weight: 400;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 
     /* CONFIRM PASSWORD FIELD */
@@ -311,6 +312,7 @@
 
     .inputFields #confirmPassword #confirmPasswordInputField{
         height: clamp(5vh, 6vh, 6vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         width: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
@@ -385,6 +387,7 @@
 
     .inputFields #password #passwordInputField{
         height: clamp(5vh, 6vh, 6vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         width: 100%;
@@ -410,6 +413,7 @@
 
     .inputFields #confirmPassword #confirmPasswordInputField{
         height: clamp(5vh, 6vh, 6vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         width: 100%;
@@ -491,6 +495,7 @@
 
     .inputFields #password #passwordInputField{
         height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         width: 100%;
@@ -516,12 +521,13 @@
 
     .inputFields #confirmPassword #confirmPasswordInputField{
         height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px 10px;
         width: 100%;
         border: none;
         font-weight: 400;
-        /* margin-bottom: 5vh; */
+        margin-bottom: 2vh;
     }
 }
 
@@ -536,17 +542,13 @@
         font-weight: 400;
     }
 
-    .topRightLabel{
-        margin-bottom: 4vh;
-    }
-
     .inputFields{
         /* background-color: antiquewhite; */
         display: flex;
         flex-direction: column;
         flex-wrap: wrap; /* Allows content to wrap if necessary */
         /* width: clamp(35vh, 45vh, 45vh); */
-        gap: 4vh;
+        gap: 2vh;
     }
 
     /* EMAIL FIELD */
@@ -559,7 +561,7 @@
         color: white;
         margin: 0;
         margin-bottom: 10px;
-        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 400;
     }
@@ -584,12 +586,13 @@
         color: white;
         margin: 0;
         margin-bottom: 10px;
-        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 400;
     }
 
     .inputFields #password #passwordInputField{
+        font-size: clamp(3.5vh, 5.5vh, 5.5vh);
         height: clamp(6vh, 8vh, 8vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 1vh 1vh;
@@ -608,12 +611,13 @@
         color: white;
         margin: 0;
         margin-bottom: 10px;
-        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 400;
     }
 
     .inputFields #confirmPassword #confirmPasswordInputField{
+        font-size: clamp(3.5vh, 5.5vh, 5.5vh);
         height: clamp(6vh, 8vh, 8vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 1vh 1vh;

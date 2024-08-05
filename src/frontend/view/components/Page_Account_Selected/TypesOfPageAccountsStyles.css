@@ -172,7 +172,7 @@
         flex-direction: column;
         align-items: center;
         height: 50vh;
-        width: 100%;
+        width: 90%;
         border: 3px solid white;
         /* font-size: clamp(2vh, 3vh, 3vh); */
         box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
@@ -272,7 +272,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5vh;
+        padding: 2vh;
         width: 100%;
     }
 
@@ -328,11 +328,11 @@
 
     .choiceContainer #bandAccountChoice #descriptionTextContainer #descriptionText{
         color: #A0A0A0;
-        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-size: clamp(1.8vh, 2vh, 2vh);
         word-spacing: 2px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        width: 60%;
+        width: 90%;
         font-weight: 600;
     }
 
@@ -381,11 +381,11 @@
         display: flex;
         justify-content: center;
         color: #A0A0A0;
-        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-size: clamp(1.8vh, 2vh, 2vh);
         word-spacing: 2px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        /* width: 70%; */
+        width: 100%;
         font-weight: 600;
     }
 
@@ -430,8 +430,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 16vh;
-        /* width: 100%; */
+        height: 20vh;
+        width: 100%;
         border: 3px solid white;
         font-size: clamp(2vh, 3vh, 3vh);
         box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
@@ -448,7 +448,7 @@
 
     .choiceContainer #bandAccountChoice .mainLabelContainer #mainLabel{
         color: white;
-        font-size: clamp(2vh, 3vh, 3vh);
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
         /* padding: auto; */
@@ -462,7 +462,7 @@
         word-spacing: 2px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        /* width: 60%; */
+        width: 80%;
         font-weight: 600;
     }
 
@@ -478,10 +478,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 16vh;
-        /* width: 100%; */
+        height: 20vh;
+        width: 100%;
         border: 3px solid white;
-        font-size: clamp(2vh, 3vh, 3vh);
         box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
         border-radius: 1vh 1vh;
     }
@@ -501,7 +500,7 @@
 
     .choiceContainer #merchantAccountChoice .mainLabelContainer #mainLabel{
         color: white;
-        font-size: clamp(1vh, 2vh, 2vh);
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
         font-weight: 600;
@@ -512,7 +511,7 @@
         display: flex;
         justify-content: center;
         color: #A0A0A0;
-        font-size: clamp(1vh, 2vh, 2vh);
+        font-size: clamp(0.8vh, 1.6vh, 1.6vh);
         /* word-spacing: 2px; */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
@@ -562,8 +561,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 60vh;
+        height: 45vh;
         width: 100%;
+        margin-bottom: 4vh;
         border: 3px solid white;
         box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
         border-radius: 1vh 1vh;
@@ -589,7 +589,7 @@
 
     .choiceContainer #bandAccountChoice #descriptionTextContainer #descriptionText{
         color: #A0A0A0;
-        font-size: clamp(3vh, 4vh, 4vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         word-spacing: 2px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
@@ -609,8 +609,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 60vh;
+        height: 45vh;
         width: 100%;
+        margin-bottom: 4vh;
         border: 3px solid white;
         box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
         border-radius: 1vh 1vh;
@@ -642,7 +643,7 @@
         display: flex;
         justify-content: center;
         color: #A0A0A0;
-        font-size: clamp(3vh, 4vh, 4vh);
+        font-size: clamp(2vh, 3vh, 3vh);
         /* word-spacing: 2px; */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;

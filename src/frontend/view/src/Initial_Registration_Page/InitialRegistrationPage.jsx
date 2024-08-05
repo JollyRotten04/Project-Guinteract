@@ -1,203 +1,250 @@
-import './InitialRegistrationPageStyle.css'; // Initial Registration Page...
-import RegistrationFields from '../../components/Replaceable_Content/RegistrationFields'; //Registration Fields Page...
-import ChooseAccountType from '../../components/Choose_Account_Type/ChooseAccountType'; //Choose Account Type Page...
-import TypesOfPageAccounts from '../../components/Page_Account_Selected/TypesOfPageAccounts'; //Types of Page Accounts Page...
+import './InitialRegistrationPageStyle.css';
+import RegistrationFields from '../../components/Replaceable_Content/RegistrationFields';
+import ChooseAccountType from '../../components/Choose_Account_Type/ChooseAccountType';
+import TypesOfPageAccounts from '../../components/Page_Account_Selected/TypesOfPageAccounts';
 import LogoComponent from '../../components/Logo_Component/LogoComponent';
+import ForgotPasswordEmail from '../../components/Forgot_Password_Email/ForgotPasswordEmail';
+import ForgotPasswordVerification from '../../components/Forgot_Password_Verification/ForgotPasswordVerification';
+import ForgotPasswordReset from '../../components/Forgot_Password_Reset/ForgotPasswordReset';
+import LoadingScreen from '../../components/Loading_Screen/LoadingScreen';
 import { useState, useRef, useEffect } from 'react';
 
-export default function InitialRegistrationPage(){    
-
-    //Functionality to change between login and register account options...
-    //const [selected, changeOption] = useState(null);
+export default function InitialRegistrationPage() {
     const [loginPage, setIsLoginPage] = useState(false);
-    const confirmPasswordFieldRef = useRef(null); // Create a ref for the password field
-    const passwordFieldRef = useRef(null); // Create a ref for the password field
-    const goButtonRef = useRef(null); // Create a ref for the GO button
-    const forgotPasswordLabel = useRef(null);
-    const views = ['RegistrationFields', 'ChooseAccountType', 'TypesOfPageAccounts'];
-    let [view, setView] = useState('RegistrationFields'); // Initial view
-    const [showBackButton, setShowBackButton] = useState(false); // State to manage back button visibility
-    const [allFilled, setAllFilled] = useState(false); //Receives the boolean value of the variable allFilled from the childComponent...
-    //If the page being viewed is the choose account page...
+    const confirmPasswordFieldRef = useRef(null);
+    const passwordFieldRef = useRef(null);
+    const goButtonRef = useRef(null);
+    const forgotPasswordLabelRef = useRef(null);
+    const views = ['RegistrationFields', 'ChooseAccountType', 'TypesOfPageAccounts', 'ForgotPasswordEmail', 'ForgotPasswordVerification', 'ForgotPasswordReset'];
+    const [view, setView] = useState('RegistrationFields');
+    const [showBackButton, setShowBackButton] = useState(false);
+    const [allFilled, setAllFilled] = useState(false);
     const [selectedOne, setSelectedOne] = useState(false);
     const selectedOneRef = useRef(selectedOne);
-    //If the page being viewed is where they need to choose the type of page account...
     const [selectedPage, setSelectedPage] = useState(false);
+    const [forgotPasswordPage, setForgotPasswordPage] = useState(false);
+    const [forgotPassEmailFilled, setForgotPassEmailFilled] = useState(false);
+    const [verificationArrayFilled, setVerificationArrayFilled] = useState(false);
+    const [resetAllFilled, setResetAllFilled] = useState(false);
+    const [showLoadingScreen, setShowLoadingScreen] = useState(false);
 
-    const changeToLogin = () => {
-        if (goButtonRef.current && passwordFieldRef.current) {
-            //To reset the values of all flagger variables every time the user goes back...
-            setSelectedOne(false);
-            setSelectedPage(false);
-            
-            if (!loginPage) {
-                console.log('Switching to login view');
-                console.log('YEEYE');
-                passwordFieldRef.current.style.marginBottom = '1vh';
-                goButtonRef.current.classList.remove('active');
-                setIsLoginPage(true);
-            } 
-            
-            else {
-                passwordFieldRef.current.style.marginBottom = '5vh';
-                goButtonRef.current.classList.remove('active');
-                setIsLoginPage(false);
-            }
-        }
-    };
-
+    const setPasswordResetAllFilled = (value) => {
+        console.log('Received value: ', value);
+        setResetAllFilled(value);
+    }
     
-    //ADD CONDITION WHERE IF GO BUTTON IS SELECTED AND LOGIN OPTION IS SELECTED...
-
-
-
-    // Callback function to handle the boolean value from the child
     const handleChildValue = (value) => {
         setAllFilled(value);
     };
 
-    // Function to change the view
-    const changeView = () => {
-    console.log('Before: ', goButtonRef.current.classList);
-    setView(prev => {
-      const currentIndex = views.indexOf(prev);
-      const nextIndex = (currentIndex + 1) % views.length;
-
-      setShowBackButton(nextIndex !== 0); // Show the back button if not on the first view
-    //   setIsLoginPage(false);
-    
-      if(goButtonRef.current){
-        goButtonRef.current.classList.remove('active');
-      }
-
-      return views[nextIndex];
-    });
-    console.log('After: ', goButtonRef.current.classList);
+    const setForgotPassEmail = (value) => {
+        setForgotPassEmailFilled(value);
     };
 
-    if((view == 'ChooseAccountType' || view == 'TypesOfPageAccounts') && loginPage){
-    if(forgotPasswordLabel.current){
-        forgotPasswordLabel.current.style.display = 'none';
-        // setIsLoginPage(false);
+    const setVerificationStatus = (value) => {
+        // console.log(verificationArrayFilled);
+        setVerificationArrayFilled(value);
+    };
 
-        //TO REDIRECT BACK TO REGISTRATION PAGE LOGIN VIEW WHEN LOGIN OPTION IS SELECTED WHEN IN OTHER VIEWS (ChooseAccountType and/or TypesOfPagesAccounts)
-        setView('RegistrationFields');
-        setShowBackButton(false);
+    //Changes View According to User's Navigation...
+    const changeView = () => {
+        setView((prev) => {
+            const currentIndex = views.indexOf(prev);
+            const nextIndex = (currentIndex + 1) % views.length;
+            setShowBackButton(nextIndex !== 0);
+            setForgotPassEmailFilled(false);
+            if (goButtonRef.current) {
+                goButtonRef.current.classList.remove('active');
+            }
+
+            console.log('view: ', view );
+            console.log('selected page: ', selectedPage);
+            // After the last view, show the loading screen
+            if (view === 'TypesOfPageAccounts' && selectedPage != null) {
+                setShowLoadingScreen(true);
+            }
+
+            return views[nextIndex];
+        });
+    };
+
+    const forgotPasswordClicked = () => {
+        if (!forgotPasswordPage) {
+            // Transition to forgot password page
+            setView('ForgotPasswordEmail');
+            setForgotPasswordPage(true);
+            setAllFilled(false);
+            setShowBackButton(true);
+            setIsLoginPage(false);
+        } 
+    };
+    
+    useEffect(() => {
+        // Manage view changes based on state
+        if (view === 'ChooseAccountType' || view === 'TypesOfPageAccounts') {
+            if (loginPage) {
+                forgotPasswordLabelRef.current.style.display = 'none';
+                setView('RegistrationFields');
+
+                setForgotPasswordPage(false);
+            }
         }
-    }
+    }, [view, forgotPasswordPage, loginPage]);
 
     const selectedAccountType = (newValue) => {
-        // console.log(newValue);
         setSelectedOne(newValue);
-        selectedOneRef.current = newValue; 
+        selectedOneRef.current = newValue;
     };
 
     const selectedPageAccount = (newValue) => {
         setSelectedPage(newValue);
     };
 
-    const viewComponents = { 
-        RegistrationFields: <RegistrationFields loginPage={loginPage} ref={(ref) => {
-            if (ref) {
-              confirmPasswordFieldRef.current = ref.confirmPasswordField.current;
-              passwordFieldRef.current = ref.passwordField.current;
+    //If forgot password page...
+
+    const viewComponents = {
+        RegistrationFields: (
+            <RegistrationFields
+                loginPage={loginPage}
+                ref={(ref) => {
+                    if (ref) {
+                        confirmPasswordFieldRef.current = ref.confirmPasswordField.current;
+                        passwordFieldRef.current = ref.passwordField.current;
+                    }
+                }}
+                onFieldsStatusChange={handleChildValue}
+            />
+        ),
+        ChooseAccountType: <ChooseAccountType setSelected={selectedAccountType} />,
+        TypesOfPageAccounts: <TypesOfPageAccounts selectedPageType={selectedPageAccount} />,
+        ForgotPasswordEmail: <ForgotPasswordEmail setFilled = {setForgotPassEmail}/>,
+        ForgotPasswordVerification: <ForgotPasswordVerification arrayFilled = {setVerificationStatus} />,
+        ForgotPasswordReset: <ForgotPasswordReset isAllFilled = {setPasswordResetAllFilled} />,
+    };
+
+    const changeToLogin = () => {
+        // console.log(view);
+        // console.log(loginPage);
+        if (goButtonRef.current && passwordFieldRef.current) {
+            setSelectedOne(false);
+            setSelectedPage(false);
+            setForgotPassEmailFilled(false);
+
+            if (forgotPasswordPage) {
+                // Transition back to login page
+                setView('RegistrationFields');
+                setShowBackButton(false);
+                setForgotPasswordPage(false);
+                setIsLoginPage(true);
             }
-          }} onFieldsStatusChange={handleChildValue} />, 
-        ChooseAccountType: <ChooseAccountType setSelected={selectedAccountType}/>, 
-        TypesOfPageAccounts: <TypesOfPageAccounts selectedPageType = {selectedPageAccount}/>
-      };
 
+            if (!loginPage) {
+                if(passwordFieldRef.current){
+                    // console.log(loginPage);
+                    passwordFieldRef.current.style.marginBottom = '5vh';
+                    goButtonRef.current.classList.remove('active');
+                    setIsLoginPage(true);
+                }
+            } 
 
-    // Function to go back to the previous view
-    const goBack = () => {
-        setView(prev => {
-        let currentIndex = views.indexOf(prev);
-        const prevIndex = (currentIndex - 1 + views.length) % views.length;
-
-        setShowBackButton(prevIndex !== 0); // Hide the back button if returning to the first view
-
-        //To reset the values of all flagger variables every time the user goes back...
-        setSelectedOne(false);
-        setSelectedPage(false);
-        setIsLoginPage(false);
-
-        //Disables the goButton when the back button is clicked...
-        if(goButtonRef.current){
-            goButtonRef.current.classList.remove('active');
+            else if(loginPage) {
+                if(passwordFieldRef.current){
+                    // console.log(loginPage);
+                    passwordFieldRef.current.style.marginBottom = '5vh';
+                    goButtonRef.current.classList.remove('active');
+                    setIsLoginPage(false);
+                }
+            }
         }
+    };
 
-        return views[prevIndex];
+    const goBack = () => {
+        setView((prev) => {
+            let currentIndex = views.indexOf(prev);
+            const prevIndex = (currentIndex - 1 + views.length) % views.length;
+            setShowBackButton(prevIndex !== 0);
+            setSelectedOne(false);
+            setSelectedPage(false);
+            setIsLoginPage(false);
+            setForgotPassEmailFilled(false);
+
+            // if (forgotPasswordPage) {
+            //     // Transition back to login page
+            //     setView('RegistrationFields');
+            //     setForgotPasswordPage(false);
+            //     setIsLoginPage(true);
+            //     setShowBackButton(false);
+            // }
+
+            if(view === 'ForgotPasswordReset' || view === 'ForgotPasswordEmail'){
+                setView('RegistrationFields');
+                setShowBackButton(false);
+                return views[views.indexOf('RegistrationFields')];
+            }
+
+            if (goButtonRef.current) {
+                goButtonRef.current.classList.remove('active');
+            }
+
+            return views[prevIndex];
         });
     };
 
-    // Handle button active state change
+    //Dynamically keeps track of user input to either activate or deactivate the go button...
     useEffect(() => {
         if (goButtonRef.current) {
-            if (view == 'RegistrationFields' && allFilled) {
+            if ((view === 'RegistrationFields' && allFilled) || 
+                (view === 'ChooseAccountType' && selectedOne) || 
+                (view === 'TypesOfPageAccounts' && selectedPage) ||
+                (view === 'ForgotPasswordEmail' && forgotPassEmailFilled) || 
+                (view === 'ForgotPasswordVerification' && verificationArrayFilled) ||
+                (view === 'ForgotPasswordReset' && resetAllFilled)) {
                 goButtonRef.current.classList.add('active');
-            } 
-
-            else if (view == 'ChooseAccountType' && selectedOne) {
-                goButtonRef.current.classList.add('active');
-            }
-            
-            else if (view == 'TypesOfPageAccounts' && selectedPage){
-                goButtonRef.current.classList.add('active');
-            }
-            
-            else {
+            } else {
                 goButtonRef.current.classList.remove('active');
             }
         }
-    }, [allFilled, selectedOne, selectedPage]);
+    }, [allFilled, selectedOne, selectedPage, forgotPassEmailFilled, verificationArrayFilled, resetAllFilled]);
 
-    return(
+    //Syncs the loginPage status to display the forgotPassword label...
+    useEffect(() => {
+        // Update forgotPasswordLabelRef display based on loginPage state
+        if (forgotPasswordLabelRef.current) {
+            forgotPasswordLabelRef.current.style.display = loginPage ? 'block' : 'none';
+        }
+    }, [loginPage]);
+
+    return (
         <div className="InitialRegistrationPage">
-
-            {/* Outer container for all elements */}
+            {showLoadingScreen && <LoadingScreen />}
+            {!showLoadingScreen && (
             <div className="outerContainer">
-
-                {/* The displays on the left */}
                 <div className="leftInnerContainer">
-                    {/* The display for the welcome and logo */}
                     <div className="logoGreetContainer">
                         <p id="welcomeTo">Welcome To</p>
-                        <LogoComponent></LogoComponent>
+                        <LogoComponent />
                     </div>
-
-                    {/* Display for the description of the platform */}
                     <div className="descriptionContainer">
                         <p id="descriptionText">Meet and connect with fellow guitarists</p>
                     </div>
-
-                    <hr id = "topDivider" /> {/* SHOW ONLY IN MOBILE */}
-
-                    {/* Option to log into an existing account */}
+                    <hr id="topDivider" />
                     <div className="logIn">
                         <p id="logInRedirect" onClick={changeToLogin}>
                             {loginPage ? 'or register a new account' : 'or log in to an existing account'}
                         </p>
                     </div>
                 </div>
-
-                {/* The displays on the right */}
                 <div className="rightInnerContainer">
-                    {/* Replaceable content */}
-
-                    {/* Replaceable content container */}
                     <div className="replaceableContent">
-                        {/* <TypesOfPageAccounts></TypesOfPageAccounts> */}
-                        {/* <ChooseAccountType></ChooseAccountType> */}
                         {viewComponents[view]}
                     </div>
-
-                    <p id="forgotPassword" ref = {forgotPasswordLabel} style={{ display: loginPage ? 'block' : 'none' }}>Forgot Password?</p>
-
+                    <p id="forgotPassword" ref={forgotPasswordLabelRef} style={{ display: loginPage ? 'block' : 'none' }} onClick={forgotPasswordClicked}>
+                        Forgot Password?
+                    </p>
                     <div className="goButtonContainer">
                         {showBackButton && <button id="backButton" onClick={goBack}>BACK</button>}
                         <button id="goButton" onClick={changeView} ref={goButtonRef}>GO</button>
                     </div>
-
                     <div className="logInPortrait">
                         <p id="logInRedirect" onClick={changeToLogin}>
                             {loginPage ? 'or register a new account' : 'or log in to an existing account'}
@@ -205,30 +252,7 @@ export default function InitialRegistrationPage(){
                     </div>
                 </div>
             </div>
+            )}
         </div>
     );
-
-    // JAVASCRIPT SEGMENT
-        //
-    // POTENTIALLY KAILANGAN SA PAG-REDESIGN NG RESIZED BROWSER WINDOW DYNAMICALLY KAYA INIWAN KO LANG AS COMMENT
-        //
-    // function getDeviceType() {
-    //     const ua = navigator.userAgent;
-    //     const body = document.querySelector('.InitialRegistrationPage');
-    //     if (/Mobile|Android|iP(ad|hone)/.test(ua)) {
-    //         body.classList.add('mobile');
-    //     } else if (/Tablet|iPad/.test(ua) || (screen.width >= 600 && screen.width < 1024)) {
-    //         body.classList.add('tablet');
-    //     } else {
-    //         body.classList.add('desktop');
-    //     }
-    // }
-    
-    // function applyLayout() {
-    //     const deviceType = getDeviceType();
-    //     document.body.setAttribute('data-device', deviceType);
-    // }
-    
-    // window.addEventListener('resize', applyLayout);
-    // document.addEventListener('DOMContentLoaded', applyLayout);
 }

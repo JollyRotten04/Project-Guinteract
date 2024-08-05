@@ -17,35 +17,39 @@ export default function ChooseAccountType({ setSelected }){
         // Update the selected option in the state
         setSelectedOption(id);
 
-        // console.log(individualAccountChoiceRef);
-        // console.log(pageAccountChoiceRef);
-        console.log(id);
+        console.log(individualAccountChoiceRef);
+        console.log(pageAccountChoiceRef);
+        // console.log(id);
 
         if(id == 'individualAccountChoice'){
-            if(individualAccountChoiceRef.classList.contains('active')){
-                individualAccountChoiceRef.classList.remove('active');
-            }
+            if(individualAccountChoiceRef.current){
+                console.log('active');
+                if(individualAccountChoiceRef.current.classList.contains('active')){
+                    individualAccountChoiceRef.current.classList.remove('active');
+                }
 
-            else{
-                individualAccountChoiceRef.classList.add('active');
-                individualAccountChoiceRef.classList.remove('active');
-            }
-        } 
+                else{
+                    individualAccountChoiceRef.current.classList.add('active');
+                    pageAccountChoiceRef.current.classList.remove('active');
+                }
+            } 
+        }
 
         else if(id == 'pageAccountChoice'){
-            
-            if(pageAccountChoiceRef.classList.contains('active')){
-                pageAccountChoiceRef.classList.remove('active');
-            }
+            if(pageAccountChoiceRef.current){
+                if(pageAccountChoiceRef.current.classList.contains('active')){
+                    pageAccountChoiceRef.current.classList.remove('active');
+                }
 
-            else{
-                pageAccountChoiceRef.classList.add('active');
-                pageAccountChoiceRef.classList.remove('active');
+                else{
+                    pageAccountChoiceRef.current.classList.add('active');
+                    individualAccountChoiceRef.current.classList.remove('active');
+                }
             }
         }
 
         //Disables the go button if user deselects both choices...
-        if(!individualAccountChoiceRef.classList.contains('active') && !pageAccountChoiceRef.classList.contains('active')){
+        if(!individualAccountChoiceRef.current.classList.contains('active') && !pageAccountChoiceRef.current.classList.contains('active')){
             id = false;
         }
 

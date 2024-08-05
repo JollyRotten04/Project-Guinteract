@@ -273,8 +273,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5vh;
+        padding: 2vh;
         width: 100%;
+        gap: 5vh;
     }
 
     .mainContainer{
@@ -311,7 +312,7 @@
     }
 
     .choiceContainer{
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -329,11 +330,11 @@
 
     .choiceContainer #individualAccountChoice #descriptionTextContainer #descriptionText{
         color: #A0A0A0;
-        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-size: clamp(1.6vh, 2vh, 2vh);
         word-spacing: 2px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        width: 60%;
+        width: 100%;
         font-weight: 600;
     }
 
@@ -382,11 +383,11 @@
         display: flex;
         justify-content: center;
         color: #A0A0A0;
-        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-size: clamp(1.6vh, 1.8vh, 1.8vh);
         word-spacing: 2px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        /* width: 70%; */
+        width: 100%;
         font-weight: 600;
     }
 
@@ -431,7 +432,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 16vh;
+        height: 20vh;
         width: 100%;
         border: 3px solid white;
         font-size: clamp(2vh, 3vh, 3vh);
@@ -478,7 +479,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 16vh;
+        height: 20vh;
         width: 100%;
         border: 3px solid white;
         font-size: clamp(2vh, 3vh, 3vh);
@@ -561,11 +562,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50vh;
+        height: 45vh;
         width: 100%;
         border: 3px solid white;
         box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
         border-radius: 1vh 1vh;
+        margin-bottom: 4vh;
     }
 
     .choiceContainer{
@@ -608,11 +610,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50vh;
+        height: 45vh;
         width: 100%;
         border: 3px solid white;
         box-shadow: 10px 10px 0 0 rgb(41, 41, 41);
         border-radius: 1vh 1vh;
+        margin-bottom: 4vh;
     }
     /* WHEN EITHER CHOICES ARE SELECTED */
 

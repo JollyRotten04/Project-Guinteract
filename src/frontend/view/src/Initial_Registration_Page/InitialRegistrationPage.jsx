@@ -221,7 +221,7 @@ export default function InitialRegistrationPage() {
             <div className="outerContainer">
                 <div className="leftInnerContainer">
                     <div className="logoGreetContainer">
-                        <p id="welcomeTo">Welcome To</p>
+                        <p id="welcomeTo">WELCOME TO</p>
                         <LogoComponent />
                     </div>
                     <div className="descriptionContainer">

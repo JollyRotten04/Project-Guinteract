@@ -8,13 +8,12 @@ html{
 body{
     display: flex;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 0;
     background-color: #313131;
     height: 100%;
     left: 0;
     top: 0;
-    /* width: 100%; */
+    width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -247,15 +246,13 @@ body{
         margin: auto;
     }
 
-    body{
+    /* body{
         display:block;
-        /* margin-top: auto;
-        margin-bottom: auto; */
         background-color: #313131;
         height: 100%;
         overflow-x: hidden;
         overflow-y: hidden;
-    }
+    } */
     .outerContainer{
         position: absolute;
         left: 0;

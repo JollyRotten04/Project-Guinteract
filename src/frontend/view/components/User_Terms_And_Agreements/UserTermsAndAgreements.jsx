@@ -1,4 +1,17 @@
-export default function UserTermsAndAgreements(){
+import React, { useState, useEffect } from 'react';
+export default function UserTermsAndAgreements({ isChecked }){
+    // Create a state variable to track checkbox status
+    const [setCheck, setIsChecked] = useState(false);
+
+
+    const setCheckbox = (event) => {
+        setIsChecked(event.target.checked);
+    };
+
+    useEffect(() => {
+        isChecked(setCheck);
+    },[setCheck]);
+
     return(
         <div className="userTermsAndAgreements">
 
@@ -150,8 +163,8 @@ export default function UserTermsAndAgreements(){
 
             {/* Checkbox container */}
             <div className="checkboxContainer">
-                <input type="checkbox" id = "checkbox" />
-                <p id="label">I agree with the user terms and agreements</p>
+                <input type="checkbox" id = "checkbox" checked={setCheck} onChange={setCheckbox}/>
+                <p id="label">I agree with the user terms and conditions</p>
             </div>
         </div>
     );

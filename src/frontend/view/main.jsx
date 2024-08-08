@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 import InitialRegistrationPage from "./src/Initial_Registration_Page/InitialRegistrationPage.jsx";
 import IndividualAccountPersonalization from './src/Individual_Account_Personalization/IndividualAccountPersonalization';
-
+import IndividualAccountPersonalization from './src/Individual_Account_Personalization/IndividualAccountPersonalization';
+import BandPagePersonalizationPage from "./src/Band_Page_Personalization/BandPagePersonalization.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
   {
     path: '/personalization',
     element: <IndividualAccountPersonalization />,
+    children: []
+  },
+  {
+    path: "/BandPagePersonalization",
+    element: <BandPagePersonalizationPage />,
     children: []
   }
   /*

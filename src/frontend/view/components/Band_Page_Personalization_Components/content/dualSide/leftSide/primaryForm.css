@@ -1,0 +1,103 @@
+h3, label{
+    color: aliceblue;
+}
+
+/* Hide the spinner in WebKit browsers (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the spinner in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* For consistency across all browsers, you can also remove the default appearance */
+input[type="number"] {
+    appearance: textfield;
+}
+
+
+.formContainer{
+    margin-left: 50px;
+    margin-right: 70px;
+    width: 78vw;
+    padding-bottom: 20px;
+}
+
+.element1 .subElements{
+    display: flex;
+    flex-direction: column;
+}
+
+#element1{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12vh;
+}
+
+#element2{
+    display: flex;
+    justify-content: space-between;
+    width:  78vw;
+    padding-bottom: 12vh;
+}
+
+.subElements{
+    width: 38.5vw;
+}
+
+.formContainer h3{
+    font-size: clamp(3vh, 3.5vh, 4vh);
+}
+
+.element label{
+    font-size: clamp(4vh, 4.5vh, 5vh);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.element input{
+    font-size: clamp(5vh, 5.5vh, 6vh);
+}
+
+.subElements{
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-select {
+    position: relative;
+    width: 38.5vw;
+  }
+
+  .custom-select select {
+    font-size: clamp(3.5vh, 4vh, 4.5vh);
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    appearance: none; /* Remove default arrow */
+    background-color: #eee;
+    cursor: pointer;
+  }
+
+  .custom-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black; /* Large, inverted triangle arrow */
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't intercept clicks */
+  }
+
+  option{
+    background-color: rgb(63, 62, 62);
+    color: white;
+  }

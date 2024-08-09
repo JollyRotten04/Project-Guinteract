@@ -88,6 +88,7 @@ export default function IndividualAccountPersonalization(){
             let currentIndex = views.indexOf(prev);
             const prevIndex = (currentIndex - 1 + views.length) % views.length;
             setStep2AllFilled(false);
+            setSelectedStep3(false);
             setCheckBoxChecked(false); 
 
             return views[prevIndex];

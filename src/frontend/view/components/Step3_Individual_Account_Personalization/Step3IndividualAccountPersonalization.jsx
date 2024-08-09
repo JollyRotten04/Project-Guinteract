@@ -24,6 +24,8 @@ export default function Step3IndividualAccountPersonalization({ hasSelected }){
             {/* Main Label Element */}
             <p id="mainLabelText">Next, what do you identify as?</p>
 
+            <hr id="dividerLine" />
+
             {/* Choices Container */}
             <div className="choiceContainer">
 

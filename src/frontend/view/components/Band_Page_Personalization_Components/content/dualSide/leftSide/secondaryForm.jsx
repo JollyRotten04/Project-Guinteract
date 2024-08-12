@@ -1,10 +1,14 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import PropTypes from "prop-types";
 import "./secondaryForm.css";
 
-const PictureSelection = () => {
+const PictureSelection = ({cameraVisibility, camVisibilityVar, profilePicture}) => {
     const fileUpload = useRef(null);
     const imgContainer = useRef(null);
-    const [selectedFileURL, setSelectedFileURL] = useState(null);
+
+    let selectedFileUrl;
+
+    console.log(camVisibilityVar);
 
     const uploadFile = () => {
         const fileInput = document.createElement('input');
@@ -18,9 +22,10 @@ const PictureSelection = () => {
         fileInput.addEventListener('change', function(event) {
             const file = event.target.files[0];
             if (file) {
-                setSelectedFileURL(URL.createObjectURL(file));
-                console.log(selectedFileURL);
-                fileUpload.current.src = selectedFileURL;
+                selectedFileUrl = URL.createObjectURL(file);
+                console.log(selectedFileUrl);
+                fileUpload.current.src = selectedFileUrl;
+                fileUpload.current.src = selectedFileUrl;
 
                 const fileHeight = fileUpload.current.naturalHeight;
                 const fileWidth = fileUpload.current.naturalWidth;
@@ -42,6 +47,10 @@ const PictureSelection = () => {
         });
     }
 
+    const openCamera = () => {
+        cameraVisibility(!camVisibilityVar);
+    }
+
     return (
         <div>
             <div>
@@ -49,17 +58,24 @@ const PictureSelection = () => {
                 
                 <div className="innerContainer">
                     <div className="imgContainer" id="imgContainer" ref={imgContainer}>
-                        <img src="../../../../../assets/Screenshot (46)(1)(1).png" id="profileImg" ref={fileUpload}/>
+                        <img src={profilePicture} id="profileImg" ref={fileUpload}/>
                     </div>
                     
                     <div className="selection">
-                        <button id="capture">Take Picture</button>
+                        <button id="capture" onClick={() => {openCamera()}}>Take Picture</button>
+                        
                         <button id="fileUpload" onClick={() => {uploadFile()}} >Select from Gallery</button>
                     </div>
                 </div>
             </div>
         </div>
     );
+}
+
+PictureSelection.propTypes = {
+    cameraVisibility: PropTypes.func.isRequired,
+    camVisibilityVar: PropTypes.bool.isRequired,
+    profilePicture: PropTypes.string.isRequired,
 }
 
 export default PictureSelection;

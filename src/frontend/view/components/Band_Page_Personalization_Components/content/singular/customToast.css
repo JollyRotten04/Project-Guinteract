@@ -1,0 +1,18 @@
+.custom-toast {
+    background-color: black !important; /* Sets background color to black */
+    color: white !important; /* Sets text color to white */
+}
+
+.custom-toast-body {
+    color: white; /* Ensures text within the body is white */
+}
+
+.custom-toast .Toastify__close-button {
+    color: white !important; /* Make the X button white */
+    opacity: 1 !important;   /* Ensure it's fully opaque */
+}
+
+/* Optionally adjust the hover effect */
+.custom-toast .Toastify__close-button:hover {
+    color: lightgray !important; /* Slight color change on hover */
+}

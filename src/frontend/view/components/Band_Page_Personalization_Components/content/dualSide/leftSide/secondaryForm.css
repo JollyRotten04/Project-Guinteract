@@ -1,6 +1,7 @@
 #profileImg{
     height: 44vw; /* Set height equal to width (making it a square) */
-    max-width: 44vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
+    width: 70vw;
+    max-width: 70vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
     max-height: 44vh;
 }
 
@@ -25,7 +26,8 @@ h3{
     height: 12vh;
 }
 
-.imgContainer{ width: 50vw;  /* Set width to 50% of the viewport width */
+.imgContainer{ 
+    width: 50vw;  /* Set width to 50% of the viewport width */
     height: 44vw; /* Set height equal to width (making it a square) */
     max-width: 44vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
     max-height: 44vh;

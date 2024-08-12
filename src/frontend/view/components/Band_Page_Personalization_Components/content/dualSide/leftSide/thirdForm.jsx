@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import {useState } from "react";
 import "./thirdForm.css";
 
 const ThirdPage = () => {
@@ -43,14 +43,19 @@ const ThirdPage = () => {
         
     ];
 
-    let clicked = [];
-
-    const choicesIndex = useRef(null);
+    const [clicked, setClicked] = useState([]);
     
-    const addClicked = (index, choicesIndex) => {
-        choicesIndex.current.styles.backgroundColor = "gray";
-        clicked.push(output[index]);
-    }
+    const addClicked = (index, e) => {
+        // Change the background color of the clicked button
+        e.target.style.backgroundColor = "gray";
+
+        // Add the clicked band to the clicked list if not already added
+        if (!clicked.includes(index)) {
+            setClicked([...clicked, output[index]]);
+        }
+
+        console.log(clicked);
+    };
 
     return (
         <div>
@@ -64,7 +69,7 @@ const ThirdPage = () => {
                                 <div className="content" >
                                     <h4 className="bandName">{band.bandName}</h4>
                                     <p>{band.follooers + "followers"}</p>
-                                    <button id={band.bandName} key={index} ref={choicesIndex} onClick={() => {addClicked(index, choicesIndex)}} >follow</button>
+                                    <button key={index} onClick={(e) => {addClicked(index, e)}} >follow</button>
                                 </div>
                             </div>
                         );

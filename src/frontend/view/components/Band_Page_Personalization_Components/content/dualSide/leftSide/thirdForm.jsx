@@ -46,7 +46,7 @@ const ThirdPage = ({ setInput, primPageStatus, setClosePage }) => {
     }, [primPageStatus, setClosePage, setInput]);
 
     return (
-        <div>
+        <div className = "thirdForm">
             <h3>Lastly, please follow at least five other pages</h3>
             <div className="body">
                 <div className="scrollBar-div">

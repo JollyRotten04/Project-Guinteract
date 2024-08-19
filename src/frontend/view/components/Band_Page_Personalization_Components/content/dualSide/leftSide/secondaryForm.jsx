@@ -65,7 +65,7 @@ const PictureSelection = ({primPageStatus}) => {
     }
 
     return (
-        <div>
+        <div className = "secondaryForm">
             <div>
                 <h3>Next, select a profile picture</h3>
                 

@@ -2,7 +2,7 @@ import "./primaryForm.css";
 
 const BandNameYear = () => {
     return (
-        <div>
+        <div className = "bandNameYear">
             <div className="formContainer">
                 <h3>First, can you provide us some basic information about your band?</h3>
 

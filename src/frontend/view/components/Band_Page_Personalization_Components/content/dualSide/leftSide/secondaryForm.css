@@ -1,21 +1,21 @@
-#profileImg{
+.secondaryForm #profileImg{
     height: 44vw; /* Set height equal to width (making it a square) */
     width: 70vw;
     max-width: 70vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
     max-height: 44vh;
 }
 
-h3{
+.secondaryForm h3{
     font-size: clamp(4vh, 4.5vh, 5vh);
     margin-inline: 50px;
 }
 
-.selection{
+.secondaryForm .selection{
     display: flex;
     flex-direction: column;
 }
 
-.selection button{
+.secondaryForm .selection button{
     margin-bottom: 40px;
     font-size: clamp(4vh, 4.5vh, 5vh);
     font-weight: bold;
@@ -26,7 +26,7 @@ h3{
     height: 12vh;
 }
 
-.imgContainer{ 
+.secondaryForm .imgContainer{ 
     width: 50vw;  /* Set width to 50% of the viewport width */
     height: 44vw; /* Set height equal to width (making it a square) */
     max-width: 44vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
@@ -44,7 +44,7 @@ h3{
     overflow: hidden;
 }
 
-.innerContainer{
+.secondaryForm .innerContainer{
     margin-inline: 60px;
     width: 78vw;
     display: flex;

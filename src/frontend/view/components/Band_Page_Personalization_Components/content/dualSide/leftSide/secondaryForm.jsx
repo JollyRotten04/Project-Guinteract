@@ -52,7 +52,7 @@ const PictureSelection = ({cameraVisibility, camVisibilityVar, profilePicture}) 
     }
 
     return (
-        <div>
+        <div className = "secondaryForm">
             <div>
                 <h3>Next, select a profile picture</h3>
                 

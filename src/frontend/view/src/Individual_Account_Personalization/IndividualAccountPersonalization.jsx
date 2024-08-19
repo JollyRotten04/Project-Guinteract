@@ -4,13 +4,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import UserTermsAndAgreements from "../../components/User_Terms_And_Agreements/UserTermsAndAgreements";
 import Step2IndividualAccountPersonalization from "../../components/Step2_Individual_Account_Personalization/Step2IndividualAccountPersonalization";
 import Step3IndividualAccountPersonalization from "../../components/Step3_Individual_Account_Personalization/Step3IndividualAccountPersonalization";
-
+import Step4IndividualAccountPersonalization from "../../components/Step4_Individual_Account_Personalization/Step4IndividualAccountPersonalization";
+import Step5IndividualAccountPersonalization from "../../components/Step5_Individual_Account_Personalization/Step5IndividualAccountPersonalization";
+import Step6IndividualAccountPersonalization from "../../components/Step6_Individual_Account_Personalization/Step6IndividualAccountPersonalization";
 
 //NOTE TO SEPARATE THIS FROM MAIN.JSX FILE SO THAT THE ENTRY POINT IS STILL INITIALREGISTRATIONPAGE.JSX
 
 
 export default function IndividualAccountPersonalization(){
-    const views = ['UserTermsAndAgreements', 'Step2IndividualAccountPersonalization', 'Step3IndividualAccountPersonalization'];
+    const views = ['UserTermsAndAgreements', 'Step2IndividualAccountPersonalization', 'Step3IndividualAccountPersonalization', 'Step4IndividualAccountPersonalization', 'Step5IndividualAccountPersonalization', 'Step6IndividualAccountPersonalization'];
     const [view, setView] = useState('UserTermsAndAgreements');
     // const [showBackButton, setShowBackButton] = useState(false);
     const [checkboxChecked, setCheckBoxChecked] = useState(false);
@@ -20,6 +22,9 @@ export default function IndividualAccountPersonalization(){
     const promptLabelPortraitRef = useRef(null);
     const [step2AllFilled, setStep2AllFilled] = useState(false);
     const [step3Chosen, setStep3Chosen] = useState(false);
+    const [step4AllChosen, setStep4AllChosen] = useState(false);
+    const [step5AllChosen, setStep5AllChosen] = useState(false);
+    const [step6Chosen, setStep6Chosen] = useState(false);
     const stepIndicatorRefPortrait = {
         step1: useRef(null),
         step2: useRef(null),
@@ -57,6 +62,19 @@ export default function IndividualAccountPersonalization(){
         setStep3Chosen(value);
     };
 
+    const setSelectedStep4 = (value) => {
+        setStep4AllChosen(value);
+    }
+
+    const setSelectedStep5 = (value) => {
+        console.log(value);
+        setStep5AllChosen(value);
+    }
+
+    const setSelectedStep6 = (value) => {
+        setStep6Chosen(value);
+    };
+
     //Changes View According to User's Navigation...
     const changeView = () => {
         setView((prev) => {
@@ -89,6 +107,8 @@ export default function IndividualAccountPersonalization(){
             const prevIndex = (currentIndex - 1 + views.length) % views.length;
             setStep2AllFilled(false);
             setSelectedStep3(false);
+            setStep4AllChosen(false);
+            setSelectedStep5(false);
             setCheckBoxChecked(false); 
 
             return views[prevIndex];
@@ -98,7 +118,10 @@ export default function IndividualAccountPersonalization(){
     const viewComponents = {
         UserTermsAndAgreements: <UserTermsAndAgreements isChecked = {setCheckBoxChecked}/>,
         Step2IndividualAccountPersonalization: <Step2IndividualAccountPersonalization isAllFilled={isStep2AllFilled}/>,
-        Step3IndividualAccountPersonalization: <Step3IndividualAccountPersonalization hasSelected={setSelectedStep3}/>
+        Step3IndividualAccountPersonalization: <Step3IndividualAccountPersonalization hasSelected={setSelectedStep3}/>,
+        Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setSelectedStep4}/>,
+        Step5IndividualAccountPersonalization: <Step5IndividualAccountPersonalization allSelected={setSelectedStep5}/>,
+        Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setSelectedStep6}/>
     };
 
     // if(!showBackButton){
@@ -159,7 +182,7 @@ export default function IndividualAccountPersonalization(){
             }
         }
 
-        else if(stepIndicatorRef.step5.current){
+        else if((stepIndicatorRefPortrait.step5.current || stepIndicatorRef.step5.current) && view === 'Step5IndividualAccountPersonalization'){
             stepIndicatorRef.step5.current.classList.add('active');
             stepIndicatorRefPortrait.step5.current.classList.add('active');
 
@@ -257,7 +280,49 @@ export default function IndividualAccountPersonalization(){
             }
         }
 
-    },[view, checkboxChecked, step2AllFilled, step3Chosen]);
+        else if(view === 'Step4IndividualAccountPersonalization' && step4AllChosen){
+            if(nextButtonRef.current){
+                nextButtonRef.current.classList.add('active');
+            }
+
+            else{
+                if(nextButtonRef.current){
+                    nextButtonRef.current.classList.remove('active');
+                }
+            }
+        }
+
+        else if(view === 'Step5IndividualAccountPersonalization' && step5AllChosen){
+            if(nextButtonRef.current){
+                nextButtonRef.current.classList.add('active');
+            }
+
+            else{
+                if(nextButtonRef.current){
+                    nextButtonRef.current.classList.remove('active');
+                }
+            }
+        }
+
+        else if(view === 'Step6IndividualAccountPersonalization' && step6Chosen){
+            if(nextButtonRef.current){
+                nextButtonRef.current.classList.add('active');
+            }
+
+            else{
+                if(nextButtonRef.current){
+                    nextButtonRef.current.classList.remove('active');
+                }
+            }
+        }
+
+        else{
+            if(nextButtonRef.current){
+                nextButtonRef.current.classList.remove('active');
+            }
+        }
+
+    },[view, checkboxChecked, step2AllFilled, step3Chosen, step4AllChosen, step5AllChosen, step6Chosen]);
 
 
     return(

@@ -59,6 +59,10 @@ input[type="number"] {
     margin-bottom: 20px;
 }
 
+.element span, .element .subElements span{
+    color: red;
+}
+
 .element input{
     font-size: clamp(5vh, 5.5vh, 6vh);
 }

@@ -1,13 +1,16 @@
 import { useState, useRef, useCallback } from "react";
+import PropTypes from "prop-types";
 import Webcam from "react-webcam";
 import ImgPrev from "./imgPrev.jsx";
-import PropTypes from "prop-types";
 import { toast, ToastContainer } from 'react-toastify';
+import {useContext} from "react";
 import 'react-toastify/dist/ReactToastify.css';
+import {cameraContext} from "../../../../src/Band_Page_Personalization/BandPagePersonalization.jsx";
 import "./customToast.css";
 import "./camerSection.css";
 
-const Camera = ({visibility, camVisibilityVar, profilePicture}) => {
+const Camera = ({setInput}) => {
+    const {setCameraVisibility, cameraVisible, setCameraSrc} = useContext(cameraContext);
     const camera = useRef(null);
     const imgPrevButton = useRef(null);
     const [prevImage, setPrevImage] = useState("../../../../assets/Screenshot (48).png");
@@ -61,7 +64,7 @@ const Camera = ({visibility, camVisibilityVar, profilePicture}) => {
                 toastClassName="custom-toast" // Apply custom styles
                 bodyClassName="custom-toast-body" // Apply custom styles to body
             />
-            {seePrev && <ImgPrev src={prevImage} setProfileSrc={profilePicture} visible={viewImage} cameraVisibility={visibility} toggle={camVisibilityVar} />}
+            {seePrev && <ImgPrev src={prevImage} visible={viewImage} setCameraSrc={setCameraSrc} setInput={setInput} />}
             {!seePrev && (
                 <div className="cameraContainer">
                 <Webcam
@@ -77,7 +80,7 @@ const Camera = ({visibility, camVisibilityVar, profilePicture}) => {
                     }}
                     style={{ transform: "scaleX(-1)" }}
                 />
-                <img className="closeButton" onClick={() => {visibility(!camVisibilityVar)}} src="../../../../assets/xred.png" />
+                <img className="closeButton" onClick={() => {setCameraVisibility(!cameraVisible)}} src="../../../../assets/xred.png" />
                 <img className="cameraButton" onClick={() => {capture()}} src="../../../../assets/Screenshot (47).png" />
                 <img className="imgPrev" id="imgPrev" ref={imgPrevButton} onClick={() => {viewImage()}} src={prevImage} />
             </div>
@@ -87,9 +90,7 @@ const Camera = ({visibility, camVisibilityVar, profilePicture}) => {
 }
 
 Camera.propTypes = {
-    visibility: PropTypes.func.isRequired,
-    camVisibilityVar: PropTypes.bool.isRequired,
-    profilePicture: PropTypes.func.isRequired,
+    setInput: PropTypes.func.isRequired,
 };
 
 export default Camera;

@@ -1,61 +1,49 @@
-import {useState } from "react";
+import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import "./thirdForm.css";
 
-const ThirdPage = () => {
-
-    // sample output from server
+const ThirdPage = ({ setInput, primPageStatus, setClosePage }) => {
+    // Sample output from server
     const output = [
-        {
-            bandName: "Black Veil Brides",
-            follooers: "8.8m",
-            profile: "../../../../../assets/Screenshot (46)(1)(1).png"
-        },
-        {
-            bandName: "Red Rangers",
-            follooers: "8.8m",
-            profile: "../../../../../assets/Screenshot (46)(1)(1).png"
-        },
-        {
-            bandName: "White Stuff",
-            follooers: "8.8m",
-            profile: "../../../../../assets/Screenshot (46)(1)(1).png"
-        },
-        {
-            bandName: "Black Panthers",
-            follooers: "8.8m",
-            profile: "../../../../../assets/Screenshot (46)(1)(1).png"
-        },
-        {
-            bandName: "The Acers",
-            follooers: "8.8m",
-            profile: "../../../../../assets/Screenshot (46)(1)(1).png"
-        },
-        {
-            bandName: "jdscsd",
-            follooers: "8.8m",
-            profile: "../../../../../assets/Screenshot (46)(1)(1).png"
-        },
-        {
-            bandName: "Black Veil Brides",
-            follooers: "8.8m",
-            profile: "../../../../../assets/Screenshot (46)(1)(1).png"
-        }
-        
+        { bandName: "Black Veil Brides", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "Red Rangers", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "White Stuff", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "Black Panthers", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "The Acers", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "jdscsd", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "Black Veil Brides", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
     ];
 
-    const [clicked, setClicked] = useState([]);
-    
+    const clickedRef = useRef([]);
+
     const addClicked = (index, e) => {
         // Change the background color of the clicked button
         e.target.style.backgroundColor = "gray";
+        e.target.textContent = "Unfollow";
 
         // Add the clicked band to the clicked list if not already added
-        if (!clicked.includes(index)) {
-            setClicked([...clicked, output[index]]);
+        const band = output[index];
+        if (!clickedRef.current.some(b => b.bandName === band.bandName)) {
+            clickedRef.current.push(band);
         }
 
-        console.log(clicked);
+        console.log(clickedRef.current);
     };
+
+    useEffect(() => {
+        console.log("status" + primPageStatus);
+        if (primPageStatus) {
+            console.log("Adjust");
+            setInput(prev => ({
+                ...prev,
+                thirdPage: {
+                    clicked: clickedRef.current
+                }
+            }));
+            setClosePage(prev => !prev);
+            console.log("Adjusted");
+        }
+    }, [primPageStatus, setClosePage, setInput]);
 
     return (
         <div>
@@ -79,5 +67,11 @@ const ThirdPage = () => {
         </div>
     );
 }
+
+ThirdPage.propTypes = {
+    setInput: PropTypes.func.isRequired,
+    primPageStatus: PropTypes.bool.isRequired,
+    setClosePage: PropTypes.func.isRequired,
+};
 
 export default ThirdPage;

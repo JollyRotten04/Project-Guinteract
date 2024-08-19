@@ -1,13 +1,19 @@
 import PropTypes from "prop-types";
+import {useContext} from "react";
+import {cameraContext} from "../../../../src/Band_Page_Personalization/BandPagePersonalization.jsx";
 import "./imgPrev.css";
 
-const ImgPrev = ({src, setProfileSrc, visible, cameraVisibility, toggle}) => {
-
+const ImgPrev = ({src, visible, setCameraSrc, setInput}) => {
+    const {setCameraVisibility, cameraVisible} = useContext(cameraContext);
     const setProfile = () => {
         console.log(src);
-        setProfileSrc(src)
+        setInput(prev => ({
+            ...prev,
+            secondPage: src
+        }))
+        setCameraSrc(src);
         visible();
-        cameraVisibility(!toggle);
+        setCameraVisibility(!cameraVisible);
     } 
 
     return (
@@ -25,10 +31,9 @@ const ImgPrev = ({src, setProfileSrc, visible, cameraVisibility, toggle}) => {
 
 ImgPrev.propTypes = {
     src: PropTypes.string.isRequired,
-    setProfileSrc: PropTypes.func.isRequired,
     visible: PropTypes.func.isRequired,
-    cameraVisibility: PropTypes.func.isRequired, 
-    toggle: PropTypes.bool.isRequired,
+    setCameraSrc: PropTypes.func.isRequired,
+    setInput: PropTypes.func.isRequired,
 };
 
 export default ImgPrev;

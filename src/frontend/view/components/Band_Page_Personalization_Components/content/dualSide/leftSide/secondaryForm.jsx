@@ -1,14 +1,27 @@
-import { useRef } from "react";
+import { useRef, useContext, useEffect } from "react";
 import PropTypes from "prop-types";
+import {secondaryPageContext} from "../../../../../src/Band_Page_Personalization/BandPagePersonalization.jsx";
 import "./secondaryForm.css";
 
-const PictureSelection = ({cameraVisibility, camVisibilityVar, profilePicture}) => {
+const PictureSelection = ({primPageStatus}) => {
     const fileUpload = useRef(null);
     const imgContainer = useRef(null);
 
+    const { setCameraVisibility, cameraVisible, cameraSrc, setClosePage } = useContext(secondaryPageContext);
+
     let selectedFileUrl;
 
-    console.log(camVisibilityVar);
+    useEffect(() => {
+        console.log("status" + status)
+        if(primPageStatus){
+
+            console.log("Adjust");
+            setClosePage(prev => !prev);
+            console.log("Adjusted");
+        }
+    }, [primPageStatus, setClosePage])
+
+    console.log(cameraVisible);
 
     const uploadFile = () => {
         const fileInput = document.createElement('input');
@@ -48,7 +61,7 @@ const PictureSelection = ({cameraVisibility, camVisibilityVar, profilePicture}) 
     }
 
     const openCamera = () => {
-        cameraVisibility(!camVisibilityVar);
+        setCameraVisibility(!cameraVisible);
     }
 
     return (
@@ -58,7 +71,7 @@ const PictureSelection = ({cameraVisibility, camVisibilityVar, profilePicture}) 
                 
                 <div className="innerContainer">
                     <div className="imgContainer" id="imgContainer" ref={imgContainer}>
-                        <img src={profilePicture} id="profileImg" ref={fileUpload}/>
+                        <img src={cameraSrc} id="profileImg" ref={fileUpload}/>
                     </div>
                     
                     <div className="selection">
@@ -73,9 +86,7 @@ const PictureSelection = ({cameraVisibility, camVisibilityVar, profilePicture}) 
 }
 
 PictureSelection.propTypes = {
-    cameraVisibility: PropTypes.func.isRequired,
-    camVisibilityVar: PropTypes.bool.isRequired,
-    profilePicture: PropTypes.string.isRequired,
-}
+    primPageStatus: PropTypes.bool.isRequired,
+};
 
 export default PictureSelection;

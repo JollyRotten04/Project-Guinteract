@@ -7,7 +7,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
     const year = useRef(null);
     const genre = useRef(null);
 
-    // id
+    // id references for error messages
     const bandNameId = useRef(null);
     const bandYearId = useRef(null);
     const genreId = useRef(null);
@@ -27,15 +27,16 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
     const collectData = useCallback(() => {
         let passed = true;
 
-        const sanitizedBandname = bandName.current.value.trim();
-        const sanitizedYear = parseInt(year.current.value.trim(), 10);
-        const saniizedGenre = genre.current.value;
+        // Safeguard to ensure refs are not null before accessing their value
+        const sanitizedBandname = bandName.current ? bandName.current.value.trim() : '';
+        const sanitizedYear = year.current ? parseInt(year.current.value.trim(), 10) : '';
+        const sanitizedGenre = genre.current ? genre.current.value : '';
 
         console.log(sanitizedBandname);
         console.log(sanitizedYear);
-        console.log(saniizedGenre);
+        console.log(sanitizedGenre);
 
-        if (!/^[a-zA-Z0-9_-]+$/.test(sanitizedBandname) || sanitizedBandname == null) {
+        if (!/^[a-zA-Z0-9_-]+$/.test(sanitizedBandname) || sanitizedBandname === '') {
             bandNameId.current.textContent = "Please enter a valid band name*";
             passed = false;
         } else {
@@ -54,7 +55,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
             bandYearId.current.textContent = "";
         }
 
-        if (saniizedGenre === "") {
+        if (sanitizedGenre === '') {
             genreId.current.textContent = "Please select a genre*";
             passed = false;
         } else {
@@ -65,9 +66,9 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
             setInputs((prevState) => ({
                 ...prevState,
                 firstPage: {
-                    bandName: bandName.current.value,
-                    year: year.current.value,
-                    genre: genre.current.value,
+                    bandName: sanitizedBandname,
+                    year: sanitizedYear,
+                    genre: sanitizedGenre,
                 },
             }));
 
@@ -76,24 +77,18 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
         } else {
             setPrimaryPageStatus((prev) => !prev);
         }
-        console.log(" submit successfully");
+        console.log("Submit successfully");
     }, [setInputs, closePage, setPrimaryPageStatus]);
 
     useEffect(() => {
-        console.log("status" + status);
         if (status) {
             collectData();
             console.log("Adjust");
         }
     }, [status, collectData, closePage]);
 
-    // Safeguard: Provide default values if inputs is not properly initialized
-    const bandNameValue = inputs?.firstPage?.bandName || ''; // Default to empty string if undefined
-    const yearValue = inputs?.firstPage?.year || ''; // Default to empty string if undefined
-    const genreValue = inputs?.firstPage?.genre || ''; // Default to empty string if undefined
-
     return (
-        <div className = "bandNameYear">
+        <div className="bandNameYear">
             <div className="formContainer">
                 <h3>First, can you provide us some basic information about your band?</h3>
 
@@ -102,9 +97,13 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
                     <input
                         type="text"
                         placeholder="Black Veil Brides"
+                        ref={bandName}
+                        name="bandName" // Added name attribute for handling changes
+                        value={inputs?.firstPage?.bandName || ''} // Use the safeguarded default value
+                        onChange={handleChange} // Added onChange handler
                     />
+                    <span className="errorTag" ref={bandNameId}></span> {/* Error message span */}
                 </div>
-
                     
                 <div className="element" id="element2">
                     <div className="subElements">
@@ -114,7 +113,12 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
                             min="1900"
                             max="2100"
                             placeholder="e.g., 2000"
+                            ref={year}
+                            name="year" // Added name attribute for handling changes
+                            value={inputs?.firstPage?.year || ''} // Use the safeguarded default value
+                            onChange={handleChange} // Added onChange handler
                         />
+                        <span className="errorTag" ref={bandYearId}></span> {/* Error message span */}
                     </div>
 
                     <div className="subElements">
@@ -123,7 +127,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
                             <select
                                 ref={genre}
                                 name="genre" // Added name attribute for handling changes
-                                value={genreValue} // Use the safeguarded default value
+                                value={inputs?.firstPage?.genre || ''} // Use the safeguarded default value
                                 onChange={handleChange} // Added onChange handler
                             >
                                 <option value="">--Select an option--</option>
@@ -142,7 +146,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
                                 <option value="rock">Rock</option>
                                 <option value="world">World</option>
                             </select>
-                            <span className="errorTag" ref={genreId}></span>
+                            <span className="errorTag" ref={genreId}></span> {/* Error message span */}
                         </div>
                     </div>
                 </div>

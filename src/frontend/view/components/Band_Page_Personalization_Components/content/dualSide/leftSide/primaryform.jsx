@@ -85,7 +85,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
             collectData();
             console.log("Adjust");
         }
-    }, [status, collectData, closePage]);
+    }, [status, collectData]);
 
     return (
         <div className="bandNameYear">

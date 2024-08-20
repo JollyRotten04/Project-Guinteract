@@ -1,5 +1,4 @@
 import { useState, useRef, useCallback } from "react";
-import PropTypes from "prop-types";
 import Webcam from "react-webcam";
 import ImgPrev from "./imgPrev.jsx";
 import { toast, ToastContainer } from 'react-toastify';
@@ -9,7 +8,7 @@ import {cameraContext} from "../../../../src/Band_Page_Personalization/BandPageP
 import "./customToast.css";
 import "./camerSection.css";
 
-const Camera = ({setInput}) => {
+const Camera = () => {
     const {setCameraVisibility, cameraVisible, setCameraSrc} = useContext(cameraContext);
     const camera = useRef(null);
     const imgPrevButton = useRef(null);
@@ -64,7 +63,7 @@ const Camera = ({setInput}) => {
                 toastClassName="custom-toast" // Apply custom styles
                 bodyClassName="custom-toast-body" // Apply custom styles to body
             />
-            {seePrev && <ImgPrev src={prevImage} visible={viewImage} setCameraSrc={setCameraSrc} setInput={setInput} />}
+            {seePrev && <ImgPrev src={prevImage} visible={viewImage} setCameraSrc={setCameraSrc} />}
             {!seePrev && (
                 <div className="cameraContainer">
                 <Webcam
@@ -88,9 +87,5 @@ const Camera = ({setInput}) => {
         </div>
     );
 }
-
-Camera.propTypes = {
-    setInput: PropTypes.func.isRequired,
-};
 
 export default Camera;

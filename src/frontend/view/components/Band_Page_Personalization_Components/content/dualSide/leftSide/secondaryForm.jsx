@@ -1,25 +1,41 @@
-import { useRef, useContext, useEffect } from "react";
+import { useRef, useContext, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import {secondaryPageContext} from "../../../../../src/Band_Page_Personalization/BandPagePersonalization.jsx";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "../../singular/customToast.css";
 import "./secondaryForm.css";
 
-const PictureSelection = ({primPageStatus}) => {
+const PictureSelection = ({primPageStatus, setPrimaryPageStatus, setInput}) => {
     const fileUpload = useRef(null);
     const imgContainer = useRef(null);
 
-    const { setCameraVisibility, cameraVisible, cameraSrc, setClosePage } = useContext(secondaryPageContext);
+    const { setCameraVisibility, cameraVisible, cameraSrc, setClosePage, setCameraSrc } = useContext(secondaryPageContext);
 
     let selectedFileUrl;
 
-    useEffect(() => {
-        console.log("status" + status)
-        if(primPageStatus){
 
+    const fetchPhoto = useCallback(() => {
+        if(cameraSrc != "../../../../../assets/Screenshot (46)(1)(1).png"){
             console.log("Adjust");
+            setInput(prev => ({
+                ...prev,
+                secondPage: cameraSrc
+            }))
             setClosePage(prev => !prev);
             console.log("Adjusted");
+        } else {
+            toast.error("Please provide an image for the camera!");
+
+            setPrimaryPageStatus(prev => !prev);
         }
-    }, [primPageStatus, setClosePage])
+    }, [cameraSrc, setClosePage, setPrimaryPageStatus, setInput]);
+
+    useEffect(() => {
+        if(primPageStatus){
+            fetchPhoto();
+        }
+    }, [primPageStatus, fetchPhoto]);
 
     console.log(cameraVisible);
 
@@ -39,6 +55,10 @@ const PictureSelection = ({primPageStatus}) => {
                 console.log(selectedFileUrl);
                 fileUpload.current.src = selectedFileUrl;
                 fileUpload.current.src = selectedFileUrl;
+
+                setCameraSrc(prev => prev = selectedFileUrl);
+
+                console.log(cameraSrc)
 
                 const fileHeight = fileUpload.current.naturalHeight;
                 const fileWidth = fileUpload.current.naturalWidth;
@@ -66,6 +86,11 @@ const PictureSelection = ({primPageStatus}) => {
 
     return (
         <div className = "secondaryForm">
+            <ToastContainer 
+                position="top-center"
+                toastClassName="custom-toast" // Apply custom styles
+                bodyClassName="custom-toast-body" // Apply custom styles to body
+            />
             <div>
                 <h3>Next, select a profile picture</h3>
                 
@@ -87,6 +112,8 @@ const PictureSelection = ({primPageStatus}) => {
 
 PictureSelection.propTypes = {
     primPageStatus: PropTypes.bool.isRequired,
+    setPrimaryPageStatus: PropTypes.func.isRequired,
+    setInput: PropTypes.func.isRequired,
 };
 
 export default PictureSelection;

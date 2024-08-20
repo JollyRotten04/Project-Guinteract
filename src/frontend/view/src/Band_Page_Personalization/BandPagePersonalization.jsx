@@ -6,7 +6,7 @@ import PictureSelection from "../../components/Band_Page_Personalization_Compone
 import ThirdPage from "../../components/Band_Page_Personalization_Components/content/dualSide/leftSide/thirdForm.jsx";
 import Camera from "../../components/Band_Page_Personalization_Components/content/singular/cameraSection.jsx";
 import {createContext} from "react";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import "./BandPagePersonalization.css";
 
 export const secondaryPageContext = createContext();
@@ -23,10 +23,12 @@ const BandPagePersonalizationPage = () => {
     const [primPageStatus, setPrimaryPageStatus] = useState(false);
     const [closePage, setClosePage] = useState(false);
 
+    const clickedRef = useRef([]);
+
     const [inputs, setInput] = useState({
         firstPage: null,
         secondPage: null,
-        thirdPage: null
+        thirdPage: []
     });
 
     useEffect(() => {
@@ -50,17 +52,11 @@ const BandPagePersonalizationPage = () => {
         } else if(primaryPage == 3) {
             if (closePage) {
                 console.log("status for page 3" + primPageStatus)
+                console.log("send to database", inputs);
                 setClosePage(prev => !prev);
                 setPrimaryPageStatus(prev => !prev);
                 console.log(inputs);
             }
-        }
-        else{
-            console.log("No page selected")
-            setPrimaryPage(1);
-            setClosePage(false);
-            setPrimaryPageStatus(false);
-            console.log(inputs);
         }
     }, [closePage, primPageStatus, primaryPage, inputs])
 
@@ -79,12 +75,12 @@ const BandPagePersonalizationPage = () => {
             <div className="contents">
                 {primaryPage == 1 && <BandNameYear setInputs={setInput} status={primPageStatus} closePage={setClosePage} setPrimaryPageStatus={setPrimaryPageStatus} inputs={inputs} />}
                 {primaryPage == 2 && 
-                    <secondaryPageContext.Provider value={{setCameraVisibility, cameraVisible, cameraSrc, setClosePage}} >
-                        <PictureSelection primPageStatus={primPageStatus} />
+                    <secondaryPageContext.Provider value={{setCameraVisibility, cameraVisible, cameraSrc, setClosePage, setCameraSrc}} >
+                        <PictureSelection primPageStatus={primPageStatus} setPrimaryPageStatus={setPrimaryPageStatus} setInput={setInput} />
                     </secondaryPageContext.Provider>
                 }
-                {primaryPage == 3 && <ThirdPage setInput={setInput} primPageStatus={primPageStatus} setClosePage={setClosePage} />}
-                <ThreeStepButtons pageMark={primaryPage} />
+                {primaryPage == 3 && <ThirdPage setInput={setInput} primPageStatus={primPageStatus} setClosePage={setClosePage} setPrimaryPageStatus={setPrimaryPageStatus} clickedRef={clickedRef} />}
+                <ThreeStepButtons pageMark={primaryPage} setPrimaryPageStatus={setPrimaryPageStatus} />
                 {cameraVisible == true && 
                     <cameraContext.Provider value={{setCameraVisibility, cameraVisible, setCameraSrc}} >
                         <Camera setInput={setInput} />

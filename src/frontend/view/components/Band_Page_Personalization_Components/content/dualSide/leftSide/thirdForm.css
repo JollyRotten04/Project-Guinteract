@@ -3,6 +3,12 @@
     margin-inline: 60px;
 }
 
+.thirdForm h3{
+    font-size: clamp(4vh, 4.5vh, 5vh);
+    color:aliceblue;
+    margin-inline: 50px;
+}
+
 .thirdForm .scrollBar-div{
     width: 53.25vw;
     height: 47vh;

@@ -5,8 +5,7 @@ import TwoButtons from "../../components/Band_Page_Personalization_Components/fo
 import PictureSelection from "../../components/Band_Page_Personalization_Components/content/dualSide/leftSide/secondaryForm.jsx";
 import ThirdPage from "../../components/Band_Page_Personalization_Components/content/dualSide/leftSide/thirdForm.jsx";
 import Camera from "../../components/Band_Page_Personalization_Components/content/singular/cameraSection.jsx";
-import {createContext} from "react";
-import {useState, useEffect, useRef} from "react";
+import {useState, useEffect, useRef, createContext} from "react";
 import "./BandPagePersonalization.css";
 
 export const secondaryPageContext = createContext();

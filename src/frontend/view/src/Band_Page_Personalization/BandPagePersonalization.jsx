@@ -5,8 +5,7 @@ import TwoButtons from "../../components/Band_Page_Personalization_Components/fo
 import PictureSelection from "../../components/Band_Page_Personalization_Components/content/dualSide/leftSide/secondaryForm.jsx";
 import ThirdPage from "../../components/Band_Page_Personalization_Components/content/dualSide/leftSide/thirdForm.jsx";
 import Camera from "../../components/Band_Page_Personalization_Components/content/singular/cameraSection.jsx";
-import {createContext} from "react";
-import {useState, useEffect, useRef} from "react";
+import {useState, useEffect, useRef, createContext} from "react";
 import "./BandPagePersonalization.css";
 
 export const secondaryPageContext = createContext();
@@ -73,21 +72,55 @@ const BandPagePersonalizationPage = () => {
         <div className="BandPagePersonalization">
             <Header />
             <div className="contents">
-                {primaryPage == 1 && <BandNameYear setInputs={setInput} status={primPageStatus} closePage={setClosePage} setPrimaryPageStatus={setPrimaryPageStatus} inputs={inputs} />}
+                {primaryPage == 1 &&    <BandNameYear 
+                                            setInputs={setInput} 
+                                            status={primPageStatus} 
+                                            closePage={setClosePage} 
+                                            setPrimaryPageStatus={setPrimaryPageStatus} 
+                                            inputs={inputs} 
+                                        />}
                 {primaryPage == 2 && 
-                    <secondaryPageContext.Provider value={{setCameraVisibility, cameraVisible, cameraSrc, setClosePage, setCameraSrc}} >
-                        <PictureSelection primPageStatus={primPageStatus} setPrimaryPageStatus={setPrimaryPageStatus} setInput={setInput} />
+                    <secondaryPageContext.Provider value={
+                        {
+                            setCameraVisibility, 
+                            cameraVisible, 
+                            cameraSrc,
+                            setClosePage, 
+                            setCameraSrc
+                        }
+                    }>
+                        <PictureSelection 
+                            primPageStatus={primPageStatus} 
+                            setPrimaryPageStatus={setPrimaryPageStatus} 
+                            setInput={setInput}
+                        />
                     </secondaryPageContext.Provider>
                 }
-                {primaryPage == 3 && <ThirdPage setInput={setInput} primPageStatus={primPageStatus} setClosePage={setClosePage} setPrimaryPageStatus={setPrimaryPageStatus} clickedRef={clickedRef} />}
-                <ThreeStepButtons pageMark={primaryPage} setPrimaryPageStatus={setPrimaryPageStatus} />
+                {primaryPage == 3 &&    <ThirdPage 
+                                            setInput={setInput} 
+                                            primPageStatus={primPageStatus} 
+                                            setClosePage={setClosePage} 
+                                            setPrimaryPageStatus={setPrimaryPageStatus} 
+                                            clickedRef={clickedRef} 
+                                        />}
+                <ThreeStepButtons 
+                    pageMark={primaryPage} 
+                    setPrimaryPageStatus={setPrimaryPageStatus} 
+                />
                 {cameraVisible == true && 
-                    <cameraContext.Provider value={{setCameraVisibility, cameraVisible, setCameraSrc}} >
+                    <cameraContext.Provider 
+                        value={{setCameraVisibility, 
+                        cameraVisible, setCameraSrc}
+                    } >
                         <Camera setInput={setInput} />
                     </cameraContext.Provider>
                 }
             </div>
-            <TwoButtons changers={pageChangers} pageMark={primaryPage} submitInput={setPrimaryPageStatus} />
+            <TwoButtons 
+                changers={pageChangers} 
+                pageMark={primaryPage} 
+                submitInput={setPrimaryPageStatus} 
+            />
         </div>
     );
 }

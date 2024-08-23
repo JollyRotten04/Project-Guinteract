@@ -7,12 +7,14 @@ import Step3IndividualAccountPersonalization from "../../components/Step3_Indivi
 import Step4IndividualAccountPersonalization from "../../components/Step4_Individual_Account_Personalization/Step4IndividualAccountPersonalization";
 import Step5IndividualAccountPersonalization from "../../components/Step5_Individual_Account_Personalization/Step5IndividualAccountPersonalization";
 import Step6IndividualAccountPersonalization from "../../components/Step6_Individual_Account_Personalization/Step6IndividualAccountPersonalization";
+import Step7IndividualAccountPersonalization from "../../components/Step7_Individual_Account_Personalization/Step7IndividualAccountPersonalization";
+import Step8IndividualAccountPersonalization from "../../components/Step8_Individual_Account_Personalization/Step8IndividualAccountPersonalization";
 
 //NOTE TO SEPARATE THIS FROM MAIN.JSX FILE SO THAT THE ENTRY POINT IS STILL INITIALREGISTRATIONPAGE.JSX
 
 
 export default function IndividualAccountPersonalization(){
-    const views = ['UserTermsAndAgreements', 'Step2IndividualAccountPersonalization', 'Step3IndividualAccountPersonalization', 'Step4IndividualAccountPersonalization', 'Step5IndividualAccountPersonalization', 'Step6IndividualAccountPersonalization'];
+    const views = ['UserTermsAndAgreements', 'Step2IndividualAccountPersonalization', 'Step3IndividualAccountPersonalization', 'Step4IndividualAccountPersonalization', 'Step5IndividualAccountPersonalization', 'Step6IndividualAccountPersonalization', 'Step8IndividualAccountPersonalization'];
     const [view, setView] = useState('UserTermsAndAgreements');
     // const [showBackButton, setShowBackButton] = useState(false);
     const [checkboxChecked, setCheckBoxChecked] = useState(false);
@@ -121,7 +123,9 @@ export default function IndividualAccountPersonalization(){
         Step3IndividualAccountPersonalization: <Step3IndividualAccountPersonalization hasSelected={setSelectedStep3}/>,
         Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setSelectedStep4}/>,
         Step5IndividualAccountPersonalization: <Step5IndividualAccountPersonalization allSelected={setSelectedStep5}/>,
-        Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setSelectedStep6}/>
+        Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setSelectedStep6}/>,
+        // Step7IndividualAccountPersonalization: <Step7IndividualAccountPersonalization />
+        Step8IndividualAccountPersonalization: <Step8IndividualAccountPersonalization />
     };
 
     // if(!showBackButton){

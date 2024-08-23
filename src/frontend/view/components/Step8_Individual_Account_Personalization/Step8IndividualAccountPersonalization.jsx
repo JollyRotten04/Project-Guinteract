@@ -12,7 +12,7 @@ export default function Step8IndividualAccountPersonalization(){
                 <div id="accountsContainer">
                     <div className="account">
                         <div id="imgContainer">
-                            <img src = "" alt="" id="guitarDefaultIcon" />
+                            <img src = "../../assets/" alt="" id="guitarDefaultIcon" />
                         </div>
                     </div>
 

@@ -6,6 +6,7 @@ import Step3IndividualAccountPersonalization from "../../components/Step3_Indivi
 import Step4IndividualAccountPersonalization from "../../components/Step4_Individual_Account_Personalization/Step4IndividualAccountPersonalization";
 import Step5IndividualAccountPersonalization from "../../components/Step5_Individual_Account_Personalization/Step5IndividualAccountPersonalization";
 import Step6IndividualAccountPersonalization from "../../components/Step6_Individual_Account_Personalization/Step6IndividualAccountPersonalization";
+import Step8IndividualAccountPersonalization from '../../components/Step8_Individual_Account_Personalization/Step8IndividualAccountPersonalization';
 import './IndividualAccountPersonalizationStyles.css';
 
 export default function IndividualAccountPersonalization() {
@@ -15,7 +16,8 @@ export default function IndividualAccountPersonalization() {
         'Step3IndividualAccountPersonalization',
         'Step4IndividualAccountPersonalization',
         'Step5IndividualAccountPersonalization',
-        'Step6IndividualAccountPersonalization'
+        'Step6IndividualAccountPersonalization',
+        'Step8IndividualAccountPersonalization'
     ];
     
     const [view, setView] = useState(views[0]);
@@ -68,7 +70,8 @@ export default function IndividualAccountPersonalization() {
             'Step3IndividualAccountPersonalization': 'Tell us more about yourself...',
             'Step4IndividualAccountPersonalization': 'Tell us more about yourself...',
             'Step5IndividualAccountPersonalization': 'Tell us more about yourself...',
-            'Step6IndividualAccountPersonalization': 'Tell us more about yourself...'
+            'Step6IndividualAccountPersonalization': 'Tell us more about yourself...',
+            'Step8IndividualAccountPersonalization': 'Tell us more about yourself...',
         };
 
         if (promptLabelRef.current && promptLabelPortraitRef.current) {
@@ -116,6 +119,7 @@ export default function IndividualAccountPersonalization() {
         Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setStep4AllChosen} />,
         Step5IndividualAccountPersonalization: <Step5IndividualAccountPersonalization allSelected={setStep5AllChosen} />,
         Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setStep6Chosen} />,
+        Step8IndividualAccountPersonalization: <Step8IndividualAccountPersonalization />,
     };
 
     return (

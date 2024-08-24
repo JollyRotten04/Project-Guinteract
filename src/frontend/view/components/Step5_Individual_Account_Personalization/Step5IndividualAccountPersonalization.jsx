@@ -1,7 +1,8 @@
 import './Step5IndividualAccountPersonalizationStyles.css';
-import React, { useEffect, useState, useRef } from 'react';
+import PropTypes from "prop-types";
+import { useEffect, useState, useRef } from 'react';
 
-export default function Step5IndividualAccountPersonalization({ allSelected }){
+export default function Step5IndividualAccountPersonalization({ allSelected, setUserInput, userInput }){
     const [countries, setCountries] = useState([]);
     const [countryCities, setCountryCities] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState("");
@@ -12,6 +13,13 @@ export default function Step5IndividualAccountPersonalization({ allSelected }){
     // Sets the allSelected flagger variable as true or false depending on the state of both eventListeners
     useEffect(() => {
         if(selectedCountry !== "" && selectedCity !== ""){
+            setUserInput((prev) => ({
+                ...prev,
+                step5: {
+                    country: selectedCountry,
+                    city: selectedCity
+                }
+            }));
             allSelected(true);
         } else {
             allSelected(false);
@@ -20,6 +28,11 @@ export default function Step5IndividualAccountPersonalization({ allSelected }){
 
     // Fetches countries when the component mounts
     useEffect(() => {
+        if(userInput.country != "" && userInput.city != ""){
+            setSelectedCountry(prev => prev = userInput.country);
+            setSelectedCity(prev => prev = userInput.city);
+        }
+
         fetch('https://countriesnow.space/api/v0.1/countries')
             .then(response => response.json())
             .then(data => setCountries(data.data))
@@ -29,7 +42,9 @@ export default function Step5IndividualAccountPersonalization({ allSelected }){
     // Fetch cities data when selectedCountry changes
     useEffect(() => {
         if (selectedCountry) {
-            setSelectedCity(""); // Reset selected city when country changes
+            if(selectedCountry != userInput.country)
+                setSelectedCity(""); // Reset selected city when country changes
+            
             setLoading(true); // Set loading to true when starting to fetch cities
 
             const fetchCities = async () => {
@@ -45,7 +60,7 @@ export default function Step5IndividualAccountPersonalization({ allSelected }){
                     const data = await response.json();
 
                     // Sort the cities alphabetically before setting them
-                    const sortedCities = data.data.sort((a, b) => a.localeCompare(b));
+                    //const sortedCities = data.data.sort((a, b) => a.localeCompare(b));
 
                     // console.log(data.data); // Log the data to inspect its structure
                     setCountryCities(data.data); // Set the cities after fetching
@@ -119,4 +134,10 @@ export default function Step5IndividualAccountPersonalization({ allSelected }){
             </div>
         </div>
     );
+}
+
+Step5IndividualAccountPersonalization.propTypes = {
+    allSelected: PropTypes.func.isRequired,
+    setUserInput: PropTypes.func.isRequired,
+    userInput: PropTypes.object.isRequired,
 }

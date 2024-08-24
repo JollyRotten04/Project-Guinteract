@@ -1,15 +1,28 @@
 import './Step6IndividualAccountPersonalizationStyles.css';
-import React, { useState, useRef, useEffect } from 'react';
-export default function Step6IndividualAccountPersonalization({ hasSelected }){
+import { useState, useRef, useEffect } from 'react';
+import PropTypes from "prop-types";
+export default function Step6IndividualAccountPersonalization({ hasSelected, setUserInput, userInput }){
     // State to track the selected choice
-    const [selectedChoice, setSelectedChoice] = useState(null);
+    const [selectedChoice, setSelectedChoice] = useState("");
     const yesChoice = useRef(null);
     const noChoice = useRef(null);
 
     // Select Container Method
     const selectContainer = (choice) => {
+        setUserInput((prev) => ({
+            ...prev,
+            step6: choice
+        }));
         setSelectedChoice(choice);
     };
+
+    useEffect(() => {
+        console.log(userInput)
+        if(userInput != ''){
+            setSelectedChoice(prev => prev = userInput);
+
+        console.log(selectedChoice)}
+    }, []);
 
     useEffect(() => {
         if(selectedChoice !== null){
@@ -58,4 +71,10 @@ export default function Step6IndividualAccountPersonalization({ hasSelected }){
             </div>
         </div>
     );
+}
+
+Step6IndividualAccountPersonalization.propTypes = {
+    hasSelected: PropTypes.func.isRequired,
+    setUserInput: PropTypes.func.isRequired,
+    userInput: PropTypes.string.isRequired,
 }

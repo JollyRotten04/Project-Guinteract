@@ -36,15 +36,15 @@ export default function IndividualAccountPersonalization() {
         },
         step3: "",
         step4: {
-            month: 0,
-            day: 0,
-            year: 0
+            month: "",
+            day: "",
+            year: ""
         },
         step5: {
             country: "",
             city: ""
         },
-        step6: false,
+        step6: "",
         step7: null,
         step8: null
     });
@@ -149,9 +149,9 @@ export default function IndividualAccountPersonalization() {
         UserTermsAndAgreements: <UserTermsAndAgreements isChecked={setCheckboxChecked} setUserInput={setUserInput} userInput={userInput.step1} />,
         Step2IndividualAccountPersonalization: <Step2IndividualAccountPersonalization isAllFilled={setStep2AllFilled} setUserInput={setUserInput} userInput={userInput.step2} />,
         Step3IndividualAccountPersonalization: <Step3IndividualAccountPersonalization hasSelected={setStep3Chosen} setUserInput={setUserInput} userInput={userInput.step3} />,
-        Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setStep4AllChosen} setUserInput={setUserInput} userInput={userInput.step3} />,
-        Step5IndividualAccountPersonalization: <Step5IndividualAccountPersonalization allSelected={setStep5AllChosen} />,
-        Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setStep6Chosen} />,
+        Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setStep4AllChosen} setUserInput={setUserInput} userInput={userInput.step4} />,
+        Step5IndividualAccountPersonalization: <Step5IndividualAccountPersonalization allSelected={setStep5AllChosen} setUserInput={setUserInput} userInput={userInput.step5} />,
+        Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setStep6Chosen} setUserInput={setUserInput} userInput={userInput.step6} />,
         Step8IndividualAccountPersonalization: <Step8IndividualAccountPersonalization />,
     };
 

@@ -25,6 +25,27 @@ export default function IndividualAccountPersonalization() {
     const [step4AllChosen, setStep4AllChosen] = useState(false);
     const [step5AllChosen, setStep5AllChosen] = useState(false);
     const [step6Chosen, setStep6Chosen] = useState(false);
+    const [ userInput, setUserInput ] = useState({
+        step1: false,
+        step2: {
+            firstName: '',
+            lastName: '',
+            username: ''
+        },
+        step3: "",
+        step4: {
+            month: 0,
+            day: 0,
+            year: 0
+        },
+        step5: {
+            country: "",
+            city: ""
+        },
+        step6: false,
+        step7: null,
+        step8: null
+    });
 
     const nextButtonRef = useRef(null);
     const backButtonRef = useRef(null);
@@ -55,6 +76,8 @@ export default function IndividualAccountPersonalization() {
 
     // Dynamically checks for which step the user is currently in and updates accordingly...
     useEffect(() => {
+
+
         Object.values(stepIndicatorRef).forEach(ref => ref.current?.classList.remove('active'));
         Object.values(stepIndicatorRefPortrait).forEach(ref => ref.current?.classList.remove('active'));
 
@@ -87,6 +110,7 @@ export default function IndividualAccountPersonalization() {
 
     // Dynamically enables the goButton...
     useEffect(() => {
+        console.log(userInput);
         if (
             (view === 'UserTermsAndAgreements' && checkboxChecked) ||
             (view === 'Step2IndividualAccountPersonalization' && step2AllFilled) ||
@@ -99,7 +123,16 @@ export default function IndividualAccountPersonalization() {
         } else {
             nextButtonRef.current?.classList.remove('active');
         }
-    }, [view, checkboxChecked, step2AllFilled, step3Chosen, step4AllChosen, step5AllChosen, step6Chosen]);
+    }, [
+        view, 
+        checkboxChecked, 
+        step2AllFilled, 
+        step3Chosen, 
+        step4AllChosen, 
+        step5AllChosen, 
+        step6Chosen, 
+        userInput
+    ]);
 
     const changeView = () => {
         setView(prev => views[(views.indexOf(prev) + 1) % views.length]);
@@ -110,10 +143,10 @@ export default function IndividualAccountPersonalization() {
     };
 
     const viewComponents = {
-        UserTermsAndAgreements: <UserTermsAndAgreements isChecked={setCheckboxChecked} />,
-        Step2IndividualAccountPersonalization: <Step2IndividualAccountPersonalization isAllFilled={setStep2AllFilled} />,
-        Step3IndividualAccountPersonalization: <Step3IndividualAccountPersonalization hasSelected={setStep3Chosen} />,
-        Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setStep4AllChosen} />,
+        UserTermsAndAgreements: <UserTermsAndAgreements isChecked={setCheckboxChecked} setUserInput={setUserInput} userInput={userInput.step1} />,
+        Step2IndividualAccountPersonalization: <Step2IndividualAccountPersonalization isAllFilled={setStep2AllFilled} setUserInput={setUserInput} userInput={userInput.step2} />,
+        Step3IndividualAccountPersonalization: <Step3IndividualAccountPersonalization hasSelected={setStep3Chosen} setUserInput={setUserInput} userInput={userInput.step3} />,
+        Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setStep4AllChosen} setUserInput={setUserInput} userInput={userInput.step3} />,
         Step5IndividualAccountPersonalization: <Step5IndividualAccountPersonalization allSelected={setStep5AllChosen} />,
         Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setStep6Chosen} />,
     };

@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-export default function UserTermsAndAgreements({ isChecked }){
+import { useState, useEffect } from 'react';
+import PropTypes from "prop-types";
+
+export default function UserTermsAndAgreements({ isChecked, setUserInput, userInput }){
     // Create a state variable to track checkbox status
     const [setCheck, setIsChecked] = useState(false);
 
@@ -8,9 +10,25 @@ export default function UserTermsAndAgreements({ isChecked }){
         setIsChecked(event.target.checked);
     };
 
+    /**
+     * For returning to the page, value must be retained
+     */
     useEffect(() => {
-        isChecked(setCheck);
-    },[setCheck]);
+        if(userInput){
+            setIsChecked(prev => prev = userInput);
+        }
+    }, []);
+
+    useEffect(() => {
+        // checks wether the checkbox is checked or not
+        if(setCheck){
+            isChecked(setCheck);
+            setUserInput((prev) => ({
+                ...prev,
+                step1: setCheck
+            }));
+        }
+    },[setCheck, isChecked, setUserInput]);
 
     return(
         <div className="userTermsAndAgreements">
@@ -168,4 +186,10 @@ export default function UserTermsAndAgreements({ isChecked }){
             </div>
         </div>
     );
+}
+
+UserTermsAndAgreements.propTypes = {
+    isChecked: PropTypes.func.isRequired,
+    setUserInput: PropTypes.func.isRequired,
+    userInput: PropTypes.bool.isRequired,
 }

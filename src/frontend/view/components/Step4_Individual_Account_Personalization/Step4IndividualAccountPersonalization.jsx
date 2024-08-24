@@ -1,6 +1,6 @@
 import './Step4IndividualAccountPersonalizationStyles.css';
-import React, { useState, useEffect } from 'react';
-export default function Step4IndividualAccountPersonalization({ allSelected }){
+import { useState, useEffect } from 'react';
+export default function Step4IndividualAccountPersonalization({ allSelected, setUserInput, userInput }){
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedDay, setSelectedDay] = useState(null);
     const [selectedMonth, setSelectedMonth] = useState(null);
@@ -229,4 +229,10 @@ export default function Step4IndividualAccountPersonalization({ allSelected }){
             </div>
         </div>
     );
+}
+
+Step4IndividualAccountPersonalization.propTypes = {
+    allSelected: PropTypes.func.isRequired,
+    setUserInput: PropTypes.func.isRequired,
+    userInput: PropTypes.string.isRequired,
 }

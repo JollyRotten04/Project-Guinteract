@@ -1,6 +1,8 @@
 import './Step3IndividualAccountPersonalizationStyles.css'
-import React, { useState, useRef, useEffect } from 'react';
-export default function Step3IndividualAccountPersonalization({ hasSelected }){
+import { useState, useRef, useEffect } from 'react';
+import PropTypes from "prop-types";
+
+export default function Step3IndividualAccountPersonalization({ hasSelected, setUserInput, userInput }){
     // State to track the selected choice
     const [selectedChoice, setSelectedChoice] = useState(null);
     const maleChoice = useRef(null);
@@ -13,7 +15,17 @@ export default function Step3IndividualAccountPersonalization({ hasSelected }){
     };
 
     useEffect(() => {
+        if(userInput != ''){
+            setSelectedChoice(prev => prev = userInput);
+        }
+    }, []);
+
+    useEffect(() => {
         if(selectedChoice !== null){
+            setUserInput((prev) => ({
+                ...prev,
+                step3: selectedChoice
+            }));
             hasSelected(true);
         }
     }, [selectedChoice]);
@@ -79,4 +91,10 @@ export default function Step3IndividualAccountPersonalization({ hasSelected }){
             </div>
         </div>
     );
+}
+
+Step3IndividualAccountPersonalization.propTypes = {
+    hasSelected: PropTypes.func.isRequired,
+    setUserInput: PropTypes.func.isRequired,
+    userInput: PropTypes.string.isRequired,
 }

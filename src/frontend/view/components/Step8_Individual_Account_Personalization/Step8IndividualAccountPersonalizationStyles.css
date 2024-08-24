@@ -14,12 +14,14 @@
         margin: auto;
         overflow-y: auto;
         margin-top: 4vh;
-        width: 90%;
+        width: 70%;
+        padding-bottom: 10px;
     }
 
     .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
         /* height: 50vh;
         overflow-y: auto; */
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -37,6 +39,9 @@
         align-items: center;
         display: flex;
         justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 2vh;
     }
 
     .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
@@ -44,5 +49,935 @@
         width: 6.5vh;
         border-radius: 50%;
         background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 6.5vh;
+        width: 6.5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .accountName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .friendCount{
+        color: gray;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+}
+
+@media (min-height: 1024px) and (orientation: portrait){
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer{
+        height: 50vh;
+        margin: auto;
+        overflow-y: auto;
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
+        /* height: 50vh;
+        overflow-y: auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 4vh; */
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account{
+        height: 8vh;
+        width: 80%;
+        background-color: #3f3f3f;
+        border-radius: 5px 5px;
+        border: 2px solid white;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+        background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .accountName{
+        color: white;
+        font-size: clamp(1.8vh, 2vh, 2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .friendCount{
+        color: gray;
+        font-size: clamp(1.5vh, 1.75vh, 1.75vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1.2vh, 1.5vh, 1.5vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 5vh;
+        width: 14vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 5vh;
+        width: 14vh;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND LANDSCAPE ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    .step8IndividualAccountPersonalization #mainLabel{
+        color: white;
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer{
+        height: 50vh;
+        margin: auto;
+        overflow-y: auto;
+        margin-top: 4vh;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
+        /* height: 50vh;
+        overflow-y: auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 4vh; */
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account{
+        height: 8vh;
+        width: 80%;
+        background-color: #3f3f3f;
+        border-radius: 5px 5px;
+        border: 2px solid white;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
+        height: 6.5vh;
+        width: 6.5vh;
+        border-radius: 50%;
+        background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 6.5vh;
+        width: 6.5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .accountName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .friendCount{
+        color: gray;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND PORTRAIT ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer{
+        height: 50vh;
+        margin: auto;
+        overflow-y: auto;
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
+        /* height: 50vh;
+        overflow-y: auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 4vh; */
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account{
+        height: 8vh;
+        width: 80%;
+        background-color: #3f3f3f;
+        border-radius: 5px 5px;
+        border: 2px solid white;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+        background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .accountName{
+        color: white;
+        font-size: clamp(1.8vh, 2vh, 2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode .friendCount{
+        color: gray;
+        font-size: clamp(1.5vh, 1.75vh, 1.75vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1.2vh, 1.5vh, 1.5vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 5vh;
+        width: 14vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 5vh;
+        width: 14vh;
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait){
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer{
+        height: 50vh;
+        margin: auto;
+        overflow-y: auto;
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
+        /* height: 50vh;
+        overflow-y: auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 4vh; */
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account{
+        height: 8vh;
+        width: 80%;
+        background-color: #3f3f3f;
+        border-radius: 5px 5px;
+        border: 2px solid white;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+        background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .accountName{
+        color: white;
+        font-size: clamp(1.8vh, 2vh, 2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode .friendCount{
+        color: gray;
+        font-size: clamp(1.5vh, 1.75vh, 1.75vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1.2vh, 1.5vh, 1.5vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 5vh;
+        width: 14vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 5vh;
+        width: 14vh;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape){
+    .step8IndividualAccountPersonalization #mainLabel{
+        color: white;
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer{
+        height: 50vh;
+        margin: auto;
+        overflow-y: auto;
+        margin-top: 2vh;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
+        /* height: 50vh;
+        overflow-y: auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 4vh; */
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account{
+        height: 8vh;
+        width: 80%;
+        background-color: #3f3f3f;
+        border-radius: 5px 5px;
+        border: 2px solid white;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
+        height: 6.5vh;
+        width: 6.5vh;
+        border-radius: 50%;
+        background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 6.5vh;
+        width: 6.5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .accountName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .friendCount{
+        color: gray;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 1000px) and (max-height: 500px) and (orientation: landscape){
+    .step8IndividualAccountPersonalization #mainLabel{
+        color: white;
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer{
+        height: 50vh;
+        margin: auto;
+        overflow-y: auto;
+        margin-top: 2vh;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
+        /* height: 50vh;
+        overflow-y: auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 4vh; */
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account{
+        height: 8vh;
+        width: 80%;
+        background-color: #3f3f3f;
+        border-radius: 5px 5px;
+        border: 1px solid white;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
+        height: 6.5vh;
+        width: 6.5vh;
+        border-radius: 50%;
+        background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 6.5vh;
+        width: 6.5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .accountName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .friendCount{
+        color: gray;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 6vh;
+        width: 18vh;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #mainLabel{
+        color: white;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer{
+        height: 50vh;
+        margin: auto;
+        overflow-y: auto;
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer{
+        /* height: 50vh;
+        overflow-y: auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 4vh; */
+        gap: 2vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account{
+        height: 8vh;
+        width: 80%;
+        background-color: #3f3f3f;
+        border-radius: 5px 5px;
+        border: 2px solid white;
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 1vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #imgContainer{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+        background-color: aliceblue;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account .profileIcon{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode .accountName{
+        color: white;
+        font-size: clamp(1vh, 1.25vh, 1.25vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-align: left;
+        align-content: center;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode .friendCount{
+        color: gray;
+        font-size: clamp(1.25vh, 1.5vh, 1.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
+        text-align: left;
+        margin: 0;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: clamp(1vh, 1.2vh, 1.2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7641e;
+        border: none;
+        height: 5vh;
+        width: 10vh;
+    }
+
+    .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer .addFriendButton.clicked{
+        display: flex;
+        cursor: pointer;
+        pointer-events: all;
+        justify-content: center;
+        align-items: center;
+        color: rgb(156, 156, 156);
+        font-weight: 600;
+        font-size: clamp(1vh, 1.2vh, 1.2vh);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7c7c7c;
+        border: none;
+        height: 5vh;
+        width: 10vh;
     }
 }

@@ -11,6 +11,9 @@
         width: 100%; */
         flex-direction: column;
     }
+    .spanErrorStep2{
+        color: red;
+    }
 
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
@@ -103,6 +106,10 @@
         flex-direction: column;
     }
 
+    .spanErrorStep2{
+        color: red;
+    }
+
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -189,6 +196,10 @@
     .step2IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
+    }
+
+    .spanErrorStep2{
+        color: red;
     }
 
     .step2IndividualAccountPersonalization #textLabel{
@@ -279,6 +290,10 @@
         flex-direction: column;
     }
 
+    .spanErrorStep2{
+        color: red;
+    }
+
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -364,6 +379,10 @@
     .step2IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
+    }
+
+    .spanErrorStep2{
+        color: red;
     }
 
     .step2IndividualAccountPersonalization #textLabel{
@@ -454,6 +473,10 @@
         flex-direction: column;
     }
 
+    .spanErrorStep2{
+        color: red;
+    }
+
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -540,6 +563,10 @@
     .step2IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
+    }
+
+    .spanErrorStep2{
+        color: red;
     }
 
     .step2IndividualAccountPersonalization #textLabel{

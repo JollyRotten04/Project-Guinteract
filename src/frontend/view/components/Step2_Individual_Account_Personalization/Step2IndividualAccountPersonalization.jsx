@@ -13,17 +13,40 @@ export default function Step2IndividualAccountPersonalization({ isAllFilled, set
     const lastNameRef = useRef(null);
     const userNameRef = useRef(null);
 
+    let [userNameErr, setUserNameErr] = useState(false);
+    let [firstNameErr, setFirstNameErr] = useState(false);
+    let [lastNameErr, setLastNameErr] = useState(false);
+
     //Setter methods...
     const handleFirstNameField = (e) => {
-        setFirstNameField(e.target.value);
+        setFirstNameErr(prev => prev = /[^a-zA-Z\s'-]/.test(e.target.value) ? true: false);
+        console.log(firstNameErr);
+        
+        if(firstNameErr == false)
+            setFirstNameField(prev => prev = e.target.value);
+        else
+            setFirstNameField(prev => prev = "");
     };
 
     const handleLastNameField = (e) => {
-        setLastNameField(e.target.value);
+        setLastNameErr(prev => prev = /[^a-zA-Z\s'-]/.test(e.target.value) ? true: false);
+        lastNameErr = /[^a-zA-Z\s'-]/.test(e.target.value) ? true: false;
+        console.log(lastNameErr);
+
+        if(lastNameErr == false)
+            setLastNameField(prev => prev = e.target.value);
+        else
+            setLastNameField(prev => prev = "");
     };
 
     const handleUsernameField = (e) => {
-        setUsernameField(e.target.value);
+        setUserNameErr(prev => prev = /[^a-zA-Z0-9_-]/.test(e.target.value) ? true: false);
+        console.log(userNameErr);
+
+        if(userNameErr == false)
+            setUsernameField(prev => prev = e.target.value);
+        else
+            setUsernameField(prev => prev = "");
     };
 
     useEffect(() => {
@@ -68,6 +91,7 @@ export default function Step2IndividualAccountPersonalization({ isAllFilled, set
 
                     {/* First Name Input Field */}
                     <input type="text" id="firstNameInputField" ref={firstNameRef} placeholder = "John Henry" onChange={handleFirstNameField}/>
+                    {firstNameErr && <span className='spanErrorStep2'>Please enter a valid first name*</span>}
                 </div>
 
                 {/* Last Name Input and Label Field */}
@@ -80,10 +104,11 @@ export default function Step2IndividualAccountPersonalization({ isAllFilled, set
 
                     {/* Last Name Input and Label Field */}
                     <input type="text" id="lastNameInputField" ref={lastNameRef} placeholder = "Smith" onChange={handleLastNameField}/>
+                    {lastNameErr && <span className='spanErrorStep2'>Please enter a valid last name*</span>}
                 </div>
 
                     {/* Desired Username Input and Label Field */}
-                    <div className="desiredUsernameContainer">
+                <div className="desiredUsernameContainer">
 
                     {/* Desired Username Label */}
                     <p id="desiredUsernameLabel">
@@ -92,6 +117,7 @@ export default function Step2IndividualAccountPersonalization({ isAllFilled, set
 
                     {/* Desired Username Input Field */}
                     <input type="text" id="desiredUsernameInputField" ref={userNameRef} placeholder = "John_Smith42!" onChange={handleUsernameField}/>
+                    {userNameErr && <span className='spanErrorStep2'>Please enter only letters, numbers, underscores, and hyphens*</span>}
                 </div>
             </div>
             

@@ -24,4 +24,67 @@
         border-radius: 50%;
         background-color: aqua;
     }
+
+    .seventhForm{
+        margin-top: -30px;
+        height: 62vh;
+    }
+
+    .seventhForm #profilePicture{
+        height: 44vw; /* Set height equal to width (making it a square) */
+        width: 70vw;
+        max-width: 70vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
+        max-height: 44vh;
+    }
+    
+    .seventhForm h3{
+        font-size: clamp(4vh, 4.5vh, 5vh);
+        color:aliceblue;
+        margin-inline: 50px;
+    }
+    
+    .seventhForm .choices{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .seventhForm .choices button{
+        margin-bottom: 40px;
+        font-size: clamp(4vh, 4.5vh, 5vh);
+        font-weight: bold;
+        background-color: rgb(255, 119, 0);
+        color: aliceblue;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.385);
+        width: 20vw;
+        height: 12vh;
+    }
+    
+    .seventhForm .pictureContainer{ 
+        width: 50vw;  /* Set width to 50% of the viewport width */
+        height: 44vw; /* Set height equal to width (making it a square) */
+        max-width: 44vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
+        max-height: 44vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    
+        display: flex;
+        justify-content: center;
+        border-radius: 2010px;
+        background-color: rgba(0, 0, 0, 0.258);
+        overflow: hidden;
+    }
+    
+    .seventhForm .innerContainer{
+        margin-inline: 60px;
+        width: 71.7vw;
+        height: 53.5vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 52.5px;
+    }
+    
 }

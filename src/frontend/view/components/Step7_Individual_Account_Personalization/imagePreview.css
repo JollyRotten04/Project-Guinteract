@@ -1,0 +1,53 @@
+.mainOuterContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 93.5vh;
+    width: 73vw;
+
+    background-color: #3d3d3d;
+    border-width: 2px;
+    border-style: solid;
+    border-color: aliceblue;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+/*
+  camera part
+*/
+.picContainer{
+    position: relative;
+    top: 44.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 77vh;
+    width: 70vw; 
+    background-color: green;
+
+    overflow: hidden;
+}
+
+.photo{
+    height: 77vh;
+    width: 70vw; 
+}
+
+.take{
+    height: 9.75vh;
+    width: 4.9vw;
+    position: relative;
+    top: 4.75%;
+    left: 42%;
+}
+
+.close{
+    height: 9vh;
+    width: 5.5vw;
+    position: relative;
+    top: 4.5%;
+    left: 45%;
+}

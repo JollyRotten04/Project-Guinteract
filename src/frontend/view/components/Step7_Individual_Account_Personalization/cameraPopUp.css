@@ -1,0 +1,52 @@
+.cameraContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 93.5vh;
+    width: 73vw;
+
+    background-color: #3d3d3d;
+    border-width: 2px;
+    border-style: solid;
+    border-color: aliceblue;
+
+    border-radius: 10px;
+}
+
+/*
+  camera part
+*/
+#camera{
+    position: relative;
+    top: 3.5%;
+    left: 2.25%;
+    transform: translate(-50%, -50%);
+    height: 77vh;
+    width: 69.75vw; 
+
+    background-color: rgb(26, 26, 26);
+}
+
+.cameraButton{
+    height: 9.75vh;
+    width: 4.9vw;
+    position: relative;
+    top: 4.75%;
+    left: 40%;
+}
+
+.closeButton{
+    height: 7vh;
+    position: relative;
+    top: 3%;
+    left: 0.5%;
+}
+
+.imgPrev{
+    height: 9vh;
+    width: 5.5vw;
+    position: relative;
+    top: 4.5%;
+    left: 76.25%;
+}

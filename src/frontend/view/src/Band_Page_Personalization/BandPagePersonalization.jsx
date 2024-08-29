@@ -109,9 +109,12 @@ const BandPagePersonalizationPage = () => {
                 />
                 {cameraVisible == true && 
                     <cameraContext.Provider 
-                        value={{setCameraVisibility, 
-                        cameraVisible, setCameraSrc}
-                    } >
+                        value={{
+                            setCameraVisibility, 
+                            cameraVisible, 
+                            setCameraSrc
+                        }} 
+                    >
                         <Camera setInput={setInput} />
                     </cameraContext.Provider>
                 }

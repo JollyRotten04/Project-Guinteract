@@ -1,89 +1,96 @@
-import React, { useRef, useState, useEffect } from 'react';
-import './Step8IndividualAccountPersonalizationStyles.css';
+import { useEffect } from "react";
+import PropTypes from "prop-types";
+import "../Band_Page_Personalization_Components/content/singular/customToast.css";
+import "./Step8IndividualAccountPersonalizationStyles.css";
 
-export default function Step8IndividualAccountPersonalization() {
-    const accountRefs = useRef([]); // Initialize an array to store refs
-    const [addedCounter, setAddedCounter] = useState(0); // Use useState for addedCounter
-    const [isPortrait, setIsPortrait] = useState(window.matchMedia("(orientation: portrait)").matches);
+const EightPage = ({ hadPicked, setUserInput, userInput }) => {
+    // Sample output from server
+    const output = [
+        { bandName: "Black Veil Brides", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "Red Rangers", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "White Stuff", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "Black Panthers", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "The Acers", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "jdscsd", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+        { bandName: "Black Veil Brides", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
+    ];
 
-    const handleAccountClick = (event, index) => {
-        const buttonClassList = event.currentTarget.classList;
+    useEffect(() => {
+        console.log(userInput);
 
-        if (!buttonClassList.contains('clicked')) {
-            buttonClassList.add('clicked');
-            setAddedCounter((prevCounter) => prevCounter + 1); // Increment the counter
-        } else {
-            buttonClassList.remove('clicked');
-            setAddedCounter((prevCounter) => prevCounter - 1); // Decrement the counter
+        if(userInput.length >= 5)
+            hadPicked(true);
+        else
+            hadPicked(false);
+    }, [userInput, hadPicked]);
+
+    const addClicked = (index, e) => {
+        // Change the background color of the clicked button
+        if(e.target.textContent == "Follow"){
+            e.target.style.backgroundColor = "gray";
+            e.target.textContent = "Unfollow";
+
+            // Add the clicked band to the clicked list if not already added
+            const band = output[index];
+            if (!userInput.some(b => b.bandName === band.bandName)) {
+                setUserInput((prev) => ({
+                    ...prev,
+                    step8: [...prev.step8, band]
+                }));
+            }
+
+            console.log(userInput);
+        } else{
+            e.target.style.backgroundColor = "rgb(255, 119, 0)";
+            e.target.textContent = "Follow";
+
+            // Remove the clicked band from the clicked list if it's already added
+            const band = output[index];
+
+            setUserInput((prev) => ({
+                ...prev,
+                step8: prev.step8.filter(b => b.bandName!== band.bandName)
+            }));
         }
     };
 
-    useEffect(() => {
-        const updateOrientation = () => {
-            setIsPortrait(window.matchMedia("(orientation: portrait)").matches);
-        };
-
-        // Add event listener to track orientation changes
-        window.addEventListener('resize', updateOrientation);
-
-        return () => {
-            window.removeEventListener('resize', updateOrientation);
-        };
-    }, []);
-
     return (
-        <div className="step8IndividualAccountPersonalization">
-            <p id="mainLabel">Lastly, please follow at least 5 other accounts...</p>
-
-            <div id="innerContainer">
-                <div id="accountsContainer">
-                    {[...Array(6)].map((_, index) => (
-                        <div
-                            key={index}
-                            className="account"
-                            ref={(el) => (accountRefs.current[index] = el)} // Assign the ref
-                        >
-                            {/* Image Container */}
-                            <div id="imgContainer">
-                                <img
-                                    src="../../assets/GuitarDefaultIcon.png"
-                                    alt=""
-                                    id="guitarDefaultIcon"
-                                    className="profileIcon"
-                                />
-                            </div>
-
-                            <div id="rightContainer">
-                            {isPortrait ? (
-                                <div id="portraitMode">
-                                    {/* Account Name */}
-                                    <p className="accountName">Placeholder {index + 1}</p>
-
-                                    {/* Number of Friends */}
-                                    <p className="friendCount">5m friends</p>
+        <div className = "eightForm">
+            <h3>Lastly, please follow at least five other pages</h3>
+            <div className="body">
+                <div className="scrollBar-div">
+                    {output.map((band, index) => {
+                        
+                        let isFollowed =  Array.isArray(userInput) && userInput.some(obj => obj.bandName != undefined && obj.bandName === band.bandName);
+                        
+                        return (
+                            
+                            <div key={index} className="innerContentContainer">
+                                <img className="bandProfile" src={band.profile} />
+                                <div className="content" >
+                                    <h4 className="bandName">{band.bandName}</h4>
+                                    <p>{band.follooers + "followers"}</p>
+                                    <button 
+                                        key={index} 
+                                        onClick={(e) => {addClicked(index, e)}} 
+                                        style={{ backgroundColor: isFollowed ? "gray" : "rgb(255, 119, 0)" }}
+                                    >
+                                        {isFollowed? "Unfollow" : "Follow"}
+                                    </button>
                                 </div>
-                            ) : (
-                                <>
-                                    {/* Account Name */}
-                                    <p className="accountName">Placeholder {index + 1}</p>
-
-                                    {/* Number of Friends */}
-                                    <p className="friendCount">5m friends</p>
-                                </>
-                            )}
-
-                                {/* Button Container */}
-                                <button
-                                    className="addFriendButton"
-                                    onClick={(event) => handleAccountClick(event, index)} // Pass event and index
-                                >
-                                    ADD FRIEND
-                                </button>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </div>
     );
 }
+
+EightPage.propTypes = {
+    hadPicked: PropTypes.func.isRequired,
+    setUserInput: PropTypes.func.isRequired,
+    userInput: PropTypes.array.isRequired,
+};
+
+export default EightPage;

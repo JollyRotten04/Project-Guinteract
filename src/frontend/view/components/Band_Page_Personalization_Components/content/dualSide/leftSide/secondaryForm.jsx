@@ -10,7 +10,13 @@ const PictureSelection = ({primPageStatus, setPrimaryPageStatus, setInput}) => {
     const fileUpload = useRef(null);
     const imgContainer = useRef(null);
 
-    const { setCameraVisibility, cameraVisible, cameraSrc, setClosePage, setCameraSrc } = useContext(secondaryPageContext);
+    const { 
+        setCameraVisibility, 
+        cameraVisible, 
+        cameraSrc, 
+        setClosePage, 
+        setCameraSrc 
+    } = useContext(secondaryPageContext);
 
     let selectedFileUrl;
 
@@ -38,6 +44,8 @@ const PictureSelection = ({primPageStatus, setPrimaryPageStatus, setInput}) => {
     }, [primPageStatus, fetchPhoto]);
 
     console.log(cameraVisible);
+
+    // need to read all the fileupload to trace what will happen to the button after clicking it
 
     const uploadFile = () => {
         const fileInput = document.createElement('input');

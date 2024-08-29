@@ -1,13 +1,19 @@
 import { useState, useRef, useEffect } from 'react';
 import LogoComponent from "../../components/Logo_Component/LogoComponent";
 import UserTermsAndAgreements from "../../components/User_Terms_And_Agreements/UserTermsAndAgreements";
-import Step2IndividualAccountPersonalization from "../../components/Step2_Individual_Account_Personalization/Step2IndividualAccountPersonalization";
-import Step3IndividualAccountPersonalization from "../../components/Step3_Individual_Account_Personalization/Step3IndividualAccountPersonalization";
-import Step4IndividualAccountPersonalization from "../../components/Step4_Individual_Account_Personalization/Step4IndividualAccountPersonalization";
-import Step5IndividualAccountPersonalization from "../../components/Step5_Individual_Account_Personalization/Step5IndividualAccountPersonalization";
-import Step6IndividualAccountPersonalization from "../../components/Step6_Individual_Account_Personalization/Step6IndividualAccountPersonalization";
-import Step8IndividualAccountPersonalization from '../../components/Step8_Individual_Account_Personalization/Step8IndividualAccountPersonalization';
+import Camera from "../../components/Step7_Individual_Account_Personalization/cameraPopUp.jsx";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "../../components/Band_Page_Personalization_Components/content/singular/customToast.css";
+import Step2IndividualAccountPersonalization from "../../components/Step2_Individual_Account_Personalization/Step2IndividualAccountPersonalization.jsx";
+import Step3IndividualAccountPersonalization from "../../components/Step3_Individual_Account_Personalization/Step3IndividualAccountPersonalization.jsx";
+import Step4IndividualAccountPersonalization from "../../components/Step4_Individual_Account_Personalization/Step4IndividualAccountPersonalization.jsx";
+import Step5IndividualAccountPersonalization from "../../components/Step5_Individual_Account_Personalization/Step5IndividualAccountPersonalization.jsx";
+import Step6IndividualAccountPersonalization from "../../components/Step6_Individual_Account_Personalization/Step6IndividualAccountPersonalization.jsx";
+import Step7IndividualAccountPersonalization from "../../components/Step7_Individual_Account_Personalization/Step7IndividualAccountPersonalization.jsx";
+import Step8IndividualAccountPersonalization from '../../components/Step8_Individual_Account_Personalization/Step8IndividualAccountPersonalization.jsx';
 import './IndividualAccountPersonalizationStyles.css';
+
 
 export default function IndividualAccountPersonalization() {
     const views = [
@@ -17,6 +23,7 @@ export default function IndividualAccountPersonalization() {
         'Step4IndividualAccountPersonalization',
         'Step5IndividualAccountPersonalization',
         'Step6IndividualAccountPersonalization',
+        'Step7IndividualAccountPersonalization',
         'Step8IndividualAccountPersonalization'
     ];
     
@@ -27,6 +34,9 @@ export default function IndividualAccountPersonalization() {
     const [step4AllChosen, setStep4AllChosen] = useState(false);
     const [step5AllChosen, setStep5AllChosen] = useState(false);
     const [step6Chosen, setStep6Chosen] = useState(false);
+    const [step7Chosen, setStep7Chosen] = useState(false);
+    const [ cameraAppear, setAppearance ] = useState(false);
+    const [step8Chosen, setStep8Chosen] = useState(false);
     const [ userInput, setUserInput ] = useState({
         step1: false,
         step2: {
@@ -45,8 +55,8 @@ export default function IndividualAccountPersonalization() {
             city: ""
         },
         step6: "",
-        step7: null,
-        step8: null
+        step7: "../../assets/Screenshot (46)(1)(1).png",
+        step8: []
     });
 
     const nextButtonRef = useRef(null);
@@ -76,6 +86,12 @@ export default function IndividualAccountPersonalization() {
         step8: useRef(null),
     };
 
+    const submitData = () => {
+        toast.success("Data submitted successfully!");
+
+        console.log("To suibmit data: ", userInput)
+    }
+
     // Dynamically checks for which step the user is currently in and updates accordingly...
     useEffect(() => {
 
@@ -94,6 +110,7 @@ export default function IndividualAccountPersonalization() {
             'Step4IndividualAccountPersonalization': 'Tell us more about yourself...',
             'Step5IndividualAccountPersonalization': 'Tell us more about yourself...',
             'Step6IndividualAccountPersonalization': 'Tell us more about yourself...',
+            'Step7IndividualAccountPersonalization': 'Tell us more about yourself...',
             'Step8IndividualAccountPersonalization': 'Tell us more about yourself...',
         };
 
@@ -120,7 +137,9 @@ export default function IndividualAccountPersonalization() {
             (view === 'Step3IndividualAccountPersonalization' && step3Chosen) ||
             (view === 'Step4IndividualAccountPersonalization' && step4AllChosen) ||
             (view === 'Step5IndividualAccountPersonalization' && step5AllChosen) ||
-            (view === 'Step6IndividualAccountPersonalization' && step6Chosen)
+            (view === 'Step6IndividualAccountPersonalization' && step6Chosen) || 
+            (view === 'Step7IndividualAccountPersonalization' && step7Chosen) ||
+            (view === 'Step8IndividualAccountPersonalization' && step8Chosen)  // Step 8 requires a picture selection component, so we check for that separately.
         ) {
             nextButtonRef.current?.classList.add('active');
         } else {
@@ -133,12 +152,17 @@ export default function IndividualAccountPersonalization() {
         step3Chosen, 
         step4AllChosen, 
         step5AllChosen, 
-        step6Chosen, 
+        step6Chosen,
+        step7Chosen,
+        step8Chosen,
         userInput
     ]);
 
     const changeView = () => {
-        setView(prev => views[(views.indexOf(prev) + 1) % views.length]);
+        if(view == "Step8IndividualAccountPersonalization")
+            submitData();
+        else
+            setView(prev => views[(views.indexOf(prev) + 1) % views.length]);
     };
 
     const goBack = () => {
@@ -152,11 +176,17 @@ export default function IndividualAccountPersonalization() {
         Step4IndividualAccountPersonalization: <Step4IndividualAccountPersonalization allSelected={setStep4AllChosen} setUserInput={setUserInput} userInput={userInput.step4} />,
         Step5IndividualAccountPersonalization: <Step5IndividualAccountPersonalization allSelected={setStep5AllChosen} setUserInput={setUserInput} userInput={userInput.step5} />,
         Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setStep6Chosen} setUserInput={setUserInput} userInput={userInput.step6} />,
-        Step8IndividualAccountPersonalization: <Step8IndividualAccountPersonalization />,
+        Step7IndividualAccountPersonalization: <Step7IndividualAccountPersonalization hasTaken={setStep7Chosen} setUserInput={setUserInput} userInput={userInput.step7} setCameraVisibility={setAppearance} />,
+        Step8IndividualAccountPersonalization: <Step8IndividualAccountPersonalization hadPicked={setStep8Chosen} setUserInput={setUserInput} userInput={userInput.step8} />,
     };
 
     return (
         <div className="step1IndividualAccountPersonalization">
+            <ToastContainer 
+                position="top-center"
+                toastClassName="custom-toast" // Apply custom styles
+                bodyClassName="custom-toast-body" // Apply custom styles to body
+            />
             <div className="mainLabel">
                 <div className="header">
                     <div id="greetingContainer">
@@ -192,6 +222,14 @@ export default function IndividualAccountPersonalization() {
                         ))}
                     </div>
                 </div>
+
+                {cameraAppear && 
+                    <Camera 
+                        setAppearance={setAppearance} 
+                        setUserInput={setUserInput}
+                        userInput={userInput.step7}
+                    />
+                }
 
                 <hr id="bottomDivider" />
 

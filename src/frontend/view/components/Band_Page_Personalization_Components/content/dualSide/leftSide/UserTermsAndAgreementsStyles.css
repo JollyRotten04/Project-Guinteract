@@ -1,0 +1,76 @@
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .userTermsAndAgreementsPage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 95%;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer{
+        /* background-color: aqua; */
+        background-color: #2a2a2a;
+        overflow-y: auto;
+        height: 93.2%;
+        width: 95%;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .mainBodyContainer{
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .userTermsAndAgreementsPage #primaryContainer .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+}

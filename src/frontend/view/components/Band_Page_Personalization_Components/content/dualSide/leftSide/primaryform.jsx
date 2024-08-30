@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import "./primaryForm.css";
 
-const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inputs }) => {
+const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inputs, isAllFilled }) => {
     const bandName = useRef(null);
     const year = useRef(null);
     const genre = useRef(null);
@@ -11,6 +11,8 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
     const bandNameId = useRef(null);
     const bandYearId = useRef(null);
     const genreId = useRef(null);
+    
+
 
     // Function to handle input changes and update state
     const handleChange = (e) => {
@@ -24,8 +26,23 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
         }));
     };
 
+    useEffect(() => {
+        if (inputs) {
+            const { firstPage } = inputs;
+
+            if((firstPage?.bandName !== '') && (firstPage?.year !== '') && (firstPage?.genre !== '')){
+                isAllFilled(inputs);
+            }
+
+            else{
+                isAllFilled(false);
+            }
+        }
+    }, [inputs]); // Dependency array includes inputs to trigger when inputs change
+
+
     const collectData = useCallback(() => {
-        let passed = true;
+        let passed = false;
 
         // Safeguard to ensure refs are not null before accessing their value
         const sanitizedBandname = bandName.current ? bandName.current.value.trim() : '';
@@ -36,30 +53,30 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
         console.log(sanitizedYear);
         console.log(sanitizedGenre);
 
-        if (!/^[a-zA-Z0-9_-]+$/.test(sanitizedBandname) || sanitizedBandname === '') {
-            bandNameId.current.textContent = "Please enter a valid band name*";
-            passed = false;
-        } else {
+        if (/^[a-zA-Z0-9_-]+$/.test(sanitizedBandname) || sanitizedBandname === '') {
+            passed = true;
             bandNameId.current.textContent = "";
+        } else {
+            bandNameId.current.textContent = "Please enter a valid band name*";
         }
 
         if (
-            !/^\d+$/.test(sanitizedYear) ||
+            /^\d+$/.test(sanitizedYear) ||
             sanitizedYear > new Date().getFullYear() ||
             sanitizedYear < 1900 ||
             isNaN(sanitizedYear)
         ) {
-            bandYearId.current.textContent = "Please enter a valid year*";
-            passed = false;
-        } else {
             bandYearId.current.textContent = "";
+            passed = true;
+        } else {
+            bandYearId.current.textContent = "Please enter a valid year*";
         }
 
-        if (sanitizedGenre === '') {
-            genreId.current.textContent = "Please select a genre*";
-            passed = false;
-        } else {
+        if (!(sanitizedGenre === '')) {
             genreId.current.textContent = "";
+            passed = true;
+        } else {
+            genreId.current.textContent = "Please select a genre*";
         }
 
         if (passed) {
@@ -73,29 +90,30 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
             }));
 
             closePage((prev) => !prev);
-            console.log("Adjusted");
         } else {
             setPrimaryPageStatus((prev) => !prev);
         }
+
         console.log("Submit successfully");
     }, [setInputs, closePage, setPrimaryPageStatus]);
+
 
     useEffect(() => {
         if (status) {
             collectData();
-            console.log("Adjust");
         }
     }, [status, collectData]);
 
     return (
         <div className="bandNameYear">
             <div className="formContainer">
-                <h3>First, can you provide us some basic information about your band?</h3>
+                <p id="mainPromptLabel">First, can you provide us some basic information about your band?</p>
 
                 <div className="element" id="element1">
                     <label>The band is called...</label>
                     <input
                         type="text"
+                        id="bandNameInputField"
                         placeholder="Black Veil Brides"
                         ref={bandName}
                         name="bandName" // Added name attribute for handling changes
@@ -110,6 +128,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
                         <label>It was formed in the year...</label>
                         <input
                             type="number"
+                            id="bandFormationYearInput"
                             min="1900"
                             max="2100"
                             placeholder="e.g., 2000"
@@ -125,6 +144,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
                         <label>{`Band's genre of music is...`}</label>
                         <div className="custom-select">
                             <select
+                                id="bandGenreSelection"
                                 ref={genre}
                                 name="genre" // Added name attribute for handling changes
                                 value={inputs?.firstPage?.genre || ''} // Use the safeguarded default value

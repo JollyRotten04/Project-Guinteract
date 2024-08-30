@@ -1,23 +1,73 @@
-#welcomeTo{
-    position: relative;
-    margin-bottom: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    color: white;
-}
-.sideText h2{
-    color: aliceblue;
-    font-size: clamp(5vh,5.5vh,6vh);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight:bold;
-}
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .header{
+        width: 100%;
+    }
 
-hr{
-    width: 95%;
-}
+    .header .mainLabel{
+        width: 100%;
+    }
 
-@media (min-width: 1025px){
+    .header .mainLabel .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #greetingContainer #welcomeTo{
+        color:white;
+        font-size: clamp(1.6vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        margin-left: 3vh;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #promptLabel #promptLabelText{
+        color: white;
+        display: flex;
+        font-size: clamp(3.5vh, 4.5vh, 4.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-top: 4vh;
+        font-weight: 600;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
 
     .outerBody{
         width: 100vw;

@@ -3,19 +3,20 @@ import "./header.css";
 
 const Header = () => {
     return (
-        <div>
-            <div className="outerBody">
+        <div className="header">
+            <div className="mainLabel">
                 <div className="header">
-                    <div className="logoGreetContainer">
+                    <div id="greetingContainer">
                         <p id="welcomeTo">WELCOME TO</p>
-                        <LogoComponent />
+                        <div id="logoContainer">
+                            <LogoComponent />
+                        </div>
                     </div>
-                    <div className="sideText">
-                        <h2>Tell us more about the band...</h2>
+                    <div id="promptLabel">
+                        <p id="promptLabelText" >User Terms And Conditions: </p>
                     </div>
                 </div>
             </div>
-            <hr />
         </div>
     )
 }

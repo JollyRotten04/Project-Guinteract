@@ -1,4 +1,5 @@
 import Header from "../../components/Band_Page_Personalization_Components/header/header.jsx"
+import UserTermsAndAgreementsPage from "../../components/Band_Page_Personalization_Components/content/dualSide/leftSide/UserTermsAndAgreementsPage.jsx";
 import BandNameYear from "../../components/Band_Page_Personalization_Components/content/dualSide/leftSide/primaryform.jsx";
 import ThreeStepButtons from "../../components/Band_Page_Personalization_Components/content/dualSide/rightSide/primaryForm.jsx";
 import TwoButtons from "../../components/Band_Page_Personalization_Components/footer/primaryForm.jsx";
@@ -12,8 +13,6 @@ export const secondaryPageContext = createContext();
 
 export const cameraContext = createContext();
 
-
-
 const BandPagePersonalizationPage = () => {
 
     const [primaryPage, setPrimaryPage] = useState(1);
@@ -22,39 +21,60 @@ const BandPagePersonalizationPage = () => {
     const [primPageStatus, setPrimaryPageStatus] = useState(false);
     const [closePage, setClosePage] = useState(false);
 
+    //Flagger variables...
+    const [hasUserAgreed, setUserAgreed] = useState(false);
+    const [allFilledStep2, setAllFilledStep2] = useState(false);
+
     const clickedRef = useRef([]);
 
     const [inputs, setInput] = useState({
-        firstPage: null,
+        firstPage: {
+            bandName: '',
+            year: '',
+            genre: ''
+        },
         secondPage: null,
         thirdPage: []
     });
 
+    // Setter methods...
+    const step2AllFilled = (value) => {
+        setAllFilledStep2(value);
+    };
+
+    const setUserConsent = (value) => {
+        setUserAgreed(value);
+    };
+
     useEffect(() => {
-        console.log("ClosePage" + closePage)
+        // console.log("ClosePage" + closePage)
         if(primaryPage == 1){
             if (closePage) {
-                console.log("status" + primPageStatus)
+                // console.log("status" + primPageStatus)
                 setPrimaryPage(primaryPage + 1);
+                hasUserAgreed(false);
                 setClosePage(prev => !prev);
                 setPrimaryPageStatus(prev => !prev);
-                console.log(inputs);
             }
         } else if(primaryPage == 2) {
             if (closePage) {
-                console.log("status for page 2" + primPageStatus)
-                setPrimaryPage(primaryPage + 1);
+                setAllFilledStep2(false);
                 setClosePage(prev => !prev);
                 setPrimaryPageStatus(prev => !prev);
-                console.log(inputs);
             }
         } else if(primaryPage == 3) {
             if (closePage) {
-                console.log("status for page 3" + primPageStatus)
-                console.log("send to database", inputs);
+                // console.log("status for page 3" + primPageStatus)
+                // console.log("send to database", inputs);
                 setClosePage(prev => !prev);
                 setPrimaryPageStatus(prev => !prev);
-                console.log(inputs);
+            }
+        } else if(primaryPage == 4) {
+            if (closePage) {
+                // console.log("status for page 3" + primPageStatus)
+                // console.log("send to database", inputs);
+                setClosePage(prev => !prev);
+                setPrimaryPageStatus(prev => !prev);
             }
         }
     }, [closePage, primPageStatus, primaryPage, inputs])
@@ -71,15 +91,22 @@ const BandPagePersonalizationPage = () => {
     return (
         <div className="BandPagePersonalization">
             <Header />
+            <hr id="dividerLine" />
             <div className="contents">
-                {primaryPage == 1 &&    <BandNameYear 
+                {primaryPage == 1 &&    <UserTermsAndAgreementsPage
+                                            hasUserAgreed={setUserConsent}
+                                            closePage={setClosePage} 
+                                        />}
+
+                {primaryPage == 2 &&    <BandNameYear 
                                             setInputs={setInput} 
                                             status={primPageStatus} 
                                             closePage={setClosePage} 
                                             setPrimaryPageStatus={setPrimaryPageStatus} 
                                             inputs={inputs} 
+                                            isAllFilled = {step2AllFilled}
                                         />}
-                {primaryPage == 2 && 
+                {primaryPage == 3 && 
                     <secondaryPageContext.Provider value={
                         {
                             setCameraVisibility, 
@@ -96,7 +123,7 @@ const BandPagePersonalizationPage = () => {
                         />
                     </secondaryPageContext.Provider>
                 }
-                {primaryPage == 3 &&    <ThirdPage 
+                {primaryPage == 4 &&    <ThirdPage 
                                             setInput={setInput} 
                                             primPageStatus={primPageStatus} 
                                             setClosePage={setClosePage} 
@@ -120,9 +147,12 @@ const BandPagePersonalizationPage = () => {
                 }
             </div>
             <TwoButtons 
+                closePage={setClosePage}
                 changers={pageChangers} 
                 pageMark={primaryPage} 
                 submitInput={setPrimaryPageStatus} 
+                hasUserAgreed={hasUserAgreed}
+                allFilledStep2={allFilledStep2}
             />
         </div>
     );

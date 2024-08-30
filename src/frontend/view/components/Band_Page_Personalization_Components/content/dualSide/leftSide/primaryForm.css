@@ -1,107 +1,150 @@
-.bandNameYear h3, label{
-    color: aliceblue;
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    /* Hide the spinner in WebKit browsers (Chrome, Safari, Edge) */
+    .bandNameYear input[type="number"]::-webkit-inner-spin-button,
+    .bandNameYear input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Hide the spinner in Firefox */
+    .bandNameYear input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    /* For consistency across all browsers, you can also remove the default appearance */
+    .bandNameYear input[type="number"] {
+        appearance: textfield;
+    }
+
+    .bandNameYear{
+        flex: 1;
+    }
+
+    .bandNameYear .formContainer{
+        /* margin-left: 50px;
+        margin-right: 70px;
+        width: 78vw;
+        padding-bottom: 30px; */
+        display: flex;
+        width: 100%;
+        height: 70vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bandNameYear .formContainer #mainPromptLabel{
+        color: white;
+        text-align: center;
+        font-size: clamp(2.5vh, 2.8vh, 2.8vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .bandNameYear .formContainer .elements .subElements{
+        display: flex;
+        flex-direction: column;
+        width: 10vh;
+    }
+
+    .bandNameYear #element1{
+        display: flex;
+        flex-direction: column;
+        flex: 0.5;
+        width: 90%;
+    }
+
+    .bandNameYear #element1 label{
+        font-size: clamp(3vh, 4vh, 4vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        color: white;
+    }
+
+    .bandNameYear #element2 label{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        color: white;
+    }
+
+    .bandNameYear #element2{
+        display: flex;
+        justify-content: space-between;
+        flex: 0.5;
+        width: 90%;
+    }
+
+    .bandNameYear #element2 .subElements #bandFormationYearInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        height: clamp(4vh, 5vh, 5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 100%;
+    }
+
+    .bandNameYear #element2 .subElements #bandGenreSelection{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        height: clamp(4vh, 5vh, 5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 100%;
+    }
+
+    .bandNameYear .formContainer h3{
+        font-size: clamp(3vh, 3.5vh, 4vh);
+    }
+
+    .bandNameYear .element label{
+        font-size: clamp(4vh, 4.5vh, 5vh);
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .element span, .element .subElements span{
+        color: red;
+    }
+
+    .bandNameYear .element #bandNameInputField{
+        font-size: clamp(3vh, 4vh, 4vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: clamp(4vh, 5vh, 5vh);
+        /* width: 100%; */
+    }
+
+    .bandNameYear .subElements{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .bandNameYear .custom-select {
+        position: relative;
+        /* width: 80%; */
+    }
+
+    .bandNameYear .custom-select select {
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(4vh, 5vh, 5vh);
+        appearance: none; /* Remove default arrow */
+        background-color: #eee;
+        cursor: pointer;
+    }
+
+    .bandNameYear .custom-select::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid black; /* Large, inverted triangle arrow */
+        transform: translateY(-50%);
+        pointer-events: none; /* Ensure the arrow doesn't intercept clicks */
+    }
+
+    .bandNameYear option{
+        background-color: rgb(63, 62, 62);
+        color: white;
+    }
 }
-
-/* Hide the spinner in WebKit browsers (Chrome, Safari, Edge) */
-.bandNameYear input[type="number"]::-webkit-inner-spin-button,
-.bandNameYear input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Hide the spinner in Firefox */
-.bandNameYear input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-/* For consistency across all browsers, you can also remove the default appearance */
-.bandNameYear input[type="number"] {
-    appearance: textfield;
-}
-
-
-.bandNameYear .formContainer{
-    margin-left: 50px;
-    margin-right: 70px;
-    width: 78vw;
-    padding-bottom: 30px;
-}
-
-.bandNameYear .element1 .subElements{
-    display: flex;
-    flex-direction: column;
-}
-
-.bandNameYear #element1{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 12vh;
-}
-
-.bandNameYear #element2{
-    display: flex;
-    justify-content: space-between;
-    width:  78vw;
-    padding-bottom: 12vh;
-}
-
-.bandNameYear .subElements{
-    width: 38.5vw;
-}
-
-.bandNameYear .formContainer h3{
-    font-size: clamp(3vh, 3.5vh, 4vh);
-}
-
-.bandNameYear .element label{
-    font-size: clamp(4vh, 4.5vh, 5vh);
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.element span, .element .subElements span{
-    color: red;
-}
-
-.bandNameYear .element input{
-    font-size: clamp(5vh, 5.5vh, 6vh);
-}
-
-.bandNameYear .subElements{
-    display: flex;
-    flex-direction: column;
-}
-
-.bandNameYear .custom-select {
-    position: relative;
-    width: 38.5vw;
-  }
-
-  .bandNameYear .custom-select select {
-    font-size: clamp(3.5vh, 4vh, 4.5vh);
-    font-weight: bold;
-    width: 100%;
-    padding: 10px;
-    appearance: none; /* Remove default arrow */
-    background-color: #eee;
-    cursor: pointer;
-  }
-
-  .bandNameYear .custom-select::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid black; /* Large, inverted triangle arrow */
-    transform: translateY(-50%);
-    pointer-events: none; /* Ensure the arrow doesn't intercept clicks */
-  }
-
-  .bandNameYear option{
-    background-color: rgb(63, 62, 62);
-    color: white;
-  }

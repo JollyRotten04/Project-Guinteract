@@ -1,55 +1,68 @@
-.secondaryForm #profileImg{
-    height: 44vw; /* Set height equal to width (making it a square) */
-    width: 70vw;
-    max-width: 70vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
-    max-height: 44vh;
-}
-
-.secondaryForm h3{
-    font-size: clamp(4vh, 4.5vh, 5vh);
-    color:aliceblue;
-    margin-inline: 50px;
-}
-
-.secondaryForm .selection{
-    display: flex;
-    flex-direction: column;
-}
-
-.secondaryForm .selection button{
-    margin-bottom: 40px;
-    font-size: clamp(4vh, 4.5vh, 5vh);
-    font-weight: bold;
-    background-color: rgb(255, 119, 0);
-    color: aliceblue;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.385);
-    width: 20vw;
-    height: 12vh;
-}
-
-.secondaryForm .imgContainer{ 
-    width: 50vw;  /* Set width to 50% of the viewport width */
-    height: 44vw; /* Set height equal to width (making it a square) */
-    max-width: 44vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
-    max-height: 44vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-
-    display: flex;
-    justify-content: center;
-    border-radius: 2010px;
-    background-color: rgba(0, 0, 0, 0.258);
-    overflow: hidden;
-}
-
-.secondaryForm .innerContainer{
-    margin-inline: 60px;
-    width: 78vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 80px;
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .secondaryForm #profileImg{
+        height: 44vw; /* Set height equal to width (making it a square) */
+        width: 70vw;
+        max-width: 70vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
+        max-height: 44vh;
+    }
+    
+    .secondaryForm{
+        width: 95%;
+    }
+    
+    .secondaryForm h3{
+        font-size: clamp(4vh, 4.5vh, 5vh);
+        color:aliceblue;
+        margin-inline: 50px;
+    }
+    
+    .secondaryForm .selection{
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+    }
+    
+    .secondaryForm .selection button{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2.5vh, 3.5vh, 3.5vh);
+        height: clamp(10vh, 12vh, 12vh);
+        width: clamp(25vh, 30vh, 30vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+    
+    .secondaryForm .imgContainer{ 
+        width: 50vw;  /* Set width to 50% of the viewport width */
+        height: 44vw; /* Set height equal to width (making it a square) */
+        max-width: 44vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
+        max-height: 44vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    
+        display: flex;
+        justify-content: center;
+        border-radius: 2010px;
+        background-color: rgba(0, 0, 0, 0.258);
+        overflow: hidden;
+    }
+    
+    .secondaryForm .innerContainer{
+        margin-inline: 60px;
+        /* width: 78vw; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+    
 }

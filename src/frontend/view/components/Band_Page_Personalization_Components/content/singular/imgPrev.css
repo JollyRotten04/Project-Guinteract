@@ -1,53 +1,76 @@
-.allContainer{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 93.5vh;
-    width: 73vw;
 
-    background-color: #3d3d3d;
-    border-width: 2px;
-    border-style: solid;
-    border-color: aliceblue;
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .imgPreview .allContainer{
+        position: fixed;
+            display: flex;
+            flex-direction: column;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 90%;
+            width: 80%;
+            background-color: #3d3d3d;
+            border-width: 2px;
+            border-style: solid;
+            border-color: aliceblue;
+            border-radius: 10px;
+            padding: 20px;
+            justify-content: flex-start;
+    }
 
-    border-radius: 10px;
+    /*
+    camera part
+    */
+    .imgPreview .allContainer .imageContainer{
+        position: relative;
+        /* transform: translate(-50%, -50%); */
+        height: 80%;
+        width: 90%; 
+        margin: auto;
+    }
 
-    overflow: hidden;
-}
+    .imgPreview .allContainer #buttonContainer{
+        display: flex;
+        justify-content: center;
+        gap: 5vh;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+    }
 
-/*
-  camera part
-*/
-.imageContainer{
-    position: relative;
-    top: 44.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 77vh;
-    width: 70vw; 
-    background-color: green;
+    .imgPreview .allContainer .imageContainer .photo{
+        height: 100%;
+        width: 100%; 
+    }
 
-    overflow: hidden;
-}
+    .imgPreview .allContainer #buttonContainer .take{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
 
-.photo{
-    height: 77vh;
-    width: 70vw; 
-}
-
-.take{
-    height: 9.75vh;
-    width: 4.9vw;
-    position: relative;
-    top: 4.75%;
-    left: 42%;
-}
-
-.close{
-    height: 9vh;
-    width: 5.5vw;
-    position: relative;
-    top: 4.5%;
-    left: 45%;
+    .imgPreview .allContainer #buttonContainer .close{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
 }

@@ -14,6 +14,7 @@ const Camera = () => {
     const imgPrevButton = useRef(null);
     const [prevImage, setPrevImage] = useState("../../../../assets/Screenshot (48).png");
     const [ seePrev, setPrevVisibility ] = useState(false);
+    const [capturedImage, setCapturedImage ] = useState(false);
 
     const capture = useCallback(async () => {
         let imageSrc = camera.current.getScreenshot();
@@ -24,6 +25,7 @@ const Camera = () => {
 
         toast.success("Image successflly captured!");
         setPrevImage(imageSrc);
+        setCapturedImage(true);
     }, [camera]);
 
     const viewImage = () => {
@@ -66,23 +68,22 @@ const Camera = () => {
             {seePrev && <ImgPrev src={prevImage} visible={viewImage} setCameraSrc={setCameraSrc} />}
             {!seePrev && (
                 <div className="cameraContainer">
-                <Webcam
-                    id="camera"
-                    audio={false}
-                    ref={camera}
-                    screenshotFormat="image/jpeg"
-                    width="77vw"
-                    videoConstraints={{
-                        width: 1280,
-                        height: 720,
-                        facingMode: "user",
-                    }}
-                    style={{ transform: "scaleX(-1)" }}
-                />
-                <img className="closeButton" onClick={() => {setCameraVisibility(!cameraVisible)}} src="../../../../assets/xred.png" />
-                <img className="cameraButton" onClick={() => {capture()}} src="../../../../assets/Screenshot (47).png" />
-                <img className="imgPrev" id="imgPrev" ref={imgPrevButton} onClick={() => {viewImage()}} src={prevImage} />
-            </div>
+                    <p className="closeButton" onClick={() => {setCameraVisibility(!cameraVisible)}} >←</p>
+                    <Webcam
+                        id="camera"
+                        audio={false}
+                        ref={camera}
+                        screenshotFormat="image/jpeg"
+                        videoConstraints={{
+                            width: 1280,
+                            height: 720,
+                            facingMode: "user",
+                        }}
+                        style={{ transform: "scaleX(-1)" }}
+                    />
+                    <img className="cameraButton" onClick={() => {capture()}} src="../../../../assets/Screenshot (47).png" />
+                    {capturedImage ? ( <img className="imgPrev" id="imgPrev" ref={imgPrevButton} onClick={() => {viewImage()}} src={prevImage} /> ) : null }
+                </div>
             )}
         </div>
     );

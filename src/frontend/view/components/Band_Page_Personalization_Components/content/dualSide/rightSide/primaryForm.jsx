@@ -11,17 +11,29 @@ const ThreeStepButtons = ({ pageMark }) => {
     useEffect(() => {
         if(pageMark == 1){
             step1.current?.classList.add('active');
+            step2.current?.classList.remove('active');
+            step3.current?.classList.remove('active');
+            step4.current?.classList.remove('active');
         }
 
         else if(pageMark == 2){
+            step1.current?.classList.remove('active');
             step2.current?.classList.add('active');
+            step3.current?.classList.remove('active');
+            step4.current?.classList.remove('active');
         }
 
         else if(pageMark == 3){
+            step1.current?.classList.remove('active');
+            step2.current?.classList.remove('active');
             step3.current?.classList.add('active');
+            step4.current?.classList.remove('active');
         }
 
         else if(pageMark == 4){
+            step1.current?.classList.remove('active');
+            step2.current?.classList.remove('active');
+            step3.current?.classList.remove('active');
             step4.current?.classList.add('active');
         }
     }, [pageMark]);

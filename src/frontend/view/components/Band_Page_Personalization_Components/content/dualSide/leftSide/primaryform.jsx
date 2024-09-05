@@ -53,7 +53,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
         console.log(sanitizedYear);
         console.log(sanitizedGenre);
 
-        if (/^[a-zA-Z0-9_-]+$/.test(sanitizedBandname) || sanitizedBandname === '') {
+        if (/^[a-zA-Z0-9_\-\s]+$/.test(sanitizedBandname) || sanitizedBandname === '') {
             passed = true;
             bandNameId.current.textContent = "";
         } else {

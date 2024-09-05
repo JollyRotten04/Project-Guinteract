@@ -13,13 +13,16 @@ const ImgPrev = ({src, visible, setCameraSrc}) => {
     } 
 
     return (
-        <div>
+        <div className = "imgPreview">
             <div className="allContainer">
                 <div className="imageContainer">
                     <img className="photo" src={src} />
                 </div>
-                <img className="take" onClick={() => {setProfile()}} src="../../../../assets/chek.png" />
-                <img className="close" onClick={() => {visible()}} src="../../../../assets/eks.png" />
+
+                <div id="buttonContainer">
+                    <button className="take" onClick={() => {setProfile()}} >Confirm</button >
+                    <button className="close" onClick={() => {visible()}} >Retake</button >
+                </div>
             </div>
         </div>
     );

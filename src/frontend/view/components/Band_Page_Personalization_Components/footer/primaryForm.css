@@ -1,43 +1,46 @@
-.mainFooterContainer{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonContainer{
-    width: 95vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-.mainFooterContainer .buttonContainer .button{
-    pointer-events: none;
-        background-color: #a34e21;
-        color: rgb(180, 180, 180);
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .mainFooterContainer{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .buttonContainer{
+        width: 95vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .mainFooterContainer .buttonContainer .button{
+        pointer-events: none;
+            background-color: #a34e21;
+            color: rgb(180, 180, 180);
+            border: none;
+            border-radius: 5px 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: clamp(3vh, 4vh, 4vh);
+            border: none;
+            border-radius: 5px 5px;
+            height: clamp(7vh, 8vh, 8vh);
+            width: clamp(15vh, 20vh, 20vh);
+            box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+    
+    .mainFooterContainer .buttonContainer .button.active{
+        pointer-events: all;
+        cursor: pointer;
         border: none;
         border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         font-size: clamp(3vh, 4vh, 4vh);
-        border: none;
-        border-radius: 5px 5px;
         height: clamp(7vh, 8vh, 8vh);
-        width: clamp(15vh, 20vh, 20vh);
+            width: clamp(15vh, 20vh, 20vh);
         box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
-}
-
-.mainFooterContainer .buttonContainer .button.active{
-    pointer-events: all;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px 5px;
-    color: white;
-    background-color: #e7641e;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 600;
-    font-size: clamp(3vh, 4vh, 4vh);
-    height: clamp(7vh, 8vh, 8vh);
-        width: clamp(15vh, 20vh, 20vh);
-    box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
 }

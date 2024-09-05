@@ -47,33 +47,36 @@ const BandPagePersonalizationPage = () => {
     };
 
     useEffect(() => {
-        // console.log("ClosePage" + closePage)
+        console.log("ClosePage" + closePage)
         if(primaryPage == 1){
             if (closePage) {
                 // console.log("status" + primPageStatus)
-                setPrimaryPage(primaryPage + 1);
-                hasUserAgreed(false);
-                setClosePage(prev => !prev);
+                setUserAgreed(false);
+                setPrimaryPage(prev => prev + 1);
+                setClosePage(false); // Reset closePage after navigation
                 setPrimaryPageStatus(prev => !prev);
             }
         } else if(primaryPage == 2) {
             if (closePage) {
                 setAllFilledStep2(false);
-                setClosePage(prev => !prev);
+                setPrimaryPage(prev => prev + 1);
+                setClosePage(false); // Reset closePage after navigation
                 setPrimaryPageStatus(prev => !prev);
             }
         } else if(primaryPage == 3) {
             if (closePage) {
                 // console.log("status for page 3" + primPageStatus)
                 // console.log("send to database", inputs);
-                setClosePage(prev => !prev);
+                setPrimaryPage(prev => prev + 1);
+                setClosePage(false); // Reset closePage after navigation
                 setPrimaryPageStatus(prev => !prev);
             }
         } else if(primaryPage == 4) {
             if (closePage) {
                 // console.log("status for page 3" + primPageStatus)
                 // console.log("send to database", inputs);
-                setClosePage(prev => !prev);
+                setPrimaryPage(prev => prev + 1);
+                setClosePage(false); // Reset closePage after navigation
                 setPrimaryPageStatus(prev => !prev);
             }
         }

@@ -1,4 +1,4 @@
-.cameraContainer{
+.seventhForm .cameraContainer{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -17,7 +17,7 @@
 /*
   camera part
 */
-#camera{
+.seventhForm #camera{
     position: relative;
     top: 3.5%;
     left: 2.25%;
@@ -28,7 +28,7 @@
     background-color: rgb(26, 26, 26);
 }
 
-.cameraButton{
+.seventhForm .cameraButton{
     height: 9.75vh;
     width: 4.9vw;
     position: relative;
@@ -36,14 +36,14 @@
     left: 40%;
 }
 
-.closeButton{
+.seventhForm .closeButton{
     height: 7vh;
     position: relative;
     top: 3%;
     left: 0.5%;
 }
 
-.imgPrev{
+.seventhForm .imgPrev{
     height: 9vh;
     width: 5.5vw;
     position: relative;

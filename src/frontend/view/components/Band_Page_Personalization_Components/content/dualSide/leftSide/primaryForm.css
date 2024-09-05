@@ -18,7 +18,8 @@
     }
 
     .bandNameYear{
-        flex: 1;
+        /* flex: 1; */
+        width: 95%;
     }
 
     .bandNameYear .formContainer{

@@ -1,14 +1,17 @@
-.contents{
-    display: flex;
-    height: 70vh;
-    width: 100%;
-}
-
-.BandPagePersonalization #dividerLine{
-    /* height: 1px; */
-    background-color: white;
-    width: 98%;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .contents{
+        display: flex;
+        height: 70vh;
+        width: 100%;
+    }
+    
+    .BandPagePersonalization #dividerLine{
+        /* height: 1px; */
+        background-color: white;
+        width: 98%;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

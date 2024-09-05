@@ -19,7 +19,7 @@
 /*
   camera part
 */
-.picContainer{
+.mainOuterContainer .picContainer{
     position: relative;
     top: 44.5%;
     left: 50%;
@@ -31,12 +31,12 @@
     overflow: hidden;
 }
 
-.photo{
+.mainOuterContainer .photo{
     height: 77vh;
     width: 70vw; 
 }
 
-.take{
+.mainOuterContainer .take{
     height: 9.75vh;
     width: 4.9vw;
     position: relative;
@@ -44,7 +44,7 @@
     left: 42%;
 }
 
-.close{
+.mainOuterContainer .close{
     height: 9vh;
     width: 5.5vw;
     position: relative;

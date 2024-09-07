@@ -1,11 +1,11 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState} from "react";
 import PropTypes from "prop-types";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../../singular/customToast.css";
 import "./thirdForm.css";
 
-const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatus, clickedRef }) => {
+const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatus, clickedRef, userFollowedEnough }) => {
     // Sample output from server
     const output = [
         { bandName: "Black Veil Brides", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
@@ -16,12 +16,14 @@ const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatu
         { bandName: "jdscsd", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
         { bandName: "Black Veil Brides", follooers: "8.8m", profile: "../../../../../assets/Screenshot (46)(1)(1).png" },
     ];
+    const [followedPages, setFollowedPages] = useState(0);
 
     const addClicked = (index, e) => {
         // Change the background color of the clicked button
         if(e.target.textContent == "Follow"){
             e.target.style.backgroundColor = "gray";
             e.target.textContent = "Unfollow";
+            setFollowedPages(followedPages + 1);
 
             // Add the clicked band to the clicked list if not already added
             const band = output[index];
@@ -40,6 +42,7 @@ const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatu
         } else{
             e.target.style.backgroundColor = "rgb(255, 119, 0)";
             e.target.textContent = "Follow";
+            setFollowedPages(followedPages - 1);
 
             // Remove the clicked band from the clicked list if it's already added
             const band = output[index];
@@ -80,6 +83,13 @@ const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatu
             addFollowedPage();
         }
     }, [primPageStatus, addFollowedPage]);
+    
+    //Dynamically updates the followedEnough counter...
+    useEffect(() => {
+        if(followedPages >= 5){
+            userFollowedEnough(true);
+        }
+    },[followedPages]);
 
     return (
         <div className = "thirdForm">
@@ -90,29 +100,31 @@ const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatu
             />
             <h3>Lastly, please follow at least five other pages</h3>
             <div className="body">
-                <div className="scrollBar-div">
-                    {output.map((band, index) => {
-                        
-                        let isFollowed =  Array.isArray(clickedRef.current) && clickedRef.current.some(obj => obj.bandName != undefined && obj.bandName === band.bandName);
-                        
-                        return (
+                <div id="mainContentContainer">
+                    <div className="scrollBar-div">
+                        {output.map((band, index) => {
                             
-                            <div key={index} className="contentContainer">
-                                <img className="bandProfile" src={band.profile} />
-                                <div className="content" >
-                                    <h4 className="bandName">{band.bandName}</h4>
-                                    <p>{band.follooers + "followers"}</p>
-                                    <button 
-                                        key={index} 
-                                        onClick={(e) => {addClicked(index, e)}} 
-                                        style={{ backgroundColor: isFollowed ? "gray" : "rgb(255, 119, 0)" }}
-                                    >
-                                        {isFollowed? "Unfollow" : "Follow"}
-                                    </button>
+                            let isFollowed =  Array.isArray(clickedRef.current) && clickedRef.current.some(obj => obj.bandName != undefined && obj.bandName === band.bandName);
+                            
+                            return (
+                                
+                                <div key={index} className="contentContainer">
+                                    <img className="bandProfile" src={band.profile} />
+                                    <div className="content" >
+                                        <h4 className="bandName">{band.bandName}</h4>
+                                        <p>{band.follooers + " followers"}</p>
+                                        <button 
+                                            key={index} 
+                                            onClick={(e) => {addClicked(index, e)}} 
+                                            style={{ backgroundColor: isFollowed ? "gray" : "rgb(255, 119, 0)" }}
+                                        >
+                                            {isFollowed? "Unfollow" : "Follow"}
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,7 +136,10 @@ ThirdPage.propTypes = {
     primPageStatus: PropTypes.bool.isRequired,
     setClosePage: PropTypes.func.isRequired,
     setPrimaryPageStatus: PropTypes.func.isRequired,
-    clickedRef: PropTypes.array.isRequired,
+    clickedRef: PropTypes.shape({
+        current: PropTypes.array.isRequired,
+    }).isRequired,
+    userFollowedEnough: PropTypes.func.isRequired,
 };
 
 export default ThirdPage;

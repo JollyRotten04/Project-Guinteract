@@ -24,6 +24,7 @@ const BandPagePersonalizationPage = () => {
     //Flagger variables...
     const [hasUserAgreed, setUserAgreed] = useState(false);
     const [allFilledStep2, setAllFilledStep2] = useState(false);
+    const [followedEnough, setFollowedEnough] = useState(false);
 
     const clickedRef = useRef([]);
 
@@ -46,8 +47,14 @@ const BandPagePersonalizationPage = () => {
         setUserAgreed(value);
     };
 
+    const updateFollowedPages = (value) => {
+        setFollowedEnough(value);
+    };
+
     useEffect(() => {
-        console.log("ClosePage" + closePage)
+        // console.log("userAgreed:" + hasUserAgreed);
+        // console.log("allFilledStep2:" + allFilledStep2);
+        // console.log('primaryPage: ', primaryPage);
         if(primaryPage == 1){
             if (closePage) {
                 // console.log("status" + primPageStatus)
@@ -132,6 +139,7 @@ const BandPagePersonalizationPage = () => {
                                             setClosePage={setClosePage} 
                                             setPrimaryPageStatus={setPrimaryPageStatus} 
                                             clickedRef={clickedRef} 
+                                            userFollowedEnough={updateFollowedPages}
                                         />}
                 <ThreeStepButtons 
                     pageMark={primaryPage} 
@@ -156,6 +164,7 @@ const BandPagePersonalizationPage = () => {
                 submitInput={setPrimaryPageStatus} 
                 hasUserAgreed={hasUserAgreed}
                 allFilledStep2={allFilledStep2}
+                userFollowedEnough={followedEnough}
             />
         </div>
     );

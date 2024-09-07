@@ -2,39 +2,43 @@ import PropTypes from "prop-types";
 import { useRef, useEffect } from "react";
 import "./primaryForm.css";
 
-const TwoButtons = ({changers, pageMark, allFilledStep2, hasUserAgreed, closePage}) => {
+const TwoButtons = ({changers, pageMark, allFilledStep2, hasUserAgreed, closePage, userFollowedEnough}) => {
     const btn1 = useRef(null);
     const btn2 = useRef(null);
 
     //Enables the nextButton if allFilledStep1 is set to true...
     useEffect(() => {
-        // For first page...
-        if(pageMark == 1 && hasUserAgreed) {
+        // console.log("pageMark: ", + pageMark);
+        // console.log("userFollowedEnough: ", userFollowedEnough);
+        console.log("pageMark: ", + pageMark);
+        if((pageMark == 1 && hasUserAgreed) || (pageMark == 2 && allFilledStep2) || (pageMark == 3) || (pageMark == 4 && userFollowedEnough)) {
             if(btn2.current){
                 btn2.current.classList.add('active');
             }
         }
 
-        else if(pageMark == 1 && !hasUserAgreed){
+        else{
             if(btn2.current){
                 btn2.current.classList.remove('active');
             }
         }
 
-        // For second page...
-        if(pageMark == 2 && allFilledStep2) {
-            if(btn2.current){
-                btn2.current.classList.add('active');
+        //Enabling the back button...
+        if((pageMark == 2) || (pageMark == 3) || (pageMark == 4)){
+            if(btn1.current){
+                btn1.current.classList.add('active');
             }
         }
-        else if(pageMark == 2 && !allFilledStep2){
-            if(btn2.current){
-                btn2.current.classList.remove('active');
+
+        //If page 1...
+        if(pageMark == 1){
+            if(btn1.current){
+                btn1.current.classList.remove('active');
             }
         }
 
         // For second page...
-    }, [hasUserAgreed, allFilledStep2]);    
+    }, [pageMark, hasUserAgreed, allFilledStep2, userFollowedEnough]);    
 
     const {nextPage, backPage} = changers;
 

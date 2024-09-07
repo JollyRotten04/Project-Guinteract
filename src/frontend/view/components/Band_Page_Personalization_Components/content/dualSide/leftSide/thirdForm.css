@@ -1,84 +1,92 @@
-.thirdForm .body{
-    width: 78vw;
-    margin-inline: 60px;
-}
-
-.thirdForm h3{
-    font-size: clamp(4vh, 4.5vh, 5vh);
-    color:aliceblue;
-    margin-inline: 50px;
-}
-
-.thirdForm .scrollBar-div{
-    width: 53.25vw;
-    height: 47vh;
-    margin-inline: 90px;
-    margin-bottom: 50px;
-    overflow-y: scroll;
-    border-width: 2px;
-}
-
-.thirdForm .contentContainer{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .thirdForm{
+        width: 95%;
+    }
     
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
+    .thirdForm .body{
+        width: 100%;
+        margin-inline: 60px;
+    }
     
-    border-radius: 10px;
+    .thirdForm h3{
+        font-size: clamp(4vh, 4.5vh, 5vh);
+        color:aliceblue;
+        margin-inline: 50px;
+    }
     
-    margin-bottom: 8px;
-    padding-inline: 15px;
-    width: 50vw;
-    height: 70px;
-}
-
-.thirdForm .bandProfile{
-    height: 5vh;
-}
-
-.thirdForm .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 46.5vw;
-}
-
-.thirdForm p{
-    color: gray;    
-    font-size: clamp(2vh, 2.5vh, 3vh);
-}
-
-.thirdForm .scrollBar-div button{
-    background-color: rgb(255, 119, 0);
-    height: 5vh;
-    width: 7vw;
-    font-size: clamp(2.5vh, 3vh, 3.5vh);
-    color: aliceblue;
-    border-radius: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: white transparent;
-}
-
-
-.thirdForm .scrollBar-div::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-}
-
-.thirdForm .scrollBar-div::-webkit-scrollbar-track {
-    background: transparent; /* Background color of the track */
-}
-
-.thirdForm .scrollBar-div::-webkit-scrollbar-thumb {
-    background-color: white; /* Thumb color */
-    border-radius: 10px; /* Roundness of the thumb */
-    border: 2px solid transparent; /* Space around thumb (optional) */
-}
-
-.thirdForm .bandName{
-    color: white;
-    font-size: clamp(2.5vh, 3vh, 3.5vh);
-    font-weight: bold;
+    .thirdForm .scrollBar-div{
+        width: 53.25vw;
+        height: 47vh;
+        margin-inline: 90px;
+        margin-bottom: 50px;
+        overflow-y: scroll;
+        border-width: 2px;
+    }
+    
+    .thirdForm .contentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        border-width: 2px;
+        border-style: solid;
+        border-color: white;
+        
+        border-radius: 10px;
+        
+        margin-bottom: 8px;
+        padding-inline: 15px;
+        width: 92%;
+        max-width: 92%;
+        height: 70px;
+    }
+    
+    .thirdForm .bandProfile{
+        height: 5vh;
+    }
+    
+    .thirdForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 46.5vw;
+    }
+    
+    .thirdForm p{
+        color: gray;    
+        font-size: clamp(2vh, 2.5vh, 3vh);
+    }
+    
+    .thirdForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: 5vh;
+        width: 7vw;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        color: aliceblue;
+        border-radius: 10px;
+        scrollbar-width: thin;
+        scrollbar-color: white transparent;
+    }
+    
+    
+    .thirdForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .thirdForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .thirdForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .thirdForm .bandName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-weight: bold;
+    }
 }

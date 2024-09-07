@@ -39,14 +39,14 @@
     }
     
     .secondaryForm .imgContainer{ 
-        width: 50vw;  /* Set width to 50% of the viewport width */
-        height: 44vw; /* Set height equal to width (making it a square) */
+        width: 50vh;  /* Set width to 50% of the viewport width */
+        height: 50vh; /* Set height equal to width (making it a square) */
         max-width: 44vh; /* Ensure that the square doesn't exceed 50% of the viewport height */
         max-height: 44vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #ccc;
+        border: 2px solid #ccc;
         box-sizing: border-box;
     
         display: flex;

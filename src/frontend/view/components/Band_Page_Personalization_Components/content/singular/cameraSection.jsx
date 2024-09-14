@@ -59,7 +59,8 @@ const Camera = () => {
     }
 
     return(
-        <div>
+        <div id = "camera">
+            <div className="overlay"></div>
             <ToastContainer 
                 position="top-center"
                 toastClassName="custom-toast" // Apply custom styles

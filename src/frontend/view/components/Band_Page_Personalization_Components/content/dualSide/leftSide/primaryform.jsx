@@ -5,14 +5,16 @@ import "./primaryForm.css";
 const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inputs, isAllFilled }) => {
     const bandName = useRef(null);
     const year = useRef(null);
-    const genre = useRef(null);
+    
+    const [isOpen, setIsOpen] = useState(false);
+    const [selected, setSelected] = useState('Select an Option');
+    const dropdownRef = useRef(null);
+
+    const toggleDropdown = () => setIsOpen(!isOpen);
 
     // id references for error messages
     const bandNameId = useRef(null);
     const bandYearId = useRef(null);
-    const genreId = useRef(null);
-    
-
 
     // Function to handle input changes and update state
     const handleChange = (e) => {
@@ -27,10 +29,11 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
     };
 
     useEffect(() => {
+        console.log(inputs);
         if (inputs) {
             const { firstPage } = inputs;
 
-            if((firstPage?.bandName !== '') && (firstPage?.year !== '') && (firstPage?.genre !== '')){
+            if((firstPage?.bandName !== '') && (firstPage?.year !== '') && (firstPage?.selected !== '')){
                 isAllFilled(inputs);
             }
 
@@ -47,11 +50,10 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
         // Safeguard to ensure refs are not null before accessing their value
         const sanitizedBandname = bandName.current ? bandName.current.value.trim() : '';
         const sanitizedYear = year.current ? parseInt(year.current.value.trim(), 10) : '';
-        const sanitizedGenre = genre.current ? genre.current.value : '';
 
-        console.log(sanitizedBandname);
-        console.log(sanitizedYear);
-        console.log(sanitizedGenre);
+        // console.log(sanitizedBandname);
+        // console.log(sanitizedYear);
+        // console.log(sanitizedGenre);
 
         if (/^[a-zA-Z0-9_\-\s]+$/.test(sanitizedBandname) || sanitizedBandname === '') {
             passed = true;
@@ -72,11 +74,8 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
             bandYearId.current.textContent = "Please enter a valid year*";
         }
 
-        if (!(sanitizedGenre === '')) {
-            genreId.current.textContent = "";
-            passed = true;
-        } else {
-            genreId.current.textContent = "Please select a genre*";
+        if(selected === ''){
+            bandYearId.current.textContent = "Please select a genre*";
         }
 
         if (passed) {
@@ -85,7 +84,7 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
                 firstPage: {
                     bandName: sanitizedBandname,
                     year: sanitizedYear,
-                    genre: sanitizedGenre,
+                    genre: selected,
                 },
             }));
 
@@ -94,7 +93,6 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
             setPrimaryPageStatus((prev) => !prev);
         }
 
-        console.log("Submit successfully");
     }, [setInputs, closePage, setPrimaryPageStatus]);
 
 
@@ -103,11 +101,33 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
             collectData();
         }
     }, [status, collectData]);
+    
+        const selectOption = (option) => {
+            setSelected(option);
+
+            setIsOpen(false);
+        };
+    
+        const handleClickOutside = (e) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+                setIsOpen(false);
+            }
+        };
+    
+        useEffect(() => {
+            document.addEventListener('mousedown', handleClickOutside);
+            return () => {
+                document.removeEventListener('mousedown', handleClickOutside);
+            };
+        }, []);
+
+        useEffect(() => {
+            console.log(selected)
+        }, [selected])
 
     return (
         <div className="bandNameYear">
             <div className="formContainer">
-                <p id="mainPromptLabel">First, can you provide us some basic information about your band?</p>
 
                 <div className="element" id="element1">
                     <label>The band is called...</label>
@@ -142,31 +162,36 @@ const BandNameYear = ({ setInputs, status, closePage, setPrimaryPageStatus, inpu
 
                     <div className="subElements">
                         <label>{`Band's genre of music is...`}</label>
-                        <div className="custom-select">
-                            <select
-                                id="bandGenreSelection"
-                                ref={genre}
-                                name="genre" // Added name attribute for handling changes
-                                value={inputs?.firstPage?.genre || ''} // Use the safeguarded default value
-                                onChange={handleChange} // Added onChange handler
-                            >
-                                <option value="">--Select an option--</option>
-                                <option value="alternative">Alternative</option>
-                                <option value="blues">Blues</option>
-                                <option value="classical">Classical</option>
-                                <option value="country">Country</option>
-                                <option value="electronic">Electronic</option>
-                                <option value="folk">Folk</option>
-                                <option value="gospel">Gospel</option>
-                                <option value="hip-hop">Hip-Hop</option>
-                                <option value="jazz">Jazz</option>
-                                <option value="metal">Metal</option>
-                                <option value="pop">Pop</option>
-                                <option value="r&b">R&B</option>
-                                <option value="rock">Rock</option>
-                                <option value="world">World</option>
-                            </select>
-                            <span className="errorTag" ref={genreId}></span> {/* Error message span */}
+                        <div 
+                            id="bandGenreSelection"
+                            name="genre" // Added name attribute for handling changes
+                            value={inputs?.firstPage?.genre || ''} // Use the safeguarded default value
+                            onChange={handleChange} // Added onChange handler
+                            className="custom-select" 
+                            ref={dropdownRef}>
+                                
+                                <div className="select-selected" onClick={toggleDropdown}>{selected}</div>
+                                
+                                {isOpen && (
+                                <div className="select-items">
+                                    <div onClick={() => selectOption('')}>--Select an option--</div>
+                                    <div onClick={() => selectOption('Alternative')}>Alternative</div>
+                                    <div onClick={() => selectOption('Blues')}>Blues</div>
+                                    <div onClick={() => selectOption('Classical')}>Classical</div>
+                                    <div onClick={() => selectOption('Country')}>Country</div>
+                                    <div onClick={() => selectOption('Electronic')}>Electronic</div>
+                                    <div onClick={() => selectOption('Folk')}>Folk</div>
+                                    <div onClick={() => selectOption('Gospel')}>Gospel</div>
+                                    <div onClick={() => selectOption('Hip-Hop')}>Hip-Hop</div>
+                                    <div onClick={() => selectOption('Jazz')}>Jazz</div>
+                                    <div onClick={() => selectOption('Metal')}>Metal</div>
+                                    <div onClick={() => selectOption('Pop')}>Pop</div>
+                                    <div onClick={() => selectOption('R&B')}>R&B</div>
+                                    <div onClick={() => selectOption('Rock')}>Rock</div>
+                                    <div onClick={() => selectOption('World')}>World</div>
+                                </div>
+                                )}
+                            {/* <span className="errorTag" ref={genreId}></span> */}
                         </div>
                     </div>
                 </div>

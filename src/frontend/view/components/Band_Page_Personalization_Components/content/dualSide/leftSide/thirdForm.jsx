@@ -98,7 +98,6 @@ const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatu
                 toastClassName="custom-toast" // Apply custom styles
                 bodyClassName="custom-toast-body" // Apply custom styles to body
             />
-            <h3>Lastly, please follow at least five other pages</h3>
             <div className="body">
                 <div id="mainContentContainer">
                     <div className="scrollBar-div">
@@ -111,8 +110,14 @@ const ThirdPage = ({ setInput, primPageStatus, setClosePage, setPrimaryPageStatu
                                 <div key={index} className="contentContainer">
                                     <img className="bandProfile" src={band.profile} />
                                     <div className="content" >
-                                        <h4 className="bandName">{band.bandName}</h4>
-                                        <p>{band.follooers + " followers"}</p>
+                                        <div id="portraitView">
+                                            <p className="bandName">{band.bandName}</p>
+                                            <p id = "followerCount">{band.follooers + " followers"}</p>
+                                        </div>
+                                        <div id="landscapeView">
+                                            <p className="bandName">{band.bandName}</p>
+                                            <p id = "followerCount">{band.follooers + " followers"}</p>
+                                        </div>
                                         <button 
                                             key={index} 
                                             onClick={(e) => {addClicked(index, e)}} 

@@ -7,7 +7,7 @@ const Header = () => {
             <div className="mainLabel">
                 <div className="header">
                     <div id="greetingContainer">
-                        <p id="welcomeTo">WELCOME TO</p>
+                        <p id="welcomeToText">WELCOME TO</p>
                         <div id="logoContainer">
                             <LogoComponent />
                         </div>

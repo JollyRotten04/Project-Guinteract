@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useRef, useEffect } from "react";
 import "./primaryForm.css";
+import Steps from "../content/dualSide/rightSide/primaryForm";
 
 const TwoButtons = ({changers, pageMark, allFilledStep2, hasUserAgreed, closePage, userFollowedEnough}) => {
     const btn1 = useRef(null);
@@ -45,8 +46,13 @@ const TwoButtons = ({changers, pageMark, allFilledStep2, hasUserAgreed, closePag
     return (
         <div className="mainFooterContainer">
             <div className="buttonContainer">    
-                <button className = "button" id="btn1" ref={btn1} onClick={() => {backPage()}}>Back</button>
-                <button className = "button" id="btn2" ref={btn2} onClick={() => {nextPage(), closePage(true)}}>Next</button>
+                <button className = "button" id="btn1" ref={btn1} onClick={() => {backPage()}}>BACK</button>
+
+                    <div className="portraitSteps">
+                        <Steps></Steps>
+                    </div>
+
+                <button className = "button" id="btn2" ref={btn2} onClick={() => {nextPage(), closePage(true)}}>NEXT</button>
             </div>
         </div>
     );

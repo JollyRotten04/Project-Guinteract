@@ -100,7 +100,6 @@ const PictureSelection = ({primPageStatus, setPrimaryPageStatus, setInput}) => {
                 bodyClassName="custom-toast-body" // Apply custom styles to body
             />
             <div>
-                <h3>Next, select a profile picture</h3>
                 
                 <div className="innerContainer">
                     <div className="imgContainer" id="imgContainer" ref={imgContainer}>

@@ -41,10 +41,10 @@ const ThreeStepButtons = ({ pageMark }) => {
     return (
         <div className="stepsContainer">
             <div className="threeButtons">
-            <div id="step1" ref={step1} className="step">Step 1</div>
-                <div id="step2" ref={step2} className="step">Step 2</div>
-                <div id="step3" ref={step3} className="step">Step 3</div>
-                <div id="step4" ref={step4} className="step">Step 4</div>
+            <div id="step1" ref={step1} className="step"><p className="stepIndicator">Step 1</p></div>
+                <div id="step2" ref={step2} className="step"><p className="stepIndicator">Step 2</p></div>
+                <div id="step3" ref={step3} className="step"><p className="stepIndicator">Step 3</p></div>
+                <div id="step4" ref={step4} className="step"><p className="stepIndicator">Step 4</p></div>
             </div>
         </div>
     );

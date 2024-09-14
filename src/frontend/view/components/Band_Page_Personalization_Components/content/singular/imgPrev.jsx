@@ -14,6 +14,7 @@ const ImgPrev = ({src, visible, setCameraSrc}) => {
 
     return (
         <div className = "imgPreview">
+            <div className="overlay"></div>
             <div className="allContainer">
                 <div className="imageContainer">
                     <img className="photo" src={src} />

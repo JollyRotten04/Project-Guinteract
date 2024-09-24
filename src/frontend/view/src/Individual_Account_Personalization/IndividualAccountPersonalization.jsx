@@ -12,6 +12,7 @@ import Step5IndividualAccountPersonalization from "../../components/Step5_Indivi
 import Step6IndividualAccountPersonalization from "../../components/Step6_Individual_Account_Personalization/Step6IndividualAccountPersonalization.jsx";
 import Step7IndividualAccountPersonalization from "../../components/Step7_Individual_Account_Personalization/Step7IndividualAccountPersonalization.jsx";
 import Step8IndividualAccountPersonalization from '../../components/Step8_Individual_Account_Personalization/Step8IndividualAccountPersonalization.jsx';
+import LoadingScreen from '../../components/Loading_Screen/LoadingScreen.jsx';
 import './IndividualAccountPersonalizationStyles.css';
 
 
@@ -24,10 +25,12 @@ export default function IndividualAccountPersonalization() {
         'Step5IndividualAccountPersonalization',
         'Step6IndividualAccountPersonalization',
         'Step7IndividualAccountPersonalization',
-        'Step8IndividualAccountPersonalization'
+        'Step8IndividualAccountPersonalization',
+        'Loading'
     ];
     
     const [view, setView] = useState(views[0]);
+    const [isLoading, setIsLoading] = useState(false);  // State for loading screen
     const [checkboxChecked, setCheckboxChecked] = useState(false);
     const [step2AllFilled, setStep2AllFilled] = useState(false);
     const [step3Chosen, setStep3Chosen] = useState(false);
@@ -159,8 +162,11 @@ export default function IndividualAccountPersonalization() {
     ]);
 
     const changeView = () => {
-        if(view == "Step8IndividualAccountPersonalization")
+        if(view == "Step8IndividualAccountPersonalization"){
+            setIsLoading(true);
             submitData();
+        }
+        
         else
             setView(prev => views[(views.indexOf(prev) + 1) % views.length]);
     };
@@ -178,77 +184,86 @@ export default function IndividualAccountPersonalization() {
         Step6IndividualAccountPersonalization: <Step6IndividualAccountPersonalization hasSelected={setStep6Chosen} setUserInput={setUserInput} userInput={userInput.step6} />,
         Step7IndividualAccountPersonalization: <Step7IndividualAccountPersonalization hasTaken={setStep7Chosen} setUserInput={setUserInput} userInput={userInput.step7} setCameraVisibility={setAppearance} />,
         Step8IndividualAccountPersonalization: <Step8IndividualAccountPersonalization hadPicked={setStep8Chosen} setUserInput={setUserInput} userInput={userInput.step8} />,
+        // LoadingScreen: <LoadingScreen></LoadingScreen>
     };
 
     return (
         <div className="step1IndividualAccountPersonalization">
-            <ToastContainer 
-                position="top-center"
-                toastClassName="custom-toast" // Apply custom styles
-                bodyClassName="custom-toast-body" // Apply custom styles to body
-            />
-            <div className="mainLabel">
-                <div className="header">
-                    <div id="greetingContainer">
-                        <p id="welcomeTo">WELCOME TO</p>
-                        <div id="logoContainer">
-                            <LogoComponent />
-                        </div>
-                    </div>
-                    <div id="promptLabel">
-                        <p id="promptLabelText" ref={promptLabelRef}>User Terms And Conditions: </p>
-                    </div>
+            { isLoading ? (
+                <div className="displayLoadingScreen">
+                    <LoadingScreen />  {/* Render LoadingScreen based on state */}
                 </div>
-            </div>
-
-            <hr id="dividerLine" />
-
-            <div className="bottomMainContainer">
-                <div id="promptLabelPortrait">
-                    <p id="promptLabelTextPortrait" ref={promptLabelPortraitRef}>User Terms And Conditions: </p>
-                </div>
-
-                <div className="upperPartContainer">
-                    <div id="leftInnerContainer">
-                        <div className="replaceableContent">
-                            {viewComponents[view]}
-                        </div>
-                    </div>
-                    <div id="rightInnerContainer">
-                        {Object.keys(stepIndicatorRef).map(step => (
-                            <div className="stepIndicator" id={step} key={step} ref={stepIndicatorRef[step]}>
-                                {step.replace('step', 'Step ')}
+            ) : (
+            <>
+                <ToastContainer 
+                    position="top-center"
+                    toastClassName="custom-toast" // Apply custom styles
+                    bodyClassName="custom-toast-body" // Apply custom styles to body
+                />
+                <div className="mainLabel">
+                    <div className="header">
+                        <div id="greetingContainer">
+                            <p id="welcomeTo">WELCOME TO</p>
+                            <div id="logoContainer">
+                                <LogoComponent />
                             </div>
-                        ))}
+                        </div>
+                        <div id="promptLabel">
+                            <p id="promptLabelText" ref={promptLabelRef}>User Terms And Conditions: </p>
+                        </div>
                     </div>
                 </div>
 
-                {cameraAppear && 
-                    <Camera 
-                        setAppearance={setAppearance} 
-                        setUserInput={setUserInput}
-                        userInput={userInput.step7}
-                    />
-                }
+                <hr id="dividerLine" />
 
-                <hr id="bottomDivider" />
+                <div className="bottomMainContainer">
+                    <div id="promptLabelPortrait">
+                        <p id="promptLabelTextPortrait" ref={promptLabelPortraitRef}>User Terms And Conditions: </p>
+                    </div>
 
-                <div className="lowerPartContainer">
-                    <div className="buttonContainer">
-                        <div id="backButtonContainer">
-                            <button id="backButton" ref={backButtonRef} onClick={goBack}>BACK</button>
+                    <div className="upperPartContainer">
+                        <div id="leftInnerContainer">
+                            <div className="replaceableContent">
+                                {viewComponents[view]}
+                            </div>
                         </div>
-                        <div id="stepIndicatorPortraitContainer">
-                            {Object.keys(stepIndicatorRefPortrait).map(step => (
-                                <div className="stepIndicator" id={step} key={step} ref={stepIndicatorRefPortrait[step]} />
+                        <div id="rightInnerContainer">
+                            {Object.keys(stepIndicatorRef).map(step => (
+                                <div className="stepIndicator" id={step} key={step} ref={stepIndicatorRef[step]}>
+                                    {step.replace('step', 'Step ')}
+                                </div>
                             ))}
                         </div>
-                        <div id="nextButtonContainer">
-                            <button id="nextButton" ref={nextButtonRef} onClick={changeView}>NEXT</button>
+                    </div>
+
+                    {cameraAppear && 
+                        <Camera 
+                            setAppearance={setAppearance} 
+                            setUserInput={setUserInput}
+                            userInput={userInput.step7}
+                        />
+                    }
+
+                    <hr id="bottomDivider" />
+
+                    <div className="lowerPartContainer">
+                        <div className="buttonContainer">
+                            <div id="backButtonContainer">
+                                <button id="backButton" ref={backButtonRef} onClick={goBack}>BACK</button>
+                            </div>
+                            <div id="stepIndicatorPortraitContainer">
+                                {Object.keys(stepIndicatorRefPortrait).map(step => (
+                                    <div className="stepIndicator" id={step} key={step} ref={stepIndicatorRefPortrait[step]} />
+                                ))}
+                            </div>
+                            <div id="nextButtonContainer">
+                                <button id="nextButton" ref={nextButtonRef} onClick={changeView}>NEXT</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
+            )}
         </div>
     );
 }

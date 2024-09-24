@@ -7,6 +7,36 @@ const TwoButtons = ({changers, pageMark, allFilledStep2, hasUserAgreed, closePag
     const btn1 = useRef(null);
     const btn2 = useRef(null);
 
+    useEffect(() => {
+        if(pageMark == 1){
+            step1.current?.classList.add('active');
+            step2.current?.classList.remove('active');
+            step3.current?.classList.remove('active');
+            step4.current?.classList.remove('active');
+        }
+
+        else if(pageMark == 2){
+            step1.current?.classList.remove('active');
+            step2.current?.classList.add('active');
+            step3.current?.classList.remove('active');
+            step4.current?.classList.remove('active');
+        }
+
+        else if(pageMark == 3){
+            step1.current?.classList.remove('active');
+            step2.current?.classList.remove('active');
+            step3.current?.classList.add('active');
+            step4.current?.classList.remove('active');
+        }
+
+        else if(pageMark == 4){
+            step1.current?.classList.remove('active');
+            step2.current?.classList.remove('active');
+            step3.current?.classList.remove('active');
+            step4.current?.classList.add('active');
+        }
+    }, [pageMark]);
+
     //Enables the nextButton if allFilledStep1 is set to true...
     useEffect(() => {
         // console.log("pageMark: ", + pageMark);
@@ -49,7 +79,7 @@ const TwoButtons = ({changers, pageMark, allFilledStep2, hasUserAgreed, closePag
                 <button className = "button" id="btn1" ref={btn1} onClick={() => {backPage()}}>BACK</button>
 
                     <div className="portraitSteps">
-                        <Steps></Steps>
+                        <Steps pageMark ={pageMark}></Steps>
                     </div>
 
                 <button className = "button" id="btn2" ref={btn2} onClick={() => {nextPage(), closePage(true)}}>NEXT</button>

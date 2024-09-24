@@ -3,7 +3,7 @@
     .step5IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -12,7 +12,6 @@
         color: white;
         font-size: clamp(4vh, 5vh, 5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
         margin-bottom: 20px; /* Add spacing below the label */
@@ -20,13 +19,14 @@
     
     .step5IndividualAccountPersonalization #mainContainer{
         display: flex;
-        flex-direction: column;
         gap: 6vh;
+        width: 100%;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryLabel{
@@ -38,15 +38,18 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer .dropdown .dropdown-toggle{
         height: clamp(4vh, 5vh, 5vh);
         font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityLabel{
@@ -58,10 +61,42 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer .dropdown .dropdown-toggle{
         height: clamp(4vh, 5vh, 5vh);
         font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .step5IndividualAccountPersonalization .dropdown > div {
+        flex: 1;
+        /* width: 50%; */
+        /* background-color: white; */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown ul{
+        position: relative;
+        padding: 0;
+        z-index: 2;
+        width: 90%;
+        margin: 0;
+        background-color: aliceblue;
+        height: 30vh;
+        overflow-y: scroll;
+        list-style-type: none; /* Hides the bullet points */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 5px;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
     }
 }
 
@@ -69,34 +104,30 @@
     .step5IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
-        /* width: 100%; */
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
-        gap: 3vh;
     }
     
     .step5IndividualAccountPersonalization #mainLabel{
         color: white;
-        font-size: clamp(3.5vh, 4vh, 4vh);
+        font-size: clamp(4vh, 5vh, 5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
-        margin-top: 2vh;
         margin-bottom: 20px; /* Add spacing below the label */
     }
     
     .step5IndividualAccountPersonalization #mainContainer{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4vh;
+        gap: 6vh;
+        width: 100%;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryLabel{
@@ -108,18 +139,18 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer .dropdown .dropdown-toggle{
         height: clamp(4vh, 5vh, 5vh);
-        width: 90%;
         font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityLabel{
@@ -131,11 +162,42 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer .dropdown .dropdown-toggle{
         height: clamp(4vh, 5vh, 5vh);
-        width: 90%;
         font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .step5IndividualAccountPersonalization .dropdown > div {
+        flex: 1;
+        /* width: 50%; */
+        /* background-color: white; */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown ul{
+        position: relative;
+        padding: 0;
+        z-index: 2;
+        width: 90%;
+        margin: 0;
+        background-color: aliceblue;
+        height: 30vh;
+        overflow-y: scroll;
+        list-style-type: none; /* Hides the bullet points */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 5px;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
     }
 }
 
@@ -144,7 +206,7 @@
     .step5IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -153,7 +215,6 @@
         color: white;
         font-size: clamp(4vh, 5vh, 5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
         margin-bottom: 20px; /* Add spacing below the label */
@@ -161,13 +222,14 @@
     
     .step5IndividualAccountPersonalization #mainContainer{
         display: flex;
-        flex-direction: column;
         gap: 6vh;
+        width: 100%;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryLabel{
@@ -179,15 +241,18 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
-        height: clamp(6vh, 7vh, 7vh);
-        font-size: clamp(4vh, 5vh, 5vh);
+    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityLabel{
@@ -199,10 +264,42 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
-        height: clamp(6vh, 7vh, 7vh);
-        font-size: clamp(4vh, 5vh, 5vh);
+    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .step5IndividualAccountPersonalization .dropdown > div {
+        flex: 1;
+        /* width: 50%; */
+        /* background-color: white; */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown ul{
+        position: relative;
+        padding: 0;
+        z-index: 2;
+        width: 90%;
+        margin: 0;
+        background-color: aliceblue;
+        height: 30vh;
+        overflow-y: scroll;
+        list-style-type: none; /* Hides the bullet points */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 5px;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
     }
 }
 
@@ -211,31 +308,30 @@
     .step5IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
-        gap: 3vh;
     }
     
     .step5IndividualAccountPersonalization #mainLabel{
         color: white;
-        font-size: clamp(3.5vh, 4vh, 4vh);
+        font-size: clamp(4vh, 5vh, 5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
-        margin-top: 2vh;
         margin-bottom: 20px; /* Add spacing below the label */
     }
     
     .step5IndividualAccountPersonalization #mainContainer{
         display: flex;
-        flex-direction: column;
-        gap: 4vh;
+        gap: 6vh;
+        width: 100%;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryLabel{
@@ -247,15 +343,18 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer .dropdown .dropdown-toggle{
         height: clamp(4vh, 5vh, 5vh);
-        font-size: clamp(3vh, 3.5vh, 3.5vh);
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityLabel{
@@ -267,10 +366,42 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer .dropdown .dropdown-toggle{
         height: clamp(4vh, 5vh, 5vh);
-        font-size: clamp(3vh, 3.5vh, 3.5vh);
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .step5IndividualAccountPersonalization .dropdown > div {
+        flex: 1;
+        /* width: 50%; */
+        /* background-color: white; */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown ul{
+        position: relative;
+        padding: 0;
+        z-index: 2;
+        width: 90%;
+        margin: 0;
+        background-color: aliceblue;
+        height: 30vh;
+        overflow-y: scroll;
+        list-style-type: none; /* Hides the bullet points */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 5px;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
     }
 }
 
@@ -288,7 +419,6 @@
         color: white;
         font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
     }
@@ -313,15 +443,19 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer .dropdown .dropdown-toggle{
         height: clamp(4vh, 5vh, 5vh);
         font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        width: 80%;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityLabel{
@@ -333,10 +467,43 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
+    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer .dropdown .dropdown-toggle{
+        position: absolute;
         height: clamp(4vh, 5vh, 5vh);
         font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 80%;
+        overflow: hidden;
+    }
+
+    .step5IndividualAccountPersonalization .dropdown > div {
+        flex: 1;
+        /* width: 50%; */
+        /* background-color: white; */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown ul{
+        position: absolute;
+        padding: 0;
+        z-index: 2;
+        width: 80%;
+        margin: 0;
+        background-color: aliceblue;
+        height: 20vh;
+        overflow-y: scroll;
+        list-style-type: none; /* Hides the bullet points */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 5px;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
     }
 }
 
@@ -344,16 +511,15 @@
     .step5IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
     
     .step5IndividualAccountPersonalization #mainLabel{
         color: white;
-        font-size: clamp(5vh, 6vh, 6vh);
+        font-size: clamp(4vh, 5vh, 5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
         margin-bottom: 20px; /* Add spacing below the label */
@@ -361,13 +527,14 @@
     
     .step5IndividualAccountPersonalization #mainContainer{
         display: flex;
-        flex-direction: column;
         gap: 6vh;
+        width: 100%;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryLabel{
@@ -379,15 +546,18 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
-        height: clamp(6vh, 7vh, 7vh);
-        font-size: clamp(4vh, 5vh, 5vh);
+    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityLabel{
@@ -399,10 +569,42 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
-        height: clamp(6vh, 7vh, 7vh);
-        font-size: clamp(4vh, 5vh, 5vh);
+    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .step5IndividualAccountPersonalization .dropdown > div {
+        flex: 1;
+        /* width: 50%; */
+        /* background-color: white; */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown ul{
+        position: relative;
+        padding: 0;
+        z-index: 2;
+        width: 90%;
+        margin: 0;
+        background-color: aliceblue;
+        height: 30vh;
+        overflow-y: scroll;
+        list-style-type: none; /* Hides the bullet points */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 5px;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
     }
 }
 
@@ -411,16 +613,15 @@
     .step5IndividualAccountPersonalization{
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
     
     .step5IndividualAccountPersonalization #mainLabel{
         color: white;
-        font-size: clamp(5vh, 6vh, 6vh);
+        font-size: clamp(4vh, 5vh, 5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
         margin-bottom: 20px; /* Add spacing below the label */
@@ -428,13 +629,14 @@
     
     .step5IndividualAccountPersonalization #mainContainer{
         display: flex;
-        flex-direction: column;
         gap: 6vh;
+        width: 100%;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryLabel{
@@ -446,15 +648,18 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
-        height: clamp(6vh, 7vh, 7vh);
-        font-size: clamp(4vh, 5vh, 5vh);
+    .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityLabel{
@@ -466,10 +671,42 @@
         font-weight: 600;
     }
     
-    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
-        height: clamp(6vh, 7vh, 7vh);
-        font-size: clamp(4vh, 5vh, 5vh);
+    .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(3vh, 3.5vh, 3.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .step5IndividualAccountPersonalization .dropdown > div {
+        flex: 1;
+        /* width: 50%; */
+        /* background-color: white; */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown ul{
+        position: relative;
+        padding: 0;
+        z-index: 2;
+        width: 90%;
+        margin: 0;
+        background-color: aliceblue;
+        height: 30vh;
+        overflow-y: scroll;
+        list-style-type: none; /* Hides the bullet points */
+    }
+
+    .step5IndividualAccountPersonalization .dropdown li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 5px;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        width: 100%;
     }
 }
 
@@ -486,9 +723,8 @@
     
     .step5IndividualAccountPersonalization #mainLabel{
         color: white;
-        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         margin: 0;
     }
@@ -515,8 +751,9 @@
     
     .step5IndividualAccountPersonalization #mainContainer #countryFieldContainer #countryInputDropdown{
         height: clamp(4vh, 5vh, 5vh);
-        font-size: clamp(3vh, 3.5vh, 3.5vh);
+        font-size: clamp(1.5vh, 2vh, 2vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
     }
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer{
@@ -535,7 +772,8 @@
     
     .step5IndividualAccountPersonalization #mainContainer #cityFieldContainer #cityInputDropdown{
         height: clamp(4vh, 5vh, 5vh);
-        font-size: clamp(3vh, 3.5vh, 3.5vh);
+        font-size: clamp(1.5vh, 2vh, 2vh);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
     }
 }

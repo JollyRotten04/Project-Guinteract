@@ -25,13 +25,15 @@ const PrevImage = ({
     }
 
     return (
-        <div>
+        <div id="imagePreviewContainer">
             <div className="mainOuterContainer">
                 <div className="picContainer">
                     <img className="photo" src={prevImage} />
                 </div>
-                <img className="take" onClick={() => {setPicture()}} src="../../../../assets/chek.png" />
-                <img className="close" onClick={() => {closeCamera()}} src="../../../../assets/eks.png" />
+                <div id="buttonsContainer">
+                    <div className="take" onClick={() => {setPicture()}} src="../../../../assets/chek.png" >SAVE</div>
+                    <div className="close" onClick={() => {closeCamera()}} src="../../../../assets/eks.png" >RETAKE</div>
+                </div>
             </div>
         </div>
     );

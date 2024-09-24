@@ -12,6 +12,7 @@ const Camera = ({ setAppearance, setUserInput }) => {
     const camera = useRef(null);
     const [prevImage, setPrevImage] = useState("../../../../assets/Screenshot (48).png");
     const [ seePrev, setPrevVisibility ] = useState(false);
+    const [capturedImage, setCapturedImage ] = useState(false);
 
     // captures the image
     const capture = useCallback(async () => {
@@ -23,6 +24,7 @@ const Camera = ({ setAppearance, setUserInput }) => {
         // shows poputp notification that shows image successfully captured
         toast.success("Image successflly captured!");
         setPrevImage(imageSrc);
+        setCapturedImage(true);
     }, [camera]);
 
     // ensures that these is an image in the prev small picture before pregviewing the captured image
@@ -58,7 +60,8 @@ const Camera = ({ setAppearance, setUserInput }) => {
     }
 
     return(
-        <div>
+        <div id = "cameraMainContainer">
+            <div id="overlay"></div>
             <ToastContainer 
                 position="top-center"
                 toastClassName="custom-toast" // Apply custom styles
@@ -73,6 +76,7 @@ const Camera = ({ setAppearance, setUserInput }) => {
                 />}
             {!seePrev && 
                 <div className="cameraContainer">
+                    <p className="closeButton" onClick={() => {setAppearance(prev => !prev)}} >←</p>
                     <Webcam
                         id="camera"
                         audio={false}
@@ -86,9 +90,8 @@ const Camera = ({ setAppearance, setUserInput }) => {
                         }}
                         style={{ transform: "scaleX(-1)" }}
                     />
-                    <img className="closeButton" onClick={() => {setAppearance(prev => !prev)}} src="../../../../assets/xred.png" />
                     <img className="cameraButton" onClick={() => {capture()}} src="../../../../assets/Screenshot (47).png" />
-                    <img className="imgPrev" id="imgPrev" onClick={() => {viewImage()}} src={prevImage} />
+                    {capturedImage ? (<img className="imgPrev" id="imgPrev" onClick={() => {viewImage()}} src={prevImage} />) : null }
                 </div>
             }
         </div>

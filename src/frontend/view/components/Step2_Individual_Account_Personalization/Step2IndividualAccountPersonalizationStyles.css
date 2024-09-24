@@ -3,7 +3,7 @@
 @media (min-width: 1025px) and (orientation: landscape){
     .step2IndividualAccountPersonalization{
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         /* padding-left: 30px;
         padding-right: 30px; */
         /* align-items: center; */
@@ -18,16 +18,17 @@
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
+        /* text-align: center; */
         font-weight: 600;
         font-size: clamp(3vh, 4vh, 4vh);
         margin: 0;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 
     .step2IndividualAccountPersonalization .innerContainer{
         /* flex: 1; */
-        width: 80%;
+        width: 100%;
+        margin: auto;
     }
 
     .step2IndividualAccountPersonalization .innerContainer .firstNameContainer{
@@ -115,9 +116,8 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         font-size: clamp(2.5vh, 3.5vh, 3.5vh);
-        text-align: center;
         margin: 0;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 
     .step2IndividualAccountPersonalization .innerContainer{
@@ -205,11 +205,10 @@
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         font-size: clamp(3vh, 4vh, 4vh);
         margin: 0;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 
     .step2IndividualAccountPersonalization .innerContainer{
@@ -297,11 +296,10 @@
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         font-size: clamp(2vh, 3vh, 3vh);
         margin: 0;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 
     .step2IndividualAccountPersonalization .innerContainer{
@@ -389,8 +387,7 @@
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
-        font-size: clamp(1.6vh, 2.2vh, 2.2vh);
-        text-align: center;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
         margin: 0;
         margin-bottom: 3vh;
     }
@@ -480,7 +477,6 @@
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         font-size: clamp(3vh, 4vh, 4vh);
         margin: 0;
@@ -572,7 +568,6 @@
     .step2IndividualAccountPersonalization #textLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
         font-weight: 600;
         font-size: clamp(3vh, 4vh, 4vh);
         margin: 0;
@@ -645,6 +640,97 @@
 
     .step2IndividualAccountPersonalization .innerContainer .desiredUsernameContainer #desiredUsernameInputField{
         height: clamp(4vh, 6vh, 6vh);
+        font-size: clamp(2.5vh, 3.5vh, 3.5vh);
+        font-weight: 600;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    .step2IndividualAccountPersonalization{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spanErrorStep2{
+        color: red;
+    }
+
+    .step2IndividualAccountPersonalization #textLabel{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 2.2vh, 2.2vh);
+        margin: 0;
+        margin-bottom: 3vh;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer{
+        flex: 1;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .firstNameContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 5vh;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .firstNameContainer #firstNameLabel{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        margin: 0;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .firstNameContainer #firstNameInputField{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(2.5vh, 3.5vh, 3.5vh);
+        font-weight: 600;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .lastNameContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 5vh;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .lastNameContainer #lastNameLabel{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        margin: 0;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .lastNameContainer #lastNameInputField{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(2.5vh, 3.5vh, 3.5vh);
+        font-weight: 600;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .desiredUsernameContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 5vh;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .desiredUsernameContainer #desiredUsernameLabel{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        margin: 0;
+    }
+
+    .step2IndividualAccountPersonalization .innerContainer .desiredUsernameContainer #desiredUsernameInputField{
+        height: clamp(4vh, 5vh, 5vh);
         font-size: clamp(2.5vh, 3.5vh, 3.5vh);
         font-weight: 600;
     }

@@ -61,8 +61,8 @@ export default function Step7IndividualAccountPersonalization({
                 toastClassName="custom-toast" 
                 bodyClassName="custom-toast-body" 
             />
-            <div>
-                <h3>Next, select a profile picture</h3>
+            <div className="step7IndividualAccountPersonalization">
+                <p id="mainLabel">Next, select a profile picture</p>
                 
                 <div className="innerContainer">
                     <div className="pictureContainer" id="imgContainer">

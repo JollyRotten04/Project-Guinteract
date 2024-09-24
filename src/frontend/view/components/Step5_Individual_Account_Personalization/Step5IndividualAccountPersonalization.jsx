@@ -1,8 +1,9 @@
 import './Step5IndividualAccountPersonalizationStyles.css';
 import PropTypes from "prop-types";
 import { useEffect, useState, useRef } from 'react';
+import CustomDropdown from '../CustomDropdown/CustomDropdown';
 
-export default function Step5IndividualAccountPersonalization({ allSelected, setUserInput, userInput }){
+export default function Step5IndividualAccountPersonalization({ allSelected, setUserInput, userInput }) {
     const [countries, setCountries] = useState([]);
     const [countryCities, setCountryCities] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState("");
@@ -10,9 +11,8 @@ export default function Step5IndividualAccountPersonalization({ allSelected, set
     const citySelectRef = useRef(null);
     const [loading, setLoading] = useState(false);
 
-    // Sets the allSelected flagger variable as true or false depending on the state of both eventListeners
     useEffect(() => {
-        if(selectedCountry !== "" && selectedCity !== ""){
+        if (selectedCountry && selectedCity) {
             setUserInput((prev) => ({
                 ...prev,
                 step5: {
@@ -26,110 +26,63 @@ export default function Step5IndividualAccountPersonalization({ allSelected, set
         }
     }, [selectedCountry, selectedCity, allSelected]);
 
-    // Fetches countries when the component mounts
     useEffect(() => {
-        if(userInput.country != "" && userInput.city != ""){
-            setSelectedCountry(prev => prev = userInput.country);
-            setSelectedCity(prev => prev = userInput.city);
-        }
-
         fetch('https://countriesnow.space/api/v0.1/countries')
             .then(response => response.json())
-            .then(data => setCountries(data.data))
-            .catch(error => console.error('Error fetching data:', error));
+            .then(data => setCountries(data.data.map(item => item.country)))
+            .catch(error => console.error('Error fetching countries:', error));
     }, []);
 
-    // Fetch cities data when selectedCountry changes
     useEffect(() => {
         if (selectedCountry) {
-            if(selectedCountry != userInput.country)
-                setSelectedCity(""); // Reset selected city when country changes
-            
-            setLoading(true); // Set loading to true when starting to fetch cities
+            if (selectedCountry !== userInput.country) {
+                setSelectedCity(""); // Reset city when country changes
+            }
 
+            setLoading(true);
             const fetchCities = async () => {
                 try {
                     const response = await fetch('https://countriesnow.space/api/v0.1/countries/cities', {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
+                        headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ country: selectedCountry })
                     });
-
                     const data = await response.json();
-
-                    // Sort the cities alphabetically before setting them
-                    //const sortedCities = data.data.sort((a, b) => a.localeCompare(b));
-
-                    // console.log(data.data); // Log the data to inspect its structure
-                    setCountryCities(data.data); // Set the cities after fetching
+                    setCountryCities(data.data);
                 } catch (error) {
                     console.error('Error fetching cities:', error);
                 } finally {
-                    setLoading(false); // Set loading to false after fetch completes
+                    setLoading(false);
                 }
             };
 
             fetchCities();
         } else {
-            setCountryCities([]); // Clear cities if no country is selected
+            setCountryCities([]);
         }
     }, [selectedCountry]);
 
-    return(
+    return (
         <div className="step5IndividualAccountPersonalization">
             <p id="mainLabel">Next, where do you live?</p>
             <div id="mainContainer">
-
-                {/* Country Field Container */}
                 <div id="countryFieldContainer">
-
-                    {/* Country Input Label */}
-                    <p id="countryLabel">Country: </p>
-
-                    {/* Country Input Field */}
-                    <select 
-                        name="countryInput" 
-                        id="countryInputDropdown" 
-                        onChange={(e) => setSelectedCountry(e.target.value)} 
-                        value={selectedCountry}
-                    >
-                        <option value="" disabled hidden>--Select a country--</option>
-                        {countries.map((item, index) => (
-                            <option key={index} value={item.country}>{item.country}</option>
-                        ))}
-                    </select>
+                    <p id="countryLabel">Country:</p>
+                    <CustomDropdown
+                        options={countries}
+                        onChange={setSelectedCountry}
+                        selectedValue={selectedCountry}
+                        placeholder="--Select a country--"
+                    />
                 </div>
-
-                {/* City Field Container */}
                 <div id="cityFieldContainer">
-
-                    {/* City Input Label */}
-                    <p id="cityLabel">City: </p>
-
-                    {/* City Input Field */}
-                    <select 
-                        name="cityInput" 
-                        id="cityInputDropdown" 
-                        onChange={(e) => setSelectedCity(e.target.value)} 
-                        value={selectedCity} 
-                        ref={citySelectRef}
-                    >
-                        <option value="" hidden>--Select a city--</option>
-
-                        {loading ? (
-                            <option value="" disabled>Loading country's cities...</option>
-                        ) : (
-                            countryCities.length > 0 ? (
-                                countryCities.map((city, index) => (
-                                    <option key={index} value={city}>{city}</option>
-                                ))
-                            ) : (
-                                <option value="" disabled>No cities available</option>
-                            )
-                        )}
-                    </select>
+                    <p id="cityLabel">City:</p>
+                    <CustomDropdown
+                        options={loading ? ["Loading cities..."] : countryCities}
+                        onChange={setSelectedCity}
+                        selectedValue={selectedCity}
+                        placeholder={loading ? "Loading..." : "--Select a city--"}
+                    />
                 </div>
             </div>
         </div>
@@ -140,4 +93,4 @@ Step5IndividualAccountPersonalization.propTypes = {
     allSelected: PropTypes.func.isRequired,
     setUserInput: PropTypes.func.isRequired,
     userInput: PropTypes.object.isRequired,
-}
+};

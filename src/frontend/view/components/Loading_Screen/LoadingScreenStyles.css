@@ -243,7 +243,7 @@
     .loadingMainContainer #loadingMainLabel{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        /* margin-top: 2vh; */
+        margin-top: 2vh;
         word-spacing: 2px;
         margin-bottom: 16vh;
         font-size: clamp(2vh, 3vh, 3vh);

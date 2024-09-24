@@ -36,7 +36,7 @@ export default function Step3IndividualAccountPersonalization({ hasSelected, set
             {/* Main Label Element */}
             <p id="mainLabelText">Next, what do you identify as?</p>
 
-            <hr id="dividerLine" />
+            {/* <hr id="dividerLine" /> */}
 
             {/* Choices Container */}
             <div className="choiceContainer">
@@ -70,7 +70,6 @@ export default function Step3IndividualAccountPersonalization({ hasSelected, set
                     <div id="radioheadLabel">
                         <p id="radioheadLabelText">I identify as a female</p>
                     </div>
-
                 </div>
 
                 {/* Non-Binary Choice Container */}

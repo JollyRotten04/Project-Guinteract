@@ -1,53 +1,588 @@
-.mainOuterContainer{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 93.5vh;
-    width: 73vw;
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 85%;
+        width: 80%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 75%;
+        width: 85%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
 
-    background-color: #3d3d3d;
-    border-width: 2px;
-    border-style: solid;
-    border-color: aliceblue;
-
-    border-radius: 10px;
-
-    overflow: hidden;
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }    
 }
 
-/*
-  camera part
-*/
-.mainOuterContainer .picContainer{
-    position: relative;
-    top: 44.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 77vh;
-    width: 70vw; 
-    background-color: green;
+@media (min-height: 1024px) and (orientation: portrait){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 90%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        width: 90%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
 
-    overflow: hidden;
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }    
 }
 
-.mainOuterContainer .photo{
-    height: 77vh;
-    width: 70vw; 
+/* MEDIUM VIEW 600px UP TO 1023px AND LANDSCAPE ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 85%;
+        width: 80%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 75%;
+        width: 85%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
+
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }    
 }
 
-.mainOuterContainer .take{
-    height: 9.75vh;
-    width: 4.9vw;
-    position: relative;
-    top: 4.75%;
-    left: 42%;
+/* MEDIUM VIEW 600px UP TO 1023px AND PORTRAIT ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 70%;
+        width: 90%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        width: 90%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
+
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
 }
 
-.mainOuterContainer .close{
-    height: 9vh;
-    width: 5.5vw;
-    position: relative;
-    top: 4.5%;
-    left: 45%;
+@media (max-width: 767px) and (orientation: portrait){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 90%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        width: 90%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
+
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 85%;
+        width: 80%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 75%;
+        width: 85%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
+
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }    
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 1000px) and (max-height: 500px) and (orientation: landscape){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 90%;
+        width: 70%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 75%;
+        width: 85%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
+
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(8vh, 10vh, 10vh);
+        width: clamp(15vh, 20vh, 20vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }    
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    #imagePreviewContainer .mainOuterContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50%;
+        width: 90%;
+        background-color: #3d3d3d;
+        border-width: 2px;
+        border-style: solid;
+        border-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    /*
+      camera part
+    */
+    #imagePreviewContainer .mainOuterContainer .picContainer{
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        width: 90%; 
+        overflow: hidden;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer .photo{
+        height: 100%;
+        width: 100%;
+    }
+
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .take{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(5vh, 7vh, 7vh);
+        width: clamp(12vh, 15vh, 15vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
+    
+    #imagePreviewContainer .mainOuterContainer #buttonsContainer .close{
+        font-size: clamp(3vh, 4vh, 4vh);
+        height: clamp(5vh, 7vh, 7vh);
+        width: clamp(12vh, 15vh, 15vh);
+        border-radius: 5px 5px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: #e7641e;
+    }
 }

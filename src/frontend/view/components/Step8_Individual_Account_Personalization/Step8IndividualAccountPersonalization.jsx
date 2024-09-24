@@ -56,7 +56,7 @@ const EightPage = ({ hadPicked, setUserInput, userInput }) => {
 
     return (
         <div className = "eightForm">
-            <h3>Lastly, please follow at least five other pages</h3>
+            <p id="mainLabel">Lastly, please follow at least five other pages</p>
             <div className="body">
                 <div className="scrollBar-div">
                     {output.map((band, index) => {
@@ -68,8 +68,18 @@ const EightPage = ({ hadPicked, setUserInput, userInput }) => {
                             <div key={index} className="innerContentContainer">
                                 <img className="bandProfile" src={band.profile} />
                                 <div className="content" >
-                                    <h4 className="bandName">{band.bandName}</h4>
-                                    <p>{band.follooers + "followers"}</p>
+
+                                    {/* Portrait View */}
+                                    <div id="portraitView">
+                                        <p className="bandName">{band.bandName}</p>
+                                        <p className="followersCount">{band.follooers + "followers"}</p>
+                                    </div>
+
+                                    {/* Landscape View */}
+                                    <div id="landscapeView">
+                                        <p className="bandName">{band.bandName}</p>
+                                        <p className="followersCount">{band.follooers + "followers"}</p>
+                                    </div>
                                     <button 
                                         key={index} 
                                         onClick={(e) => {addClicked(index, e)}} 

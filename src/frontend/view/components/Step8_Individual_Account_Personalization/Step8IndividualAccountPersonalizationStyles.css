@@ -1,39 +1,589 @@
 /* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 60vh;
+        width: 100%;
+    }
+
     .eightForm .body{
-        width: 71.5vw;
-        margin-inline: 60px;
+        display: flex;
+        height: 85%;
+        max-height: 85%;
+        justify-content: center;
     }
     
-    .eightForm h3{
-        font-size: clamp(4vh, 4.5vh, 5vh);
+    .eightForm #mainLabel{
+        font-size: clamp(3vh, 4vh, 4vh);
         color:aliceblue;
-        margin-inline: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
     }
     
     .eightForm .scrollBar-div{
-        width: 53.25vw;
-        height: 45.55vh;
-        margin-inline: 90px;
-        margin-bottom: 50px;
+        width: 80%;
+        height: 100%;
         overflow-y: scroll;
         border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: none;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: flex;
+        align-items: center;
+        width: 70%;
+        justify-content: space-between;
+        gap: 0;
     }
     
     .eightForm .innerContentContainer{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        
-        border-width: 2px;
-        border-style: solid;
-        border-color: white;
-        
+        border: 2px solid white;
         border-radius: 10px;
-        
-        margin-bottom: 8px;
-        padding-inline: 15px;
-        width: 50vw;
-        height: 70px;
+        width: 90%;
+        height: clamp(8vh, 10vh, 10vh);
+    }
+    
+    .eightForm .bandProfile{
+        height: 5vh;
+    }
+    
+    .eightForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 46.5vw;
+    }
+    
+    .eightForm p{
+        color: gray;    
+        font-size: clamp(2vh, 2.5vh, 3vh);
+    }
+    
+    .eightForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: 5vh;
+        width: 7vw;
+        font-size: clamp(2.2vh, 2.5vh, 2.5vh);
+        color: aliceblue;
+        border: none;
+        border-radius: 5px;
+        scrollbar-width: thin;
+        scrollbar-color: white transparent;
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .eightForm .bandName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-weight: bold;
+    }
+}
+
+@media (min-height: 1024px) and (orientation: portrait){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 80%;
+        width: 100%;
+    }
+
+    .eightForm .body{
+        display: flex;
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .eightForm #mainLabel{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        color:aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .eightForm .scrollBar-div{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+    
+    .eightForm .innerContentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 90%;
+        height: clamp(8vh, 10vh, 10vh);
+        padding: 1vh;
+        box-sizing: border-box;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 0;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: none;
+    }
+    
+    .eightForm .bandProfile{
+        height: 6vh;
+    }
+    
+    .eightForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40vh;
+    }
+    
+    .eightForm .followersCount{
+        color: gray;    
+        font-size: clamp(1.8vh, 2vh, 2vh);
+        margin: 0;
+    }
+    
+    .eightForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: clamp(5vh, 6vh, 6vh);
+        width: clamp(8vh, 10vh, 10vh);
+        font-size: clamp(2vh, 2.2vh, 2.2vh);
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        scrollbar-width: thin;
+        scrollbar-color: white transparent;
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .eightForm .bandName{
+        color: white;
+        font-size: clamp(2.5vh, 2.5vh, 2.5vh);
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND LANDSCAPE ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 60vh;
+        width: 100%;
+    }
+
+    .eightForm .body{
+        display: flex;
+        height: 85%;
+        max-height: 85%;
+        justify-content: center;
+    }
+    
+    .eightForm #mainLabel{
+        font-size: clamp(3vh, 4vh, 4vh);
+        color:aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .eightForm .scrollBar-div{
+        width: 80%;
+        height: 100%;
+        overflow-y: scroll;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: none;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: flex;
+        align-items: center;
+        width: 70%;
+        justify-content: space-between;
+        gap: 0;
+    }
+    
+    .eightForm .innerContentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 90%;
+        height: clamp(8vh, 10vh, 10vh);
+    }
+    
+    .eightForm .bandProfile{
+        height: 5vh;
+    }
+    
+    .eightForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 46.5vw;
+    }
+    
+    .eightForm p{
+        color: gray;    
+        font-size: clamp(2vh, 2.5vh, 3vh);
+    }
+    
+    .eightForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: 5vh;
+        width: 7vw;
+        font-size: clamp(2vh, 2.2vh, 2.2vh);
+        color: aliceblue;
+        border-radius: 5px;
+        scrollbar-width: thin;
+        border: none;
+        scrollbar-color: white transparent;
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .eightForm .bandName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-weight: bold;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND PORTRAIT ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 80%;
+        width: 100%;
+    }
+
+    .eightForm .body{
+        display: flex;
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .eightForm #mainLabel{
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        color:aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .eightForm .scrollBar-div{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+    
+    .eightForm .innerContentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 90%;
+        height: clamp(8vh, 10vh, 10vh);
+        padding: 1vh;
+        box-sizing: border-box;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 0;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: none;
+    }
+    
+    .eightForm .bandProfile{
+        height: 6vh;
+    }
+    
+    .eightForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40vh;
+    }
+    
+    .eightForm .followersCount{
+        color: gray;    
+        font-size: clamp(1.8vh, 2vh, 2vh);
+        margin: 0;
+    }
+    
+    .eightForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: clamp(5vh, 6vh, 6vh);
+        width: clamp(8vh, 10vh, 10vh);
+        font-size: clamp(2vh, 2.2vh, 2.2vh);
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        scrollbar-width: thin;
+        scrollbar-color: white transparent;
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .eightForm .bandName{
+        color: white;
+        font-size: clamp(2.5vh, 2.5vh, 2.5vh);
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 80%;
+        width: 100%;
+    }
+
+    .eightForm .body{
+        display: flex;
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .eightForm #mainLabel{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        color:aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .eightForm .scrollBar-div{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+    
+    .eightForm .innerContentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 90%;
+        height: clamp(8vh, 10vh, 10vh);
+        padding: 1vh;
+        box-sizing: border-box;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 0;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: none;
+    }
+    
+    .eightForm .bandProfile{
+        height: 6vh;
+    }
+    
+    .eightForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40vh;
+    }
+    
+    .eightForm .followersCount{
+        color: gray;    
+        font-size: clamp(1.8vh, 2vh, 2vh);
+        margin: 0;
+    }
+    
+    .eightForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: clamp(5vh, 6vh, 6vh);
+        width: clamp(8vh, 10vh, 10vh);
+        font-size: clamp(2vh, 2.6vh, 2.6vh);
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        scrollbar-width: thin;
+        scrollbar-color: white transparent;
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .eightForm .bandName{
+        color: white;
+        font-size: clamp(2.5vh, 2.5vh, 2.5vh);
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 767px) and (orientation: landscape){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 60vh;
+        width: 100%;
+    }
+
+    .eightForm .body{
+        display: flex;
+        height: 85%;
+        max-height: 85%;
+        justify-content: center;
+    }
+    
+    .eightForm #mainLabel{
+        font-size: clamp(3vh, 4vh, 4vh);
+        color:aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .eightForm .scrollBar-div{
+        width: 80%;
+        height: 100%;
+        overflow-y: scroll;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: none;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: flex;
+        align-items: center;
+        width: 70%;
+        justify-content: space-between;
+        gap: 0;
+    }
+    
+    .eightForm .innerContentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 90%;
+        height: clamp(8vh, 10vh, 10vh);
     }
     
     .eightForm .bandProfile{
@@ -82,8 +632,214 @@
         font-size: clamp(2.5vh, 3vh, 3.5vh);
         font-weight: bold;
     }
+}
 
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 1000px) and (max-height: 500px) and (orientation: landscape){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 56vh;
+        width: 100%;
+    }
 
+    .eightForm .body{
+        display: flex;
+        height: 85%;
+        max-height: 85%;
+        justify-content: center;
+    }
+    
+    .eightForm #mainLabel{
+        font-size: clamp(3vh, 4vh, 4vh);
+        color:aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .eightForm .scrollBar-div{
+        width: 80%;
+        height: 100%;
+        overflow-y: scroll;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: none;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: flex;
+        align-items: center;
+        width: 70%;
+        justify-content: space-between;
+        gap: 0;
+    }
+    
+    .eightForm .innerContentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 90%;
+        height: clamp(8vh, 10vh, 10vh);
+    }
+    
+    .eightForm .bandProfile{
+        height: 5vh;
+    }
+    
+    .eightForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 46.5vw;
+    }
+    
+    .eightForm p{
+        color: gray;    
+        font-size: clamp(2vh, 2.5vh, 3vh);
+    }
+    
+    .eightForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: 5vh;
+        width: 7vw;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        color: aliceblue;
+        border-radius: 5px;
+        border: none;
+        scrollbar-width: thin;
+        scrollbar-color: white transparent;
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .eightForm .bandName{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-weight: bold;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    /* LARGE VIEW 1024px ABOVE */
+    .eightForm{
+        height: 56vh;
+        width: 100%;
+    }
+
+    .eightForm .body{
+        display: flex;
+        height: 85%;
+        max-height: 85%;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .eightForm #mainLabel{
+        font-size: clamp(1.5vh, 1.75vh, 1.75vh);
+        color:aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .eightForm .scrollBar-div{
+        width: 95%;
+        height: 100%;
+        overflow-y: scroll;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .eightForm .innerContentContainer .content #portraitView{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .eightForm .innerContentContainer .content #landscapeView{
+        display: none;
+    }
+    
+    .eightForm .innerContentContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 100%;
+        height: clamp(8vh, 10vh, 10vh);
+    }
+    
+    .eightForm .bandProfile{
+        height: 5vh;
+    }
+    
+    .eightForm .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 26vh;
+    }
+    
+    .eightForm .followersCount{
+        color: gray;    
+        font-size: clamp(1.2vh, 1.5vh, 1.5vh);
+    }
+    
+    .eightForm .scrollBar-div button{
+        background-color: rgb(255, 119, 0);
+        height: clamp(4vh, 5vh, 5vh);
+        width: clamp(7vh, 8vh, 8vh);
+        font-size: clamp(1.5vh, 1.8vh, 1.8vh);
+        color: aliceblue;
+        border-radius: 10px;
+        border: none;
+        scrollbar-width: thin;
+        scrollbar-color: white transparent;
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-track {
+        background: transparent; /* Background color of the track */
+    }
+    
+    .eightForm .scrollBar-div::-webkit-scrollbar-thumb {
+        background-color: white; /* Thumb color */
+        border-radius: 10px; /* Roundness of the thumb */
+        border: 2px solid transparent; /* Space around thumb (optional) */
+    }
+    
+    .eightForm .bandName{
+        color: white;
+        font-size: clamp(1.5vh, 1.75vh, 1.75vh);
+        font-weight: bold;
+    }
+}
 /*
 @media (min-height: 1024px) and (orientation: portrait){
     .step8IndividualAccountPersonalization #innerContainer #accountsContainer .account #rightContainer #portraitMode{

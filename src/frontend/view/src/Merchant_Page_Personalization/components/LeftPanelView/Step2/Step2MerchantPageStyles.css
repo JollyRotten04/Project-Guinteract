@@ -1,0 +1,2512 @@
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .geosearch-control {
+        width: 80%;  /* Set your desired width */
+        height: 50%;  /* Set your desired height */
+        margin: 10px;  /* Optional: Add margin for spacing */
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        
+    }
+
+    .leaflet-control-geosearch.bar form{
+        height: 5vh !important;
+        width: 70% !important;
+        margin: auto;
+    }
+
+    .leaflet-control-geosearch a.reset{
+        font-size: 2vh;
+        /* margin-t */
+        /* margin-left: 3vh; */
+    }
+
+    .leaflet-control-geosearch.bar{
+        width: 100% !important;
+        height: 40% !important;
+    }
+
+    .glass {
+        /* margin: auto; */
+        width: 100% !important;  /* Adjust the width as needed */
+        font-size: clamp(2vh, 2.5vh, 2.5vh) !important;
+        height: 4vh !important;  /* Adjust the height as needed */
+        padding: 10px;            /* Optional: Add some padding */
+        border: 1px solid #ccc;   /* Optional: Customize border */
+        border-radius: 4px;       /* Optional: Add rounded corners */
+        box-sizing: border-box;    /* Include padding and border in the element's total width and height */
+    }
+    
+    .geosearch-control button {
+        height: 100%; /* Ensure the button takes full height */
+        /* Optional: Add additional button styles here */
+    }
+
+    .step2MerchantPage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 85vh; /* Set a fixed height (adjust as needed) */
+        width: 120vh;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        background-color: aliceblue;
+        padding:0px;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left:20px;
+        padding-right:20px;
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        height: clamp(7vh, 8vh, 8vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}
+
+@media (min-height: 1024px) and (orientation: portrait){
+    .geosearch-control {
+        width: 80%;  /* Set your desired width */
+        height: 50%;  /* Set your desired height */
+        margin: 10px;  /* Optional: Add margin for spacing */
+    }
+    
+    .glass {
+        /* margin: auto; */
+        width: 30vh !important;  /* Adjust the width as needed */
+        font-size: clamp(2vh, 3vh, 3vh) !important;
+        height: 4vh !important;  /* Adjust the height as needed */
+        padding: 10px;            /* Optional: Add some padding */
+        border: 1px solid #ccc;   /* Optional: Customize border */
+        border-radius: 4px;       /* Optional: Add rounded corners */
+        box-sizing: border-box;    /* Include padding and border in the element's total width and height */
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        position: relative; /* Adjust as needed */
+    }
+    
+    .leaflet-control-geosearch a.reset{
+        font-size: 2vh;
+        line-height: 0;
+        top: 1vh;
+        /* margin-top: 1vh; */
+        /* margin-left: 3vh; */
+    }
+    
+    .geosearch-control button {
+        height: 100%; /* Ensure the button takes full height */
+        /* Optional: Add additional button styles here */
+    }
+    
+    .step2MerchantPage {
+        height: 100%;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 80%; /* Set a fixed height (adjust as needed) */
+        width: 90%;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        position: relative;
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        /* position: absolute; */
+        background-color: aliceblue;
+        left: 0;
+        top: 0;
+        padding:0;
+        margin: 0;
+        z-index: 5;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+        position: relative;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left:20px;
+        padding-right:20px;
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        height: clamp(7vh, 8vh, 8vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND LANDSCAPE ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    .step2MerchantPage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        position: relative; /* Adjust as needed */
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 85vh; /* Set a fixed height (adjust as needed) */
+        width: 120vh;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 80%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        background-color: aliceblue;
+        padding:0px;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left:20px;
+        padding-right:20px;
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        height: clamp(7vh, 8vh, 8vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND PORTRAIT ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+    .geosearch-control {
+        width: 80%;  /* Set your desired width */
+        height: 50%;  /* Set your desired height */
+        margin: 10px;  /* Optional: Add margin for spacing */
+    }
+    
+    .glass {
+        /* margin: auto; */
+        width: 30vh !important;  /* Adjust the width as needed */
+        font-size: clamp(2vh, 2.5vh, 2.5vh) !important;
+        height: 4vh !important;  /* Adjust the height as needed */
+        padding: 10px;            /* Optional: Add some padding */
+        border: 1px solid #ccc;   /* Optional: Customize border */
+        border-radius: 4px;       /* Optional: Add rounded corners */
+        box-sizing: border-box;    /* Include padding and border in the element's total width and height */
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        position: relative; /* Adjust as needed */
+    }
+    
+    .leaflet-control-geosearch a.reset{
+        font-size: 2vh;
+        margin-top: 1vh;
+        /* margin-left: 3vh; */
+    }
+    
+    .geosearch-control button {
+        height: 100%; /* Ensure the button takes full height */
+        /* Optional: Add additional button styles here */
+    }
+    
+    .step2MerchantPage {
+        height: 100%;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 80%; /* Set a fixed height (adjust as needed) */
+        width: 90%;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        position: relative;
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        /* position: absolute; */
+        background-color: aliceblue;
+        left: 0;
+        top: 0;
+        padding:0;
+        margin: 0;
+        z-index: 5;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+        position: relative;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left:20px;
+        padding-right:20px;
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        height: clamp(7vh, 8vh, 8vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait){
+    .geosearch-control {
+        width: 80%;  /* Set your desired width */
+        height: 50%;  /* Set your desired height */
+        margin: 10px;  /* Optional: Add margin for spacing */
+    }
+    
+    .glass {
+        /* margin: auto; */
+        width: 5vh !important;  /* Adjust the width as needed */
+        font-size: clamp(2vh, 2.5vh, 2.5vh) !important;
+        height: 4vh !important;  /* Adjust the height as needed */
+        padding: 10px;            /* Optional: Add some padding */
+        border: 1px solid #ccc;   /* Optional: Customize border */
+        border-radius: 4px;       /* Optional: Add rounded corners */
+        box-sizing: border-box;    /* Include padding and border in the element's total width and height */
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        position: relative; /* Adjust as needed */
+    }
+    
+    .leaflet-control-geosearch a.reset{
+        font-size: 2vh;
+        top: 1vh;
+        /* margin-top: 1vh; */
+        /* margin-left: 3vh; */
+    }
+    
+    .geosearch-control button {
+        height: 100%; /* Ensure the button takes full height */
+        /* Optional: Add additional button styles here */
+    }
+    
+    .step2MerchantPage {
+        height: 100%;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 80%; /* Set a fixed height (adjust as needed) */
+        width: 90%;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        position: relative;
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        /* position: absolute; */
+        background-color: aliceblue;
+        left: 0;
+        top: 0;
+        padding:0;
+        margin: 0;
+        z-index: 5;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+        position: relative;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* padding-left:20px;
+        padding-right:20px; */
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        height: clamp(5vh, 6vh, 6vh);
+        width: clamp(10vh, 15vh, 15vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape){
+    .step2MerchantPage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        position: relative; /* Adjust as needed */
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 85vh; /* Set a fixed height (adjust as needed) */
+        width: 120vh;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 80%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        background-color: aliceblue;
+        padding:0px;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left:20px;
+        padding-right:20px;
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        height: clamp(7vh, 8vh, 8vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 1000px) and (max-height: 500px) and (orientation: landscape){
+    .geosearch-control {
+        width: 80%;  /* Set your desired width */
+        height: 50%;  /* Set your desired height */
+        margin: 10px;  /* Optional: Add margin for spacing */
+    }
+
+    .leaflet-control-geosearch.bar form{
+        width: 60%;
+        /* margin-left: 8vh; */
+        margin: auto;
+    }
+    
+    .glass {
+        /* margin: auto; */
+        width: 100% !important;  /* Adjust the width as needed */
+        font-size: clamp(2vh, 2.5vh, 2.5vh) !important;
+        height: 4vh !important;  /* Adjust the height as needed */
+        padding: 10px;            /* Optional: Add some padding */
+        border: 1px solid #ccc;   /* Optional: Customize border */
+        border-radius: 4px;       /* Optional: Add rounded corners */
+        box-sizing: border-box;    /* Include padding and border in the element's total width and height */
+    }
+
+    .leaflet-control-geosearch a.reset{
+        font-size: 2vh;
+        line-height: 0 !important; 
+        bottom: 8px;
+        /* margin-left: 3vh; */
+    }
+    
+    .geosearch-control button {
+        height: 100%; /* Ensure the button takes full height */
+        /* Optional: Add additional button styles here */
+    }
+
+    .step2MerchantPage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        position: relative; /* Adjust as needed */
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 85vh; /* Set a fixed height (adjust as needed) */
+        width: 120vh;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 80%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2.5vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        background-color: aliceblue;
+        padding:0px;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left:20px;
+        padding-right:20px;
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 3vh, 3vh);
+        height: clamp(7vh, 8vh, 8vh);
+        width: clamp(15vh, 20vh, 20vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    .geosearch-control {
+        width: 80%;  /* Set your desired width */
+        height: 50%;  /* Set your desired height */
+        margin: 10px;  /* Optional: Add margin for spacing */
+    }
+
+    .leaflet-control-geosearch.bar form{
+        width: 55vw;
+        margin-left: 8vh;
+    }
+    
+    .glass {
+        /* margin: auto; */
+        width: 100% !important;  /* Adjust the width as needed */
+        font-size: clamp(2vh, 2.5vh, 2.5vh) !important;
+        height: 4vh !important;  /* Adjust the height as needed */
+        padding: 10px;            /* Optional: Add some padding */
+        border: 1px solid #ccc;   /* Optional: Customize border */
+        border-radius: 4px;       /* Optional: Add rounded corners */
+        box-sizing: border-box;    /* Include padding and border in the element's total width and height */
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+        height: 100% !important;
+    }
+
+    .leaflet-container.leaflet-touch.leaflet-retina.leaflet-safari.leaflet-fade-anim {
+        height: 100% !important; 
+        width: 100%; 
+        position: relative; /* Adjust as needed */
+    }
+    
+    .leaflet-control-geosearch a.reset{
+        font-size: 2vh;
+        line-height: 0 !important;
+        top: 2vh;
+        /* margin-top: 1vh; */
+        /* margin-left: 3vh; */
+    }
+    
+    .geosearch-control button {
+        height: 100%; /* Ensure the button takes full height */
+        /* Optional: Add additional button styles here */
+    }
+    
+    .step2MerchantPage {
+        height: 100%;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgb(33, 33, 33);
+        opacity: 0.6;
+        z-index: 99;
+    }
+    
+    .step2MerchantPage #outerContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 60%; /* Set a fixed height (adjust as needed) */
+        width: 90%;  /* Set a fixed width proportional to the height */
+        background-color: #313131;
+        border-radius: 2vh;
+        z-index: 100;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack{
+        display: flex;
+        margin: 0;
+    }
+
+    .step2MerchantPage #outerContainer #firstStack #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin: auto;
+    }
+
+    .step2MerchantPage #outerContainer #dividerLine{
+        color: white;
+        width: 100%;
+    }
+
+    .step2MerchantPage #outerContainer #closeIcon{
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+        /* margin-bottom: 2vh; */
+        cursor: pointer;
+    }
+
+    .step2MerchantPage #outerContainer #mapContainer {
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .step2MerchantPage #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step2MerchantPage #mainContainer #mainLabel{
+        color: white;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        /* height: 100%; */
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 3vh;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    /* .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer{
+        box-sizing: border-box;
+    } */
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageNameContainer #pageNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageOwnerNameContainer #pageOwnerNameInput{
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 4vh;
+        width: 90%;
+        /* margin: 0; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationLabelPrompt{
+        color: white;
+        font-size: clamp(2.5vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #leftContainer #pageLocationContainer #pageLocationButton{
+        height: clamp(6vh, 7vh, 7vh);
+        width: clamp(14vh, 18vh, 18vh);
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3vh;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color:brown; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt{
+        width: 100%;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #productServicePrompt #productServiceLabelPrompt{
+        color: white;
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 4.5vh;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-toggle{
+        position: relative;
+        height: clamp(4vh, 5vh, 5vh);
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-weight: 600;
+        width: 100%;
+        cursor:pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu{
+        /* position: absolute; */
+        background-color: aliceblue;
+        left: 0;
+        top: 0;
+        padding:0;
+        margin: 0;
+        z-index: 5;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdown-menu .dropdown-item{
+        list-style-type: none;
+        cursor: pointer;
+        pointer-events: all;
+        border: 1px solid;
+        /* font-weight: 600; */
+        font-size: clamp(1.8vh, 2.2vh, 2.2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-left: 2vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer .dropdown .dropdownContainers > div {
+        flex: 1;
+        position: relative;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionPromptLabel{
+        color: white;
+        font-size: clamp(2vh, 3vh, 3vh);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* margin-top: 4.5vh; */
+    }
+
+    .step2MerchantPage #mainContainer #innerContainer #rightContainer #descriptionFieldContainer #descriptionField{
+        font-size: clamp(1.8vh, 2.5vh, 2.5vh);
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        resize: none;
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #locationLabelText #locationLabel{
+        color: gray;
+        font-size: clamp(1.8vh, 2vh, 2vh);
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* padding-left:20px;
+        padding-right:20px; */
+        box-sizing: border-box;
+        /* background-color: #e7641e; */
+        flex: 1;
+    }
+
+    .step2MerchantPage #outerContainer #buttonContainer #reselectButton, #proceedButton{
+        pointer-events: all;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px 5px;
+        color: white;
+        background-color: #e7641e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        height: clamp(5vh, 6vh, 6vh);
+        width: clamp(10vh, 15vh, 15vh);
+        box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
+    }
+}

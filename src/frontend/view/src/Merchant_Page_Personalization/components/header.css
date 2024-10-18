@@ -1,0 +1,871 @@
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .merchantAccountPersonalization .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel{
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization .header #dividerLine{
+        width: 98%;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel .header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(1.6vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        margin-left: 3vh;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel #promptLabelText{
+        color: white;
+        display: flex;
+        font-size: clamp(3.5vh, 4.5vh, 4.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-top: 4vh;
+        font-weight: 600;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+
+    .merchantAccountPersonalization .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+@media (min-height: 1024px) and (orientation: portrait){
+    .merchantAccountPersonalization .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel{
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization .header #dividerLine{
+        width: 98%;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel .header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(1.6vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        margin-left: 3vh;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel #promptLabelText{
+        color: white;
+        display: none;
+        font-size: clamp(3.5vh, 4.5vh, 4.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-top: 4vh;
+        font-weight: 600;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+
+    .merchantAccountPersonalization .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND LANDSCAPE ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    .merchantAccountPersonalization .header{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel{
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization .header #dividerLine{
+        width: 98%;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel .header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(1.6vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        margin-left: 3vh;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel #promptLabelText{
+        color: white;
+        display: flex;
+        font-size: clamp(3.5vh, 4.5vh, 4.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-top: 4vh;
+        font-weight: 600;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+
+    .merchantAccountPersonalization .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }.merchantAccountPersonalization .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel{
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization .header #dividerLine{
+        position: absolute;
+        bottom: 0;
+        width: 98%;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization .header .mainLabel .header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(1.6vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        margin-left: 3vh;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .merchantAccountPersonalization .header .mainLabel .header #promptLabel #promptLabelText{
+        color: white;
+        display: flex;
+        font-size: clamp(3.5vh, 4.5vh, 4.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-top: 4vh;
+        font-weight: 600;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+
+    .merchantAccountPersonalization .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND PORTRAIT ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+    .header{
+        width: 100%;
+    }
+
+    .header .mainLabel{
+        width: 100%;
+    }
+
+    .header .mainLabel .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(2vh, 2.6vh, 2.6vh);
+        text-align: center;
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(4vh, 6vh, 6vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(4vh, 6vh, 6vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(4vh, 6vh, 6vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #promptLabel #promptLabelText{
+        display: none;
+    }
+
+    .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait){
+    .header{
+        width: 100%;
+        position: relative;
+    }
+
+    .header .mainLabel{
+        width: 100%;
+    }
+
+    .header #dividerLine{
+        position: absolute;
+        bottom: 0;
+        width: 98%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    .header .mainLabel .header{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(2vh, 2.6vh, 2.6vh);
+        text-align: center;
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(4vh, 6vh, 6vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(4vh, 6vh, 6vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(4vh, 6vh, 6vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #promptLabel #promptLabelText{
+        display: none;
+    }
+
+    .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    } */
+
+    .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape){
+    .header{
+        position: relative;
+    }
+
+    .header .mainLabel{
+        width: 100%;
+    }
+
+    .header .mainLabel .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(1.6vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        margin-left: 3vh;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #promptLabel #promptLabelText{
+        color: white;
+        display: flex;
+        font-size: clamp(3.5vh, 4.5vh, 4.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-top: 4vh;
+        font-weight: 600;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+
+    .header #dividerLine{
+        position: absolute;
+        bottom: 0;
+        width: 98%;
+        color: white;
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 1000px) and (max-height: 500px) and (orientation: landscape){
+    .header{
+        position: relative;
+    }
+
+    .header .mainLabel{
+        width: 100%;
+    }
+
+    .header .mainLabel .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(1.6vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        margin-left: 3vh;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(5vh, 7vh, 7vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+
+    .header #dividerLine{
+        position: absolute;
+        bottom: 0;
+        width: 98%;
+        color: white;
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    .header .mainLabel .header #promptLabel #promptLabelText{
+        color: white;
+        display: flex;
+        font-size: clamp(3.5vh, 4.5vh, 4.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-top: 4vh;
+        font-weight: 600;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+
+    .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    .header{
+        width: 100%;
+        position: relative;
+    }
+
+    .header .mainLabel{
+        width: 100%;
+    }
+
+    .header .mainLabel .header{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #greetingContainer #welcomeToText{
+        color:white;
+        font-size: clamp(2vh, 2.2vh, 2.2vh);
+        text-align: center;
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo{
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoFirstPart{
+        font-size: clamp(4vh, 5vh, 5vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoPickIcon{
+        height: clamp(4vh, 5vh, 5vh);
+        margin: 0;
+    }
+    
+    .header .mainLabel .header #greetingContainer #logoContainer .logo #logoSecondPart{
+        font-size: clamp(4vh, 5vh, 5vh);
+        margin: 0;
+    }
+
+    .header #dividerLine{
+        position: absolute;
+        bottom: 0;
+        width: 98%;
+        color: white;
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    .header .mainLabel .header #promptLabel{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: aqua; */
+        /* height: 5vh; */
+    }
+    
+    .header .mainLabel .header #promptLabel #promptLabelText{
+        display: none;
+    }
+
+    .outerBody{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    } */
+
+    .header .sideText h2{
+        padding-top: 50px;
+        margin-bottom: -10px;
+    }
+}

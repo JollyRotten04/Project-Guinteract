@@ -79,8 +79,7 @@
         width: clamp(10vh, 12vh, 12vh);
         box-shadow: 1vh 1vh 0 0 rgb(41, 41, 41);
     }
-    
-    
+        
     .thirdForm .scrollBar-div::-webkit-scrollbar {
         width: 8px; /* Width of the scrollbar */
     }

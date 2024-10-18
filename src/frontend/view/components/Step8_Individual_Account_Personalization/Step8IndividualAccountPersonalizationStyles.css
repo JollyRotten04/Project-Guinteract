@@ -64,7 +64,7 @@
     }
     
     .eightForm p{
-        color: gray;    
+        color: rgb(161, 161, 161);
         font-size: clamp(2vh, 2.5vh, 3vh);
     }
     
@@ -97,6 +97,7 @@
     .eightForm .bandName{
         color: white;
         font-size: clamp(2.5vh, 3vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
     }
 }

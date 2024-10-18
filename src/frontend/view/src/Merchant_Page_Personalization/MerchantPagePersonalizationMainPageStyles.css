@@ -1,0 +1,927 @@
+/* LARGE VIEW 1024px ABOVE */
+@media (min-width: 1025px) and (orientation: landscape){
+    .merchantAccountPersonalization{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization #portraitDivider{
+        display: none;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        display: none;
+    }
+
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 72vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 80%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        height: 100%;
+        width: 20%;
+    }
+}
+
+@media (min-height: 1024px) and (orientation: portrait){
+    .merchantAccountPersonalization{
+        height: 100vh;
+        width: 100%;
+    }
+
+  .merchantAccountPersonalization #portraitDivider{
+        height: 1px;
+        background-color: white;
+        width: 96%;
+        margin: 0;
+        margin: auto;
+    }
+
+  
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 64vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        font-size: clamp(2vh, 3vh, 3vh);
+        color: white;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* text-align: center; */
+        margin: 0;
+        margin-top: 2vh;
+        width: 90%;
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 90%;
+        /* margin:auto; */
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        display: none;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND LANDSCAPE ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape){
+    .merchantAccountPersonalization{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization #portraitDivider{
+        display: none;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        display: none;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 72vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 80%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        height: 100%;
+        width: 20%;
+    }
+}
+
+/* MEDIUM VIEW 600px UP TO 1023px AND PORTRAIT ORIENTATION*/
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait){
+    .merchantAccountPersonalization{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization #portraitDivider{
+        height: 1px;
+        background-color: white;
+        width: 96%;
+        margin: 0;
+        margin: auto;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 64vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        font-size: clamp(2vh, 3vh, 3vh);
+        color: white;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* text-align: center; */
+        margin: 0;
+        margin-top: 2vh;
+        width: 90%;
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 90%;
+        /* margin:auto; */
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        display: none;
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait){
+    .merchantAccountPersonalization{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization #portraitDivider{
+        height: 1px;
+        background-color: white;
+        width: 96%;
+        margin: 0;
+        margin: auto;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 64vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        font-size: clamp(2vh, 3vh, 3vh);
+        color: white;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* text-align: center; */
+        margin: 0;
+        margin-top: 2vh;
+        width: 90%;
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 90%;
+        /* margin:auto; */
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        display: none;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape){
+    .merchantAccountPersonalization{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization #portraitDivider{
+        display: none;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        display: none;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 72vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 90%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        height: 100%;
+        width: 20%;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-width: 1000px) and (max-height: 500px) and (orientation: landscape){
+    .merchantAccountPersonalization{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization #portraitDivider{
+        display: none;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        display: none;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 68vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 3.5vh, 3.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        height: 100%;
+        width: 20%;
+    }
+}
+
+/* FOR SMALL SCREENS (MOBILE DEVICES) LANDSCAPE ORIENTATION*/
+@media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    .merchantAccountPersonalization{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .merchantAccountPersonalization #portraitDivider{
+        height: 1px;
+        background-color: white;
+        width: 96%;
+        margin: 0;
+        margin: auto;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer{
+        height: 64vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #mainLabelText{
+        font-size: clamp(1.75vh, 2vh, 2vh);
+        color: white;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* text-align: center; */
+        margin: 0;
+        margin-top: 2vh;
+        width: 90%;
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView{
+        height: 100%;
+        width: 90%;
+        /* margin:auto; */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Replaceable content styles... */
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements{
+        display: flex;
+        background-color: #2a2a2a;
+        flex-direction: column;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainTitleContainer #mainTitle{
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer{
+        flex: 1; /* Takes remaining space */
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .mainBodyContainer #mainContent{
+        color: white;
+        font-size: clamp(1.5vh, 2vh, 2vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer{
+        /* background-color: #e7641e; */
+        display: flex;
+        gap: 2vh;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        /* padding-bottom: 10px; */
+
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #checkbox:checked{
+        accent-color: #f16c25;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #leftView #replaceableContent .userTermsAndAgreements .checkboxContainer #label{
+        color: white;
+        font-size: clamp(1.5vh, 2.5vh, 2.5vh);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+
+    .merchantAccountPersonalization #merchantMainContainer #rightView{
+        display: none;
+    }
+}

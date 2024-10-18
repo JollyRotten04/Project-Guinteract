@@ -5,6 +5,7 @@ import './index.css';
 import InitialRegistrationPage from "./src/Initial_Registration_Page/InitialRegistrationPage.jsx";
 import IndividualAccountPersonalization from './src/Individual_Account_Personalization/IndividualAccountPersonalization';
 import BandPagePersonalizationPage from "./src/Band_Page_Personalization/BandPagePersonalization.jsx";
+import MerchantPagePersonalizationMainPage from './src/Merchant_Page_Personalization/MerchantPagePersonalizationMainPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,13 +14,18 @@ const router = createBrowserRouter([
     children: []
   },
   {
-    path: '/personalization',
+    path: '/IndividualAccount',
     element: <IndividualAccountPersonalization />,
     children: []
   },
   {
-    path: "/BandPagePersonalization",
+    path: "/BandPage",
     element: <BandPagePersonalizationPage />,
+    children: []
+  },
+  {
+    path: "/MerchantPage",
+    element: <MerchantPagePersonalizationMainPage />,
     children: []
   }
   /*
